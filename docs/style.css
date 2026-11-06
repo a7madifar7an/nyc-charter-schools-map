@@ -206,16 +206,6 @@ svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width:
   background: var(--fill) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 8l4 4 4-4' fill='none' stroke='%238e8e93' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 8px center / 16px;
   color: var(--label); font-size: 15px; cursor: pointer;
 }
-.switch-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; cursor: pointer; font-size: 15px; position: relative; }
-.switch-row input { position: absolute; opacity: 0; width: 51px; height: 31px; right: 0; margin: 0; cursor: pointer; }
-.switch { width: 51px; height: 31px; border-radius: 999px; background: var(--fill-strong); position: relative; transition: background .2s; flex: none; }
-.switch::after {
-  content: ""; position: absolute; top: 2px; left: 2px; width: 27px; height: 27px; border-radius: 50%; background: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,.2); transition: transform .2s;
-}
-.switch-row input:checked + .switch { background: #34c759; }
-.switch-row input:checked + .switch::after { transform: translateX(20px); }
-.switch-row input:focus-visible + .switch { box-shadow: 0 0 0 3px var(--focus); }
 #reset { justify-self: start; }
 
 /* results */
@@ -336,5 +326,5 @@ svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width:
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .panel, .switch, .switch::after, .filters .chev { transition: none !important; }
+  .panel, .filters .chev { transition: none !important; }
 }

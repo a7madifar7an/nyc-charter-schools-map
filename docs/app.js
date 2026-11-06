@@ -82,7 +82,7 @@
 
   // ---------------------------------------------------------------- state
   var campuses = [], zips = {}, totalSchools = 0;
-  var state = { q: "", borough: "", levels: [], authorizer: "", district: "", newOnly: false, near: null };
+  var state = { q: "", borough: "", levels: [], authorizer: "", district: "", near: null };
   var markerByCampus = {};
 
   // ---------------------------------------------------------------- popups
@@ -134,7 +134,6 @@
     if (state.borough && p.borough !== state.borough) return false;
     if (state.authorizer && p.authorizer !== state.authorizer) return false;
     if (state.district && p.district !== state.district) return false;
-    if (state.newOnly && !p.new) return false;
     if (state.levels.length) {
       var ok = state.levels.some(function (k) {
         var lf = LEVEL_FILTERS.filter(function (x) { return x.key === k; })[0];
@@ -152,7 +151,7 @@
 
   function activeFilterCount() {
     return (state.borough ? 1 : 0) + (state.levels.length ? 1 : 0) + (state.authorizer ? 1 : 0) +
-      (state.district ? 1 : 0) + (state.newOnly ? 1 : 0);
+      (state.district ? 1 : 0);
   }
 
   // ---------------------------------------------------------------- render
@@ -392,28 +391,31 @@
 
     if (!isPhone()) $("filters").open = true;
 
-    // appearance: Auto (follow the device) -> Light -> Dark, remembered on this device
-    var THEMES = {
-      auto:  { next: "light", label: "automatic", icon: '<circle cx="10" cy="10" r="6.5"/><path d="M10 3.5v13a6.5 6.5 0 0 0 0-13z" fill="currentColor"/>' },
-      light: { next: "dark", label: "light", icon: '<circle cx="10" cy="10" r="3.5"/><path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.3 4.3l1.4 1.4M14.3 14.3l1.4 1.4M4.3 15.7l1.4-1.4M14.3 5.7l1.4-1.4"/>' },
-      dark:  { next: "auto", label: "dark", icon: '<path d="M16 12.5A6.5 6.5 0 0 1 7.5 4a6.5 6.5 0 1 0 8.5 8.5z"/>' }
+    // appearance: a light/dark toggle. It starts from the device setting; every tap visibly switches,
+    // and an explicit choice is remembered on this device.
+    var darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    var ICONS = {
+      dark: '<path d="M16 12.5A6.5 6.5 0 0 1 7.5 4a6.5 6.5 0 1 0 8.5 8.5z"/>',
+      light: '<circle cx="10" cy="10" r="3.5"/><path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.3 4.3l1.4 1.4M14.3 14.3l1.4 1.4M4.3 15.7l1.4-1.4M14.3 5.7l1.4-1.4"/>'
     };
-    function applyTheme(t) {
-      if (t === "auto") document.documentElement.removeAttribute("data-theme");
-      else document.documentElement.setAttribute("data-theme", t);
-      $("theme").innerHTML = '<svg viewBox="0 0 20 20" aria-hidden="true">' + THEMES[t].icon + "</svg>";
-      $("theme").setAttribute("aria-label", "Appearance: " + THEMES[t].label + ". Switch to " + THEMES[THEMES[t].next].label);
-      $("theme").title = "Appearance: " + THEMES[t].label;
+    function currentTheme() {
+      var t = document.documentElement.getAttribute("data-theme");
+      return t === "light" || t === "dark" ? t : (darkQuery.matches ? "dark" : "light");
     }
-    var theme = "auto";
-    try { theme = localStorage.getItem("theme") || "auto"; } catch (e) { /* storage unavailable */ }
-    if (!THEMES[theme]) theme = "auto";
-    applyTheme(theme);
+    function showThemeButton() {
+      var next = currentTheme() === "dark" ? "light" : "dark";
+      $("theme").innerHTML = '<svg viewBox="0 0 20 20" aria-hidden="true">' + ICONS[next] + "</svg>";
+      $("theme").setAttribute("aria-label", "Switch to " + next + " mode");
+      $("theme").title = "Switch to " + next + " mode";
+    }
     $("theme").addEventListener("click", function () {
-      theme = THEMES[theme].next;
-      applyTheme(theme);
-      try { localStorage.setItem("theme", theme); } catch (e) { /* storage unavailable */ }
+      var next = currentTheme() === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      try { localStorage.setItem("theme", next); } catch (e) { /* storage unavailable */ }
+      showThemeButton();
     });
+    if (darkQuery.addEventListener) darkQuery.addEventListener("change", showThemeButton);
+    showThemeButton();
 
     // desktop: hide/show the panel (remembered on this device)
     function setPanel(open, focus) {
@@ -443,10 +445,9 @@
     });
     $("authorizer").addEventListener("change", function () { state.authorizer = $("authorizer").value; render({ fit: true }); });
     $("district").addEventListener("change", function () { state.district = $("district").value; render({ fit: true }); });
-    $("new-only").addEventListener("change", function () { state.newOnly = $("new-only").checked; render({ fit: true }); });
     $("reset").addEventListener("click", function () {
-      state.q = ""; state.borough = ""; state.levels = []; state.authorizer = ""; state.district = ""; state.newOnly = false;
-      $("q").value = ""; $("authorizer").value = ""; $("district").value = ""; $("new-only").checked = false;
+      state.q = ""; state.borough = ""; state.levels = []; state.authorizer = ""; state.district = "";
+      $("q").value = ""; $("authorizer").value = ""; $("district").value = "";
       document.querySelector('input[name="borough"][value=""]').checked = true;
       document.querySelectorAll('input[name="level"]').forEach(function (x) { x.checked = false; });
       render({ fit: true });
