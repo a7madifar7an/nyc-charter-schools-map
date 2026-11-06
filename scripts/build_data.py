@@ -515,6 +515,19 @@ def main():
     say(f"- Addresses that look like an office or mailing address (suite, floor, apt, room): {len(office)}")
     for _, r in office.iterrows():
         say(f"  - {r.campus_name}: {r.address}")
+    # Grades: DOE (2026-27) is per school; the campus map (2025-26) is per campus. Use DOE wherever it can answer.
+    doe_gr = m.set_index("doe_code").grades_list
+    n_by_school = camp.groupby("doe_code").doe_code.transform("size")
+    union = camp.groupby("doe_code").grades_list.apply(lambda s: set().union(*map(set, s)))
+    single = n_by_school == 1
+    agrees = camp.doe_code.map(lambda c: union[c] == set(doe_gr[c]))
+    camp.loc[single, "grades_list"] = camp.loc[single, "doe_code"].map(doe_gr)
+    camp["grades_source"] = "DOE 2026-27"
+    camp.loc[~single & agrees, "grades_source"] = "campus map, matches DOE 2026-27"
+    camp.loc[~single & ~agrees, "grades_source"] = "campus map 2025-26"
+    say(f"- Campus grades: single-campus schools use DOE 2026-27 grades ({single.sum()} campuses); "
+        f"multi-campus schools whose campus grades add up to the DOE grades: {camp[~single & agrees].doe_code.nunique()} schools; "
+        f"multi-campus schools where they differ (campus grades shown as 2025-26): {camp[~single & ~agrees].doe_code.nunique()} schools")
     nogr = camp[camp.grades_list.str.len() == 0]
     say(f"- Campuses with no grades listed: {len(nogr)}")
     every_school = set(m.doe_code) == set(camp.doe_code)
@@ -543,7 +556,7 @@ def main():
     camp["schools_in_building"] = camp.bin.map(bin_count).fillna(1).astype(int)
     camp = camp.sort_values(["school", "campus_name"]).reset_index(drop=True)
     camp["campus_id"] = camp.doe_code + "-" + camp.building_code.fillna("") + "-" + camp.groupby(["doe_code", "building_code"]).cumcount().astype(str)
-    cols = ["campus_id", "doe_code", "school", "campus_name", "address", "borough", "district", "grades", "levels",
+    cols = ["campus_id", "doe_code", "school", "campus_name", "address", "borough", "district", "grades", "grades_source", "levels",
             "lat", "lon", "location", "bin", "schools_in_building", "campus_source"]
     camp[cols].to_csv(OUT / "campuses.csv", index=False)
 
@@ -555,7 +568,8 @@ def main():
                       "properties": {
                           "school": sc["name"], "campus": r.campus_name if r.campus_name != sc["name"] else "",
                           "address": r.address, "borough": r.borough, "district": r.district,
-                          "grades": r.grades, "levels": r.levels, "authorizer": sc.authorizer,
+                          "grades": r.grades, "grades_2025_26": r.grades_source == "campus map 2025-26", "levels": r.levels,
+                          "authorizer": sc.authorizer,
                           "school_grades": sc.grades, "website": sc.website, "opened": sc.year_opened,
                           "school_campuses": int(sc.campuses), "schools_in_building": int(r.schools_in_building),
                           "also_known_as": sc.nysed_name if norm_name(sc.nysed_name) != norm_name(sc["name"]) else "",

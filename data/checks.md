@@ -140,6 +140,7 @@ Schools not on the campus map (mostly new in 2026); placed at their DOE address:
   - Bedford Stuyvesant New Beginnings Charter Schools High School: 217 N 10th Street, Brooklyn, NY 11211 -> 229 NORTH 10 STREET, Brooklyn, NY, USA
 - Duplicate campus rows (same school, same building): 0 removed
 - Addresses that look like an office or mailing address (suite, floor, apt, room): 0
+- Campus grades: single-campus schools use DOE 2026-27 grades (183 campuses); multi-campus schools whose campus grades add up to the DOE grades: 73 schools; multi-campus schools where they differ (campus grades shown as 2025-26): 31 schools
 - Campuses with no grades listed: 0
 - Every school has at least one campus: PASS
 - Buildings shared by two or more schools: 34 (largest: 4 schools in one building)
