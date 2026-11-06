@@ -165,12 +165,15 @@ Where the AI got it wrong and the checks caught it:
 
 ## What I would build next
 
-- **Plain-language search with AI**, for example "K-5 with Pre-K near Bed-Stuy that a bus can reach". This needs a small server so no API key sits in the page.
-- **Admissions information**: application deadlines, lottery dates and seats per grade, the questions parents actually have.
-- **Commute times** by transit or walking from a home address, instead of straight-line distance.
-- **Outcomes**: NYSED report card data (test results, attendance) linked from each school.
-- **Automatic checks against every network's website**, not just Success Academy, so campus moves are caught each year.
-- **Spanish and other languages**, and shareable links that keep the current search and filters.
+In the order I would build them, quickest and most useful first:
+
+1. **Shareable links** that keep the current search and filters, so a parent can send a shortlist to someone else. A small change.
+2. **Outcomes**: NYSED report card data (test results, attendance) linked from each school. The data is public and the map already has each school's state ID, so the join is exact. Results are per school rather than per campus, small groups are suppressed for privacy, and scores should be shown neutrally with a link to the official report card.
+3. **Admissions information**: application deadlines and lottery dates, and where available, seats per grade. Dates are easy to add; seats per grade are not in any single public dataset and would have to be collected school by school.
+4. **Plain-language search with AI**, for example "K-5 with Pre-K near Bed-Stuy". The AI only turns the sentence into the map's existing filters, and the results always come from the dataset, so it cannot invent a school. It needs a small server so no API key sits in the page.
+5. **Automatic checks against the largest networks' websites**, not just Success Academy, so campus moves are caught each year. Each site is built differently, so AI would pull the addresses from each page and a person would review the differences.
+6. **Spanish and other languages**, starting with the languages NYC public schools already translate into.
+7. **Commute times** by transit or walking from a home address, instead of straight-line distance. Transit routing needs a trip planner running on the MTA's schedule data, so this is the largest piece of work. Once it exists, AI search could answer questions like "that a bus can reach".
 
 ## Credits
 
