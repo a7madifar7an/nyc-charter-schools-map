@@ -343,6 +343,29 @@
 
     if (!isPhone()) $("filters").open = true;
 
+    // appearance: Auto (follow the device) -> Light -> Dark, remembered on this device
+    var THEMES = {
+      auto:  { next: "light", label: "automatic", icon: '<circle cx="10" cy="10" r="6.5"/><path d="M10 3.5v13a6.5 6.5 0 0 0 0-13z" fill="currentColor"/>' },
+      light: { next: "dark", label: "light", icon: '<circle cx="10" cy="10" r="3.5"/><path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.3 4.3l1.4 1.4M14.3 14.3l1.4 1.4M4.3 15.7l1.4-1.4M14.3 5.7l1.4-1.4"/>' },
+      dark:  { next: "auto", label: "dark", icon: '<path d="M16 12.5A6.5 6.5 0 0 1 7.5 4a6.5 6.5 0 1 0 8.5 8.5z"/>' }
+    };
+    function applyTheme(t) {
+      if (t === "auto") document.documentElement.removeAttribute("data-theme");
+      else document.documentElement.setAttribute("data-theme", t);
+      $("theme").innerHTML = '<svg viewBox="0 0 20 20" aria-hidden="true">' + THEMES[t].icon + "</svg>";
+      $("theme").setAttribute("aria-label", "Appearance: " + THEMES[t].label + ". Switch to " + THEMES[THEMES[t].next].label);
+      $("theme").title = "Appearance: " + THEMES[t].label;
+    }
+    var theme = "auto";
+    try { theme = localStorage.getItem("theme") || "auto"; } catch (e) { /* storage unavailable */ }
+    if (!THEMES[theme]) theme = "auto";
+    applyTheme(theme);
+    $("theme").addEventListener("click", function () {
+      theme = THEMES[theme].next;
+      applyTheme(theme);
+      try { localStorage.setItem("theme", theme); } catch (e) { /* storage unavailable */ }
+    });
+
     // desktop: hide/show the panel (remembered on this device)
     function setPanel(open, focus) {
       panel.hidden = !open;

@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
   <link rel="stylesheet" href="vendor/leaflet.markercluster/MarkerCluster.css">
   <link rel="stylesheet" href="style.css">
+  <script>try { var t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}</script>
 </head>
 <body>
   <a class="skip" href="#results">Skip to the school list</a>
@@ -28,9 +29,14 @@
         <h1>NYC Charter Schools</h1>
         <p class="sub">2026-27 school year</p>
       </div>
-      <button type="button" id="panel-close" class="icon-btn" aria-label="Hide the panel" aria-controls="panel">
-        <svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2.5" y="3.5" width="15" height="13" rx="2.5"/><path d="M8 3.5v13"/></svg>
-      </button>
+      <div class="head-actions">
+        <button type="button" id="theme" class="icon-btn" aria-label="Appearance: automatic. Switch to light">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="M10 3.5v13a6.5 6.5 0 0 0 0-13z" fill="currentColor"/></svg>
+        </button>
+        <button type="button" id="panel-close" class="icon-btn" aria-label="Hide the panel" aria-controls="panel">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2.5" y="3.5" width="15" height="13" rx="2.5"/><path d="M8 3.5v13"/></svg>
+        </button>
+      </div>
     </header>
 
     <div class="panel-scroll">
