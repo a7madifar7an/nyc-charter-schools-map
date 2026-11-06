@@ -1,0 +1,56 @@
+# Rebuilds the charter school dataset from the official sources twice a year and opens a
+# pull request with a plain-English summary of what changed. Nothing reaches the live map
+# until a person reviews and merges the pull request.
+#
+# Schedule (times in UTC):
+#   - August 1: NYC DOE publishes next-year school data by July 15 (fall semester)
+#   - January 15: mid-year changes (spring semester)
+# It can also be run by hand from the Actions tab ("Run workflow").
+name: Update school data
+
+on:
+  schedule:
+    - cron: "17 13 1 8 *"
+    - cron: "17 13 15 1 *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Rebuild the dataset from the sources
+        # Fails (and GitHub emails the repo owner) if a source changed shape or a check breaks,
+        # so wrong data is never proposed silently.
+        run: python scripts/build_data.py --refresh
+
+      - name: Summarise the changes
+        run: python scripts/summarize_changes.py > "$RUNNER_TEMP/change_summary.md"
+
+      - name: Open a pull request if anything changed
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: data-update/${{ github.run_id }}
+          delete-branch: true
+          commit-message: "Update school data from official sources"
+          title: "School data update (${{ github.event_name == 'schedule' && 'scheduled' || 'manual' }} run)"
+          body-path: ${{ runner.temp }}/change_summary.md
+          labels: data-update
