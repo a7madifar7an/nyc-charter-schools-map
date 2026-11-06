@@ -257,6 +257,55 @@
     $("sheet-handle").setAttribute("aria-label", open ? "Show more of the map" : "Expand the school list");
   }
 
+  // Phone: drag the sheet with a finger. Swipe up to expand, swipe down to shrink; it follows the finger and
+  // snaps on release. When the expanded list is scrolled, a downward swipe scrolls the list first.
+  function enableSheetGestures() {
+    var scroller = panel.querySelector(".panel-scroll");
+    var startY = 0, lastY = 0, lastT = 0, velocity = 0, startH = 0, dragging = false, tracking = false, fromTop = false;
+    function heights() {
+      var peek = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--peek")) || 214;
+      return { min: peek, max: window.innerHeight * 0.82 };
+    }
+    panel.addEventListener("touchstart", function (e) {
+      if (!isPhone() || e.touches.length !== 1) return;
+      tracking = true; dragging = false;
+      startY = lastY = e.touches[0].clientY; lastT = e.timeStamp; velocity = 0;
+      startH = panel.getBoundingClientRect().height;
+      fromTop = scroller.scrollTop <= 0 || !!e.target.closest(".sheet-handle, .panel-head");
+    }, { passive: true });
+    panel.addEventListener("touchmove", function (e) {
+      if (!tracking) return;
+      var y = e.touches[0].clientY, dy = y - startY, open = panel.classList.contains("sheet-open");
+      if (!dragging) {
+        if (Math.abs(dy) < 8) return;
+        // expanded sheet: only a downward swipe from the top of the list (or on the header) moves the sheet
+        if (open && (dy < 0 || !fromTop)) { tracking = false; return; }
+        dragging = true;
+        panel.classList.add("dragging");
+        if (document.activeElement && document.activeElement.blur && panel.contains(document.activeElement)) document.activeElement.blur();
+      }
+      e.preventDefault();
+      var h = heights();
+      panel.style.height = Math.max(h.min, Math.min(h.max, startH - dy)) + "px";
+      velocity = (y - lastY) / Math.max(1, e.timeStamp - lastT);
+      lastY = y; lastT = e.timeStamp;
+    }, { passive: false });
+    function end() {
+      if (!tracking) return;
+      tracking = false;
+      if (!dragging) return;
+      dragging = false;
+      // a quick flick or a drag of more than 60px goes the way the finger went; tiny drags snap back
+      var moved = lastY - startY, wasOpen = panel.classList.contains("sheet-open");
+      var open = velocity < -0.3 || moved < -60 ? true : velocity > 0.3 || moved > 60 ? false : wasOpen;
+      panel.classList.remove("dragging");
+      panel.style.height = "";
+      setSheet(open);
+    }
+    panel.addEventListener("touchend", end);
+    panel.addEventListener("touchcancel", end);
+  }
+
   // ---------------------------------------------------------------- near me
   function setNear(lat, lon, label) {
     state.near = { lat: lat, lon: lon, label: label };
@@ -430,6 +479,7 @@
     });
     totalSchools = Object.keys(codes).length;
     buildControls();
+    enableSheetGestures();
     addLegend();
     render({ fit: true });
   }).catch(function (err) {
