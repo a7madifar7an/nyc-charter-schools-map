@@ -163,7 +163,7 @@ Success Academy publishes its locations with coordinates (snapshot: `data/crossc
 
 ## Result
 
-- **287 schools** at **424 campuses** in **382 buildings**
+- **287 schools** at **424 campuses** in **383 buildings**
 - Authorizer SUNY: 191 schools
 - Authorizer Board of Regents: 61 schools
 - Authorizer NYC DOE: 35 schools

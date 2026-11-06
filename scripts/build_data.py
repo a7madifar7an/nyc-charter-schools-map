@@ -718,7 +718,8 @@ def main():
     (SITE_DATA / "zip_centroids.json").write_text(json.dumps(zips, separators=(",", ":"), sort_keys=True))
 
     say("\n## Result\n")
-    say(f"- **{len(schools)} schools** at **{len(camp)} campuses** in **{camp.bin.nunique()} buildings**")
+    building_key = camp.bin.where(camp.bin.notna(), camp.lat.round(5).astype(str) + "," + camp.lon.round(5).astype(str))
+    say(f"- **{len(schools)} schools** at **{len(camp)} campuses** in **{building_key.nunique()} buildings**")
     for k, v in schools.authorizer.value_counts().items():
         say(f"- Authorizer {k}: {v} schools")
     say(f"- Schools with a website link: {(schools.website.fillna('') != '').sum()}/{len(schools)}")
