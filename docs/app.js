@@ -52,7 +52,15 @@
   var $ = function (id) { return document.getElementById(id); };
 
   // ---------------------------------------------------------------- map
-  var map = L.map("map", { zoomControl: true });
+  var map = L.map("map", { zoomControl: false });
+  L.control.zoom({ position: "topright" }).addTo(map);
+  var isPhone = function () { return window.matchMedia("(max-width: 760px)").matches; };
+  var panel = $("panel");
+  // Keep fitted views and popups clear of the floating panel (desktop) or the bottom sheet (phone).
+  function viewPadding() {
+    if (isPhone()) return { tl: [20, 20], br: [20, panel.getBoundingClientRect().height + 20] };
+    return { tl: [panel.hidden ? 20 : panel.getBoundingClientRect().right + 20, 20], br: [70, 20] };
+  }
   // OpenStreetMap tiles (free with attribution), softened in CSS so the coloured pins stand out.
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19, className: "basemap",
@@ -170,7 +178,10 @@
         : group[0].school;
       var m = L.marker([group[0].lat, group[0].lon], {
         icon: iconFor(group), title: title, alt: title, riseOnHover: true, campuses: group.length
-      }).bindPopup(buildingHtml(group, hidden), { maxWidth: 320, autoPanPaddingTopLeft: [56, 20], autoPanPaddingBottomRight: [20, 20] });
+      }).bindPopup(buildingHtml(group, hidden), {
+        maxWidth: 320, autoPanPaddingTopLeft: [16, 16],
+        autoPanPaddingBottomRight: isPhone() ? [16, panel.getBoundingClientRect().height + 16] : [64, 16]
+      });
       group.forEach(function (p) { markerByCampus[p.id] = m; });
       return m;
     });
@@ -206,7 +217,8 @@
             (p.school_campuses > 1 && c.grades ? " <small>(grades " + esc(c.grades) + ")</small>" : "");
           return '<li><button type="button" class="campus-btn" data-id="' + c.id + '">' +
             '<span class="pin lvl-' + c.pin + '" aria-hidden="true"></span><span>' + label +
-            (state.near && s.campuses.length > 1 ? " <small>" + c.dist.toFixed(1) + " mi</small>" : "") + "</span></button></li>";
+            (state.near && s.campuses.length > 1 ? " <small>" + c.dist.toFixed(1) + " mi</small>" : "") + "</span>" +
+            '<svg class="go" viewBox="0 0 20 20" aria-hidden="true"><path d="M8 5l5 5-5 5"/></svg></button></li>';
         }).join("");
         return "<li><h2><span>" + esc(s.name) + (p.new ? ' <span class="badge">New</span>' : "") + "</span>" +
           (state.near ? '<span class="dist">' + s.dist.toFixed(1) + " mi</span>" : "") + "</h2>" +
@@ -226,15 +238,23 @@
     $("filter-count").textContent = n;
 
     if (opts.fit && markers.length && !state.near) {
-      map.fitBounds(L.featureGroup(markers).getBounds(), { padding: [30, 30], maxZoom: 15 });
+      var pad = viewPadding();
+      map.fitBounds(L.featureGroup(markers).getBounds(), { paddingTopLeft: pad.tl, paddingBottomRight: pad.br, maxZoom: 15 });
     }
   }
 
   function showCampus(id) {
     var m = markerByCampus[id];
     if (!m) return;
-    if (window.matchMedia("(max-width: 760px)").matches) $("map").scrollIntoView({ block: "start" });
+    if (isPhone()) setSheet(false);
     cluster.zoomToShowLayer(m, function () { m.openPopup(); });
+  }
+
+  function setSheet(open) {
+    panel.classList.toggle("sheet-open", open);
+    if (!open) panel.querySelector(".panel-scroll").scrollTop = 0;
+    $("sheet-handle").setAttribute("aria-expanded", open ? "true" : "false");
+    $("sheet-handle").setAttribute("aria-label", open ? "Show more of the map" : "Expand the school list");
   }
 
   // ---------------------------------------------------------------- near me
@@ -245,9 +265,10 @@
       icon: L.divIcon({ className: "", iconSize: [18, 18], iconAnchor: [9, 9], html: '<div class="here-pin"></div>' }),
       title: "You searched: " + label, zIndexOffset: 1000, keyboard: false
     }).addTo(hereLayer);
-    map.setView([lat, lon], 14);
+    var pad = viewPadding();
+    map.fitBounds(L.latLng(lat, lon).toBounds(1600), { paddingTopLeft: pad.tl, paddingBottomRight: pad.br });
     $("near-status").innerHTML = "Sorted by distance from <strong>" + esc(label) + "</strong>. " +
-      '<button type="button" class="link" id="near-clear">Clear</button>';
+      '<button type="button" class="btn-text" id="near-clear">Clear</button>';
     $("near-clear").addEventListener("click", clearNear);
     render();
   }
@@ -283,7 +304,7 @@
   function addLegend() {
     var ctl = L.control({ position: "bottomright" });
     ctl.onAdd = function () {
-      var div = L.DomUtil.create("div", "legend");
+      var div = L.DomUtil.create("div", "legend glass");
       var rows = Object.keys(PIN_LEVELS).map(function (k) {
         return '<div class="row"><span class="pin lvl-' + k + '"></span>' + PIN_LEVELS[k] + "</div>";
       }).join("") +
@@ -310,7 +331,7 @@
         (name || "All") + "</span></label>";
     }).join(""));
     $("levels").insertAdjacentHTML("beforeend", LEVEL_FILTERS.map(function (l) {
-      return '<label class="check"><input type="checkbox" name="level" value="' + l.key + '"> ' + l.label + "</label>";
+      return '<label><input type="checkbox" name="level" value="' + l.key + '"><span>' + l.label + "</span></label>";
     }).join(""));
 
     var auths = {}, dists = {};
@@ -320,7 +341,26 @@
       $("district").insertAdjacentHTML("beforeend", '<option value="' + esc(d) + '">District ' + esc(d) + "</option>");
     });
 
-    if (window.matchMedia("(min-width: 761px)").matches) $("filters").open = true;
+    if (!isPhone()) $("filters").open = true;
+
+    // desktop: hide/show the panel (remembered on this device)
+    function setPanel(open, focus) {
+      panel.hidden = !open;
+      $("panel-open").hidden = open;
+      $("panel-open").setAttribute("aria-expanded", open ? "true" : "false");
+      try { localStorage.setItem("panelHidden", open ? "0" : "1"); } catch (e) { /* storage unavailable */ }
+      if (focus) (open ? $("q") : $("panel-open")).focus();
+    }
+    $("panel-close").addEventListener("click", function () { setPanel(false, true); });
+    $("panel-open").addEventListener("click", function () { setPanel(true, true); });
+    try { if (!isPhone() && localStorage.getItem("panelHidden") === "1") setPanel(false, false); } catch (e) { /* ignore */ }
+
+    // phone: bottom sheet expands for searching and browsing, shrinks to show the map
+    $("sheet-handle").addEventListener("click", function () { setSheet(!panel.classList.contains("sheet-open")); });
+    ["q", "near"].forEach(function (id) {
+      $(id).addEventListener("focus", function () { if (isPhone()) setSheet(true); });
+    });
+    $("filters").addEventListener("toggle", function () { if (isPhone() && $("filters").open) setSheet(true); });
 
     $("q").addEventListener("input", debounce(function () { state.q = $("q").value; render({ fit: true }); }, 200));
     $("search-form").addEventListener("submit", function (e) { e.preventDefault(); });

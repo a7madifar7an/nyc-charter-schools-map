@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
   <title>NYC Charter Schools Map</title>
   <meta name="description" content="Every NYC charter school campus for the 2026-27 school year, built from official NYC DOE, NYSED and NYC Charter School Center data.">
   <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
@@ -11,62 +12,91 @@
 </head>
 <body>
   <a class="skip" href="#results">Skip to the school list</a>
-  <header class="topbar">
-    <h1>NYC Charter Schools <span class="year">2026-27</span></h1>
-    <a class="about" href="https://github.com/a7madifar7an/nyc-charter-schools-map#readme">About the data</a>
-  </header>
 
-  <main class="layout">
-    <section class="controls" aria-label="Search and filters">
-      <form id="search-form" class="field" role="search">
-        <label for="q">Search schools</label>
-        <input id="q" type="search" placeholder="School name, network or address" autocomplete="off">
-      </form>
+  <div id="map" role="region" aria-label="Map of charter school campuses"></div>
 
-      <form id="near-form" class="field">
-        <label for="near">Find schools near you</label>
-        <div class="inline">
-          <input id="near" type="text" placeholder="Street address or ZIP code" autocomplete="street-address">
-          <button type="submit">Go</button>
-        </div>
+  <button type="button" id="panel-open" class="panel-open glass" aria-controls="panel" aria-expanded="true" hidden>
+    <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4.5 4.5"/></svg>
+    <span>Search &amp; list</span>
+  </button>
+
+  <aside id="panel" class="panel glass" aria-label="Search, filters and school list">
+    <button type="button" id="sheet-handle" class="sheet-handle" aria-label="Expand the school list" aria-expanded="false"><span></span></button>
+
+    <header class="panel-head">
+      <div>
+        <h1>NYC Charter Schools</h1>
+        <p class="sub">2026-27 school year</p>
+      </div>
+      <button type="button" id="panel-close" class="icon-btn" aria-label="Hide the panel" aria-controls="panel">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2.5" y="3.5" width="15" height="13" rx="2.5"/><path d="M8 3.5v13"/></svg>
+      </button>
+    </header>
+
+    <div class="panel-scroll">
+      <section class="controls">
+        <form id="search-form" role="search" class="search">
+          <label for="q" class="visually-hidden">Search schools</label>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4.5 4.5"/></svg>
+          <input id="q" type="search" placeholder="Search name, network or address" autocomplete="off">
+        </form>
+
+        <form id="near-form" class="near">
+          <label for="near" class="visually-hidden">Find schools near an address or ZIP code</label>
+          <div class="search">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 18s6-5.2 6-10A6 6 0 0 0 4 8c0 4.8 6 10 6 10z"/><circle cx="10" cy="8" r="2.2"/></svg>
+            <input id="near" type="text" placeholder="Near an address or ZIP" autocomplete="street-address">
+          </div>
+          <button type="submit" class="btn-primary">Go</button>
+        </form>
         <p id="near-status" class="hint" aria-live="polite"></p>
-      </form>
 
-      <details id="filters" class="filters">
-        <summary>Filters <span id="filter-count" class="count-pill" hidden></span></summary>
-        <fieldset class="chips" id="borough">
-          <legend>Borough</legend>
-        </fieldset>
-        <fieldset class="checks" id="levels">
-          <legend>Grade level</legend>
-        </fieldset>
-        <div class="selects">
-          <div class="field">
-            <label for="authorizer">Authorizer</label>
-            <select id="authorizer"><option value="">All authorizers</option></select>
+        <details id="filters" class="filters">
+          <summary>
+            <span>Filters</span>
+            <span id="filter-count" class="count-pill" hidden></span>
+            <svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 8l4 4 4-4"/></svg>
+          </summary>
+          <div class="filter-body">
+            <fieldset class="chips" id="borough">
+              <legend>Borough</legend>
+            </fieldset>
+            <fieldset class="chips" id="levels">
+              <legend>Grade level</legend>
+            </fieldset>
+            <div class="selects">
+              <div class="select">
+                <label for="authorizer">Authorizer</label>
+                <select id="authorizer"><option value="">All</option></select>
+              </div>
+              <div class="select">
+                <label for="district">District</label>
+                <select id="district"><option value="">All</option></select>
+              </div>
+            </div>
+            <label class="switch-row" for="new-only">
+              <span>New in 2026-27 only</span>
+              <input type="checkbox" id="new-only" role="switch">
+              <span class="switch" aria-hidden="true"></span>
+            </label>
+            <button type="button" id="reset" class="btn-text">Clear all filters</button>
           </div>
-          <div class="field">
-            <label for="district">School district</label>
-            <select id="district"><option value="">All districts</option></select>
-          </div>
-        </div>
-        <label class="check"><input type="checkbox" id="new-only"> New in 2026-27 only</label>
-        <button type="button" id="reset" class="link">Clear all filters</button>
-      </details>
-    </section>
+        </details>
+      </section>
 
-    <div id="map" role="region" aria-label="Map of charter school campuses"></div>
+      <section class="results" id="results" aria-label="School list" tabindex="-1">
+        <p class="summary" id="summary" aria-live="polite">Loading schools…</p>
+        <ol id="list" class="list"></ol>
+      </section>
 
-    <section class="results" id="results" aria-label="School list" tabindex="-1">
-      <p class="summary" id="summary" aria-live="polite">Loading schools…</p>
-      <ol id="list" class="list"></ol>
-    </section>
-  </main>
-
-  <footer class="credits">
-    Data: NYC DOE school report (Nov 2026), NYSED Charter Schools Directory, NYC Charter School Center campus list,
-    NYC Planning GeoSearch. <a href="https://github.com/a7madifar7an/nyc-charter-schools-map/blob/main/data/checks.md">Data checks</a>
-  </footer>
+      <footer class="panel-foot">
+        Data: NYC DOE school report (Nov 2026), NYSED Charter Schools Directory, NYC Charter School Center campus list,
+        NYC Planning GeoSearch.
+        <a href="https://github.com/a7madifar7an/nyc-charter-schools-map#readme">About the data</a> ·
+        <a href="https://github.com/a7madifar7an/nyc-charter-schools-map/blob/main/data/checks.md">Data checks</a>
+      </footer>
+    </div>
+  </aside>
 
   <script src="vendor/leaflet/leaflet.js"></script>
   <script src="vendor/leaflet.markercluster/leaflet.markercluster.js"></script>

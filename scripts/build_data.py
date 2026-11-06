@@ -511,7 +511,11 @@ def main():
     say(f"\nManual campus corrections from `data/overrides.csv`: {len(fixes)}\n")
     for _, o in fixes.iterrows():
         hit = (camp.doe_code == o.doe_code) & camp.address.str.contains(o.match_address, case=False, regex=False)
-        assert hit.sum() == 1, f"override matched {hit.sum()} campuses: {o.to_dict()}"
+        assert hit.sum() <= 1, f"override matched {hit.sum()} campuses, expected one: {o.to_dict()}"
+        if hit.sum() == 0:
+            # The sources have caught up (or changed); the correction is no longer needed. Flag it for removal.
+            say(f"- **Correction no longer applies, review and remove it:** {o.action} `{o.doe_code}` '{o.match_address}'")
+            continue
         before = camp.loc[hit, "address"].iloc[0]
         if o.action == "drop_campus":
             camp = camp[~hit].copy()
