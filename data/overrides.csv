@@ -1,0 +1,4 @@
+action,doe_code,nysed_sed_code,reason
+exclude,84OBIG,,"Listed under the DOE Office of Charter Schools, but the school is in Mount Vernon (Westchester), outside NYC."
+exclude,84X554,,"Listed as Open in the DOE report but with no grades for 2026-27, and absent from the NYSED directory. Treated as not operating."
+match,84Q422,342700861100,"NYSED serial 861100 is shared with South Bronx Community Charter HS; DOE carries a placeholder BEDS code for Success Academy NYC 14. Matched by name."
