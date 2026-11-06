@@ -10,28 +10,62 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip" href="#results">Skip to the school list</a>
   <header class="topbar">
-    <div class="title">
-      <h1>NYC Charter Schools <span class="year">2026-27</span></h1>
-      <p class="summary" id="summary" aria-live="polite">Loading…</p>
-    </div>
-    <nav class="boroughs" aria-label="Zoom to a borough">
-      <button type="button" data-borough="all">All NYC</button>
-      <button type="button" data-borough="Bronx">Bronx</button>
-      <button type="button" data-borough="Brooklyn">Brooklyn</button>
-      <button type="button" data-borough="Manhattan">Manhattan</button>
-      <button type="button" data-borough="Queens">Queens</button>
-      <button type="button" data-borough="Staten Island">Staten Island</button>
-    </nav>
+    <h1>NYC Charter Schools <span class="year">2026-27</span></h1>
+    <a class="about" href="https://github.com/a7madifar7an/nyc-charter-schools-map#readme">About the data</a>
   </header>
 
   <main class="layout">
+    <section class="controls" aria-label="Search and filters">
+      <form id="search-form" class="field" role="search">
+        <label for="q">Search schools</label>
+        <input id="q" type="search" placeholder="School name, network or address" autocomplete="off">
+      </form>
+
+      <form id="near-form" class="field">
+        <label for="near">Find schools near you</label>
+        <div class="inline">
+          <input id="near" type="text" placeholder="Street address or ZIP code" autocomplete="street-address">
+          <button type="submit">Go</button>
+        </div>
+        <p id="near-status" class="hint" aria-live="polite"></p>
+      </form>
+
+      <details id="filters" class="filters">
+        <summary>Filters <span id="filter-count" class="count-pill" hidden></span></summary>
+        <fieldset class="chips" id="borough">
+          <legend>Borough</legend>
+        </fieldset>
+        <fieldset class="checks" id="levels">
+          <legend>Grade level</legend>
+        </fieldset>
+        <div class="selects">
+          <div class="field">
+            <label for="authorizer">Authorizer</label>
+            <select id="authorizer"><option value="">All authorizers</option></select>
+          </div>
+          <div class="field">
+            <label for="district">School district</label>
+            <select id="district"><option value="">All districts</option></select>
+          </div>
+        </div>
+        <label class="check"><input type="checkbox" id="new-only"> New in 2026-27 only</label>
+        <button type="button" id="reset" class="link">Clear all filters</button>
+      </details>
+    </section>
+
     <div id="map" role="region" aria-label="Map of charter school campuses"></div>
+
+    <section class="results" id="results" aria-label="School list" tabindex="-1">
+      <p class="summary" id="summary" aria-live="polite">Loading schools…</p>
+      <ol id="list" class="list"></ol>
+    </section>
   </main>
 
   <footer class="credits">
     Data: NYC DOE school report (Nov 2026), NYSED Charter Schools Directory, NYC Charter School Center campus list,
-    NYC Planning GeoSearch. <a href="https://github.com/a7madifar7an/nyc-charter-schools-map">How this map was built</a>
+    NYC Planning GeoSearch. <a href="https://github.com/a7madifar7an/nyc-charter-schools-map/blob/main/data/checks.md">Data checks</a>
   </footer>
 
   <script src="vendor/leaflet/leaflet.js"></script>

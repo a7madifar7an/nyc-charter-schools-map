@@ -1,44 +1,88 @@
-/* NYC charter school campus map. Data: data/campuses.geojson, built by scripts/build_data.py */
+/* NYC charter school campus map.
+   Data: data/campuses.geojson and data/zip_centroids.json, built by scripts/build_data.py */
 (function () {
   "use strict";
 
-  var LEVELS = {
-    elem:    { label: "Elementary" },
-    elemmid: { label: "Elementary + Middle" },
-    mid:     { label: "Middle" },
-    high:    { label: "High (incl. 6-12)" },
-    k12:     { label: "K-12" }
+  var GRADE_ORDER = ["PK", "K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+  var BOROUGHS = ["Bronx", "Brooklyn", "Manhattan", "Queens", "Staten Island"];
+  var LEVEL_FILTERS = [
+    { key: "pk", label: "Pre-K", grades: ["PK"] },
+    { key: "elem", label: "Elementary (K-5)", grades: ["K", "1", "2", "3", "4", "5"] },
+    { key: "mid", label: "Middle (6-8)", grades: ["6", "7", "8"] },
+    { key: "high", label: "High (9-12)", grades: ["9", "10", "11", "12"] }
+  ];
+  var PIN_LEVELS = {
+    elem: "Elementary", elemmid: "Elementary + Middle", mid: "Middle", high: "High (incl. 6-12)", k12: "K-12"
   };
+  var GEOSEARCH = "https://geosearch.planninglabs.nyc/v2/search";
 
-  function levelOf(levels) {
-    var e = levels.indexOf("Elementary") >= 0, m = levels.indexOf("Middle") >= 0, h = levels.indexOf("High") >= 0;
+  // ---------------------------------------------------------------- helpers
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function norm(s) {
+    return String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "")
+      .replace(/[–—]/g, "-").replace(/[^a-z0-9]+/g, " ").trim();
+  }
+  function gradeList(span) {
+    if (!span) return [];
+    var parts = span.split("-"), a = GRADE_ORDER.indexOf(parts[0]), b = GRADE_ORDER.indexOf(parts[1] || parts[0]);
+    return a < 0 || b < 0 ? [] : GRADE_ORDER.slice(a, b + 1);
+  }
+  function pinLevel(grades) {
+    var has = function (list) { return list.some(function (g) { return grades.indexOf(g) >= 0; }); };
+    var e = has(["PK", "K", "1", "2", "3", "4", "5"]), m = has(["6", "7", "8"]), h = has(["9", "10", "11", "12"]);
     if (e && h) return "k12";
     if (h) return "high";
     if (e && m) return "elemmid";
     if (m) return "mid";
     return "elem";
   }
-
-  function esc(s) {
-    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
-      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
-    });
+  function miles(lat1, lon1, lat2, lon2) {
+    var r = Math.PI / 180, dLat = (lat2 - lat1) * r, dLon = (lon2 - lon1) * r;
+    var x = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos(lat1 * r) * Math.cos(lat2 * r) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    return 3958.8 * 2 * Math.atan2(Math.sqrt(x), Math.sqrt(1 - x));
   }
+  function debounce(fn, ms) {
+    var t; return function () { clearTimeout(t); t = setTimeout(fn, ms); };
+  }
+  var $ = function (id) { return document.getElementById(id); };
 
-  var map = L.map("map", { zoomControl: true, preferCanvas: false });
+  // ---------------------------------------------------------------- map
+  var map = L.map("map", { zoomControl: true });
   // OpenStreetMap tiles (free with attribution), softened in CSS so the coloured pins stand out.
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 19,
-    className: "basemap",
+    maxZoom: 19, className: "basemap",
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
   map.setView([40.70, -73.94], 11);
 
+  var cluster = L.markerClusterGroup({
+    maxClusterRadius: 32, disableClusteringAtZoom: 15, spiderfyOnMaxZoom: true, showCoverageOnHover: false,
+    iconCreateFunction: function (c) {
+      var n = 0;
+      c.getAllChildMarkers().forEach(function (m) { n += m.options.campuses; });
+      var size = n < 10 ? 30 : n < 30 ? 36 : 42;
+      return L.divIcon({ className: "", iconSize: [size, size],
+        html: '<div class="cluster" style="width:' + size + "px;height:" + size + 'px">' + n + "</div>" });
+    }
+  }).addTo(map);
+  var hereLayer = L.layerGroup().addTo(map);
+
+  // ---------------------------------------------------------------- state
+  var campuses = [], zips = {}, totalSchools = 0;
+  var state = { q: "", borough: "", levels: [], authorizer: "", district: "", newOnly: false, near: null };
+  var markerByCampus = {};
+
+  // ---------------------------------------------------------------- popups
   function campusHtml(p, showAddress) {
-    var gradesNote = p.grades_2025_26
+    var note = p.grades_2025_26
       ? ' <span class="note">(as of 2025-26; school is ' + esc(p.school_grades) + " in 2026-27)</span>"
-      : (p.school_grades && p.school_grades !== p.grades && p.school_campuses > 1
-        ? ' <span class="note">(school: ' + esc(p.school_grades) + ")</span>" : "");
+      : (p.school_campuses > 1 && p.school_grades && p.school_grades !== p.grades
+        ? ' <span class="note">(whole school: ' + esc(p.school_grades) + ")</span>" : "");
     var links = [];
     if (p.phone) links.push('<a href="tel:' + esc(p.phone.replace(/[^\d+]/g, "")) + '">' + esc(p.phone) + "</a>");
     if (p.website) links.push('<a href="' + esc(p.website) + '" target="_blank" rel="noopener">Website</a>');
@@ -50,43 +94,202 @@
       (p.also_known_as ? '<p class="campus">State name: ' + esc(p.also_known_as) + "</p>" : "") +
       (showAddress ? '<p class="address">' + esc(p.address) + "</p>" : "") +
       "<dl>" +
-      "<dt>Grades</dt><dd>" + esc(p.grades) + gradesNote + "</dd>" +
+      "<dt>Grades</dt><dd>" + esc(p.grades) + note + "</dd>" +
       "<dt>District</dt><dd>" + esc(p.district) + " · " + esc(p.borough) + "</dd>" +
       "<dt>Authorizer</dt><dd>" + esc(p.authorizer) + "</dd>" +
       "<dt>Opened</dt><dd>" + esc(p.opened) + "</dd>" +
       (p.school_campuses > 1 ? "<dt>Campuses</dt><dd>" + p.school_campuses + " (this is one)</dd>" : "") +
       "</dl>" +
-      (p.approximate ? '<p class="note">Location approximate: this address is not in the city address database, so the pin is at the nearest address on the same street.</p>' : "") +
-      '<div class="links">' + links.join("") + "</div>" +
-      "</div>";
+      (p.approximate ? '<p class="note">Approximate location: this address is not in the city address database, so the pin is at the nearest address on the same street.</p>' : "") +
+      '<div class="links">' + links.join("") + "</div></div>";
   }
-
-  function buildingHtml(feats) {
-    var shared = feats.length > 1;
+  function buildingHtml(shown, hidden) {
+    var shared = shown.length + hidden > 1;
     var head = shared
-      ? '<p class="building">' + feats.length + " schools share this building</p>" +
-        '<p class="address">' + esc(feats[0].properties.address) + "</p>" : "";
-    return '<div class="popup">' + head + feats.map(function (f) { return campusHtml(f.properties, !shared); }).join("") + "</div>";
+      ? '<p class="building">' + (shown.length + hidden) + " schools share this building</p>" +
+        '<p class="address">' + esc(shown[0].address) + "</p>" +
+        (hidden ? '<p class="note">' + hidden + " of them " + (hidden === 1 ? "doesn't" : "don't") + " match your filters.</p>" : "")
+      : "";
+    return '<div class="popup">' + head + shown.map(function (p) { return campusHtml(p, !shared); }).join("") + "</div>";
   }
-
-  function iconFor(feats) {
-    if (feats.length > 1) {
+  function iconFor(shown) {
+    if (shown.length > 1) {
       return L.divIcon({ className: "", iconSize: [22, 22], iconAnchor: [11, 11], popupAnchor: [0, -10],
-        html: '<div class="pin shared lvl-shared">' + feats.length + "</div>" });
+        html: '<div class="pin shared lvl-shared">' + shown.length + "</div>" });
     }
-    var lv = levelOf(feats[0].properties.levels);
     return L.divIcon({ className: "", iconSize: [14, 14], iconAnchor: [7, 7], popupAnchor: [0, -6],
-      html: '<div class="pin lvl-' + lv + '"></div>' });
+      html: '<div class="pin lvl-' + shown[0].pin + '"></div>' });
   }
 
+  // ---------------------------------------------------------------- filtering
+  function matches(p) {
+    if (state.borough && p.borough !== state.borough) return false;
+    if (state.authorizer && p.authorizer !== state.authorizer) return false;
+    if (state.district && p.district !== state.district) return false;
+    if (state.newOnly && !p.new) return false;
+    if (state.levels.length) {
+      var ok = state.levels.some(function (k) {
+        var lf = LEVEL_FILTERS.filter(function (x) { return x.key === k; })[0];
+        return lf.grades.some(function (g) { return p.gradeList.indexOf(g) >= 0; });
+      });
+      if (!ok) return false;
+    }
+    if (state.q) {
+      // every typed word must start a word in the school's name, campus name or address ("4" won't match "10457")
+      var words = norm(state.q).split(" ");
+      for (var i = 0; i < words.length; i++) if (p.haystack.indexOf(" " + words[i]) < 0) return false;
+    }
+    return true;
+  }
+
+  function activeFilterCount() {
+    return (state.borough ? 1 : 0) + (state.levels.length ? 1 : 0) + (state.authorizer ? 1 : 0) +
+      (state.district ? 1 : 0) + (state.newOnly ? 1 : 0);
+  }
+
+  // ---------------------------------------------------------------- render
+  function render(opts) {
+    opts = opts || {};
+    var shown = campuses.filter(matches);
+    var shownIds = {};
+    shown.forEach(function (p) { shownIds[p.id] = true; });
+
+    // markers: one per building, listing every matching school in it
+    cluster.clearLayers();
+    markerByCampus = {};
+    var buildings = {}, order = [];
+    shown.forEach(function (p) {
+      if (!buildings[p.building]) { buildings[p.building] = []; order.push(p.building); }
+      buildings[p.building].push(p);
+    });
+    var markers = order.map(function (key) {
+      var group = buildings[key].sort(function (a, b) { return a.school.localeCompare(b.school); });
+      var hidden = campuses.filter(function (c) { return c.building === key && !shownIds[c.id]; }).length;
+      var title = group.length > 1
+        ? group.length + " schools: " + group.map(function (p) { return p.school; }).join("; ")
+        : group[0].school;
+      var m = L.marker([group[0].lat, group[0].lon], {
+        icon: iconFor(group), title: title, alt: title, riseOnHover: true, campuses: group.length
+      }).bindPopup(buildingHtml(group, hidden), { maxWidth: 320, autoPanPaddingTopLeft: [56, 20], autoPanPaddingBottomRight: [20, 20] });
+      group.forEach(function (p) { markerByCampus[p.id] = m; });
+      return m;
+    });
+    cluster.addLayers(markers);
+
+    // list: one entry per school, with each matching campus
+    var bySchool = {}, schools = [];
+    shown.forEach(function (p) {
+      if (!bySchool[p.doe_code]) { bySchool[p.doe_code] = { name: p.school, first: p, campuses: [] }; schools.push(bySchool[p.doe_code]); }
+      bySchool[p.doe_code].campuses.push(p);
+    });
+    if (state.near) {
+      schools.forEach(function (s) {
+        s.campuses.forEach(function (p) { p.dist = miles(state.near.lat, state.near.lon, p.lat, p.lon); });
+        s.campuses.sort(function (a, b) { return a.dist - b.dist; });
+        s.dist = s.campuses[0].dist;
+      });
+      schools.sort(function (a, b) { return a.dist - b.dist; });
+    } else {
+      schools.sort(function (a, b) { return a.name.localeCompare(b.name); });
+    }
+
+    var list = $("list");
+    if (!schools.length) {
+      list.innerHTML = '<li class="empty">No schools match. Try removing a filter or changing the search.</li>';
+    } else {
+      list.innerHTML = schools.map(function (s) {
+        var p = s.first;
+        var meta = [p.borough, "Grades " + p.school_grades, p.authorizer].join(" · ");
+        var camp = s.campuses.map(function (c) {
+          // show the campus's own name when it has one (e.g. a charter's high school under a different name)
+          var label = (c.campus ? esc(c.campus) + "<br><small>" + esc(c.address) + "</small>" : esc(c.address)) +
+            (p.school_campuses > 1 && c.grades ? " <small>(grades " + esc(c.grades) + ")</small>" : "");
+          return '<li><button type="button" class="campus-btn" data-id="' + c.id + '">' +
+            '<span class="pin lvl-' + c.pin + '" aria-hidden="true"></span><span>' + label +
+            (state.near && s.campuses.length > 1 ? " <small>" + c.dist.toFixed(1) + " mi</small>" : "") + "</span></button></li>";
+        }).join("");
+        return "<li><h2><span>" + esc(s.name) + (p.new ? ' <span class="badge">New</span>' : "") + "</span>" +
+          (state.near ? '<span class="dist">' + s.dist.toFixed(1) + " mi</span>" : "") + "</h2>" +
+          '<p class="meta">' + esc(meta) + (p.school_campuses > s.campuses.length
+            ? " · " + s.campuses.length + " of " + p.school_campuses + " campuses match" : "") + "</p>" +
+          '<ul class="campuses">' + camp + "</ul></li>";
+      }).join("");
+    }
+
+    var filtered = shown.length !== campuses.length;
+    $("summary").innerHTML = "<strong>" + schools.length + (schools.length === 1 ? " school" : " schools") + "</strong> at " +
+      shown.length + (shown.length === 1 ? " campus" : " campuses") +
+      (filtered ? " (of " + totalSchools + " schools)" : "") +
+      (state.near ? " · nearest first" : "");
+    var n = activeFilterCount();
+    $("filter-count").hidden = !n;
+    $("filter-count").textContent = n;
+
+    if (opts.fit && markers.length && !state.near) {
+      map.fitBounds(L.featureGroup(markers).getBounds(), { padding: [30, 30], maxZoom: 15 });
+    }
+  }
+
+  function showCampus(id) {
+    var m = markerByCampus[id];
+    if (!m) return;
+    if (window.matchMedia("(max-width: 760px)").matches) $("map").scrollIntoView({ block: "start" });
+    cluster.zoomToShowLayer(m, function () { m.openPopup(); });
+  }
+
+  // ---------------------------------------------------------------- near me
+  function setNear(lat, lon, label) {
+    state.near = { lat: lat, lon: lon, label: label };
+    hereLayer.clearLayers();
+    L.marker([lat, lon], {
+      icon: L.divIcon({ className: "", iconSize: [18, 18], iconAnchor: [9, 9], html: '<div class="here-pin"></div>' }),
+      title: "You searched: " + label, zIndexOffset: 1000, keyboard: false
+    }).addTo(hereLayer);
+    map.setView([lat, lon], 14);
+    $("near-status").innerHTML = "Sorted by distance from <strong>" + esc(label) + "</strong>. " +
+      '<button type="button" class="link" id="near-clear">Clear</button>';
+    $("near-clear").addEventListener("click", clearNear);
+    render();
+  }
+  function clearNear() {
+    state.near = null;
+    hereLayer.clearLayers();
+    $("near").value = "";
+    $("near-status").textContent = "";
+    render({ fit: true });
+  }
+  function findNear(text) {
+    text = text.trim();
+    if (!text) return;
+    if (/^\d{5}$/.test(text)) {
+      if (zips[text]) setNear(zips[text][0], zips[text][1], "ZIP " + text);
+      else $("near-status").textContent = "ZIP " + text + " isn't a New York City ZIP code. Try a street address instead.";
+      return;
+    }
+    $("near-status").textContent = "Searching…";
+    fetch(GEOSEARCH + "?size=1&text=" + encodeURIComponent(text))
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        var f = j.features && j.features[0];
+        if (!f) throw new Error("not found");
+        setNear(f.geometry.coordinates[1], f.geometry.coordinates[0], f.properties.label.replace(/, USA$/, ""));
+      })
+      .catch(function () {
+        $("near-status").textContent = "We couldn't find that address. Try a street address with the borough, like \"350 5th Ave, Manhattan\", or a 5-digit ZIP code.";
+      });
+  }
+
+  // ---------------------------------------------------------------- legend
   function addLegend() {
     var ctl = L.control({ position: "bottomright" });
     ctl.onAdd = function () {
       var div = L.DomUtil.create("div", "legend");
-      var rows = Object.keys(LEVELS).map(function (k) {
-        return '<div class="row"><span class="pin lvl-' + k + '"></span>' + LEVELS[k].label + "</div>";
-      }).join("") + '<div class="row"><span class="pin shared lvl-shared">3</span>Shared building (number of schools)</div>' +
-        '<div class="row"><span class="cluster legend-cluster">12</span>Nearby campuses (zoom in)</div>';
+      var rows = Object.keys(PIN_LEVELS).map(function (k) {
+        return '<div class="row"><span class="pin lvl-' + k + '"></span>' + PIN_LEVELS[k] + "</div>";
+      }).join("") +
+        '<div class="row"><span class="pin shared lvl-shared">3</span>Shared building (number of schools)</div>' +
+        '<div class="row"><span class="cluster legend-cluster">12</span>Nearby campuses (zoom in)</div>' +
+        '<div class="row"><span class="here-pin" style="width:14px;height:14px;border-width:2px"></span>Your search</div>';
       div.innerHTML = '<button type="button" class="legend-toggle" aria-expanded="false">Legend</button><div class="rows">' + rows + "</div>";
       var btn = div.querySelector(".legend-toggle");
       btn.addEventListener("click", function () {
@@ -99,67 +302,75 @@
     ctl.addTo(map);
   }
 
-  fetch("data/campuses.geojson")
-    .then(function (r) { return r.json(); })
-    .then(function (gj) {
-      var feats = gj.features;
-      // Group campuses by building so every school in a shared building is reachable from one pin.
-      var buildings = {};
-      feats.forEach(function (f) {
-        var c = f.geometry.coordinates;
-        var key = f.properties.bin || (c[1].toFixed(5) + "," + c[0].toFixed(5));
-        (buildings[key] = buildings[key] || []).push(f);
-      });
-      // Nearby pins merge into a count bubble at low zoom and split apart as you zoom in.
-      var layer = L.markerClusterGroup({
-        maxClusterRadius: 32,
-        disableClusteringAtZoom: 15,
-        spiderfyOnMaxZoom: true,
-        showCoverageOnHover: false,
-        iconCreateFunction: function (cluster) {
-          var n = 0;
-          cluster.getAllChildMarkers().forEach(function (m) { n += m.options.campuses; });
-          var size = n < 10 ? 30 : n < 30 ? 36 : 42;
-          return L.divIcon({ className: "", iconSize: [size, size],
-            html: '<div class="cluster" style="width:' + size + "px;height:" + size + 'px" aria-label="' + n +
-                  ' campuses, zoom in to see them">' + n + "</div>" });
-        }
-      });
-      var byBorough = {};
-      Object.keys(buildings).forEach(function (key) {
-        var group = buildings[key].sort(function (a, b) { return a.properties.school.localeCompare(b.properties.school); });
-        var c = group[0].geometry.coordinates;
-        var title = group.length > 1 ? group.length + " schools: " + group.map(function (f) { return f.properties.school; }).join("; ")
-                                     : group[0].properties.school;
-        var m = L.marker([c[1], c[0]], { icon: iconFor(group), title: title, alt: title, riseOnHover: true, campuses: group.length })
-          .bindPopup(buildingHtml(group), { maxWidth: 320, autoPanPaddingTopLeft: [56, 20], autoPanPaddingBottomRight: [20, 20] });
-        layer.addLayer(m);
-        var b = group[0].properties.borough;
-        (byBorough[b] = byBorough[b] || []).push([c[1], c[0]]);
-      });
-      layer.addTo(map);
-      var all = layer.getBounds();
-      map.fitBounds(all, { padding: [20, 20] });
+  // ---------------------------------------------------------------- controls
+  function buildControls() {
+    var b = $("borough");
+    b.insertAdjacentHTML("beforeend", [""].concat(BOROUGHS).map(function (name) {
+      return '<label><input type="radio" name="borough" value="' + esc(name) + '"' + (name ? "" : " checked") + "><span>" +
+        (name || "All") + "</span></label>";
+    }).join(""));
+    $("levels").insertAdjacentHTML("beforeend", LEVEL_FILTERS.map(function (l) {
+      return '<label class="check"><input type="checkbox" name="level" value="' + l.key + '"> ' + l.label + "</label>";
+    }).join(""));
 
-      var schools = {};
-      feats.forEach(function (f) { schools[f.properties.doe_code] = 1; });
-      document.getElementById("summary").textContent =
-        Object.keys(schools).length + " schools · " + feats.length + " campuses · " + Object.keys(buildings).length + " buildings";
-
-      var buttons = document.querySelectorAll(".boroughs button");
-      buttons.forEach(function (btn) {
-        btn.addEventListener("click", function () {
-          var b = btn.getAttribute("data-borough");
-          buttons.forEach(function (x) { x.setAttribute("aria-pressed", x === btn ? "true" : "false"); });
-          map.closePopup();
-          if (b === "all") map.fitBounds(all, { padding: [20, 20] });
-          else map.fitBounds(L.latLngBounds(byBorough[b]), { padding: [30, 30] });
-        });
-      });
-      addLegend();
-    })
-    .catch(function (err) {
-      document.getElementById("summary").textContent = "Could not load the school data.";
-      console.error(err);
+    var auths = {}, dists = {};
+    campuses.forEach(function (p) { auths[p.authorizer] = 1; dists[p.district] = 1; });
+    Object.keys(auths).sort().forEach(function (a) { $("authorizer").insertAdjacentHTML("beforeend", "<option>" + esc(a) + "</option>"); });
+    Object.keys(dists).sort(function (a, c) { return a - c; }).forEach(function (d) {
+      $("district").insertAdjacentHTML("beforeend", '<option value="' + esc(d) + '">District ' + esc(d) + "</option>");
     });
+
+    if (window.matchMedia("(min-width: 761px)").matches) $("filters").open = true;
+
+    $("q").addEventListener("input", debounce(function () { state.q = $("q").value; render({ fit: true }); }, 200));
+    $("search-form").addEventListener("submit", function (e) { e.preventDefault(); });
+    b.addEventListener("change", function (e) { state.borough = e.target.value; render({ fit: true }); });
+    $("levels").addEventListener("change", function () {
+      state.levels = Array.prototype.map.call(document.querySelectorAll('input[name="level"]:checked'), function (x) { return x.value; });
+      render({ fit: true });
+    });
+    $("authorizer").addEventListener("change", function () { state.authorizer = $("authorizer").value; render({ fit: true }); });
+    $("district").addEventListener("change", function () { state.district = $("district").value; render({ fit: true }); });
+    $("new-only").addEventListener("change", function () { state.newOnly = $("new-only").checked; render({ fit: true }); });
+    $("reset").addEventListener("click", function () {
+      state.q = ""; state.borough = ""; state.levels = []; state.authorizer = ""; state.district = ""; state.newOnly = false;
+      $("q").value = ""; $("authorizer").value = ""; $("district").value = ""; $("new-only").checked = false;
+      document.querySelector('input[name="borough"][value=""]').checked = true;
+      document.querySelectorAll('input[name="level"]').forEach(function (x) { x.checked = false; });
+      render({ fit: true });
+    });
+    $("near-form").addEventListener("submit", function (e) { e.preventDefault(); findNear($("near").value); });
+    $("list").addEventListener("click", function (e) {
+      var btn = e.target.closest(".campus-btn");
+      if (btn) showCampus(btn.getAttribute("data-id"));
+    });
+  }
+
+  // ---------------------------------------------------------------- load
+  Promise.all([
+    fetch("data/campuses.geojson").then(function (r) { return r.json(); }),
+    fetch("data/zip_centroids.json").then(function (r) { return r.json(); }).catch(function () { return {}; })
+  ]).then(function (res) {
+    zips = res[1];
+    var codes = {};
+    campuses = res[0].features.map(function (f, i) {
+      var p = f.properties;
+      p.id = String(i);
+      p.lat = f.geometry.coordinates[1];
+      p.lon = f.geometry.coordinates[0];
+      p.building = p.bin || (p.lat.toFixed(5) + "," + p.lon.toFixed(5));
+      p.gradeList = gradeList(p.grades);
+      p.pin = pinLevel(p.gradeList);
+      p.haystack = " " + norm([p.school, p.campus, p.also_known_as, p.address, p.doe_code].join(" "));
+      codes[p.doe_code] = 1;
+      return p;
+    });
+    totalSchools = Object.keys(codes).length;
+    buildControls();
+    addLegend();
+    render({ fit: true });
+  }).catch(function (err) {
+    $("summary").textContent = "The school data didn't load. Refresh the page to try again.";
+    console.error(err);
+  });
 })();

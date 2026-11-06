@@ -145,6 +145,24 @@ def grade_bands(grades: list[str]) -> list[str]:
     return bands
 
 
+def display_address(a: str) -> str:
+    """'245 West 129Th Street, Manhattan, NY 10027' / '856 QUINCY STREET, ...' -> consistent title case for display."""
+    a = re.sub(r"\s+", " ", a).strip()
+    keep_upper = {"NY", "PS", "IS", "MS", "HS", "JHS"}
+    out = []
+    for i, w in enumerate(a.split(" ")):
+        core = w.strip(",.")
+        if i and core.lower() in {"of", "the", "and", "at"}:
+            out.append(w.lower())
+        elif core.upper() in keep_upper:
+            out.append(w.upper())
+        elif re.fullmatch(r"\d+(st|nd|rd|th)[,.]?", w, flags=re.I) or re.fullmatch(r"[\d-]+[,.]?", w):
+            out.append(w.lower())
+        else:
+            out.append("-".join(part[:1].upper() + part[1:].lower() for part in w.split("-")))
+    return " ".join(out)
+
+
 OFFICE_RE = re.compile(r"\b(?:suite|ste|apt|apartment|floor|fl|room|rm|unit)\b\.?|#", re.I)
 
 
@@ -679,7 +697,7 @@ def main():
                       "geometry": {"type": "Point", "coordinates": [round(r.lon, 6), round(r.lat, 6)]},
                       "properties": {
                           "school": sc["name"], "campus": r.campus_name if r.campus_name != sc["name"] else "",
-                          "address": r.address, "borough": r.borough, "district": r.district,
+                          "address": display_address(r.address), "borough": r.borough, "district": r.district,
                           "grades": r.grades, "grades_2025_26": r.grades_source == "campus map 2025-26", "levels": r.levels,
                           "authorizer": sc.authorizer,
                           "school_grades": sc.grades, "website": sc.website if isinstance(sc.website, str) else "",
