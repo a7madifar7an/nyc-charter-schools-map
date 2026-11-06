@@ -1,4 +1,7 @@
-action,doe_code,nysed_sed_code,reason
-exclude,84OBIG,,"Listed under the DOE Office of Charter Schools, but the school is in Mount Vernon (Westchester), outside NYC."
-exclude,84X554,,"Listed as Open in the DOE report but with no grades for 2026-27, and absent from the NYSED directory. Treated as not operating."
-match,84Q422,342700861100,"NYSED serial 861100 is shared with South Bronx Community Charter HS; DOE carries a placeholder BEDS code for Success Academy NYC 14. Matched by name."
+action,doe_code,nysed_sed_code,match_address,new_address,lat,lon,reason
+exclude,84OBIG,,,,,,"Listed under the DOE Office of Charter Schools, but the school is in Mount Vernon (Westchester), outside NYC."
+exclude,84X554,,,,,,"Listed as Open in the DOE report but with no grades for 2026-27, and absent from the NYSED directory. Treated as not operating."
+match,84Q422,342700861100,,,,,"NYSED serial 861100 is shared with South Bronx Community Charter HS; DOE carries a placeholder BEDS code for Success Academy NYC 14. Matched by name."
+move_campus,84X638,,604 East 139th Street,"101 East 150 Street, Bronx, NY 10451",40.820671,-73.929353,"Success Academy's locations page (checked Nov 2026) lists its Bronx K-12 Campus at 101 E 150th St as newly open, and the DOE 2026-27 address for this school agrees. The building is too new for the city address database, so the coordinates come from the Success Academy map."
+move_campus,84M386,,461 West 131 Street,"509 West 129 Street, Manhattan, NY 10027",,,"Success Academy's locations page (checked Nov 2026) lists Hamilton Heights Middle School at 509 W 129th St."
+drop_campus,84K883,,63-57 Fresh Pond Road,,,,"This campus served K-1 in 2025-26. DOE 2026-27 grades for Bed Stuy 3 are 2-8, and Success Academy's locations page lists no school at this address."

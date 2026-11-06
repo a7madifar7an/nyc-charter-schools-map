@@ -99,23 +99,27 @@ Schools not on the campus map (mostly new in 2026); placed at their DOE address:
 - Success Academy Charter School – NYC 17: 58-25 Catalpa Avenue, Queens
 - South Bronx Classical Charter School V: 3880 Sedgwick Avenue, Bronx
 
+Manual campus corrections from `data/overrides.csv`: 3
+
+- Moved `84X638` from 604 East 139th Street, Bronx, NY 10454 to 101 East 150 Street, Bronx, NY 10451: Success Academy's locations page (checked Nov 2026) lists its Bronx K-12 Campus at 101 E 150th St as newly open, and the DOE 2026-27 address for this school agrees. The building is too new for the city address database, so the coordinates come from the Success Academy map.
+- Moved `84M386` from 461 West 131 Street, Manhattan, NY 10027 to 509 West 129 Street, Manhattan, NY 10027: Success Academy's locations page (checked Nov 2026) lists Hamilton Heights Middle School at 509 W 129th St.
+- Dropped 63-57 Fresh Pond Road, Brooklyn, NY 11385 (`84K883`): This campus served K-1 in 2025-26. DOE 2026-27 grades for Bed Stuy 3 are 2-8, and Success Academy's locations page lists no school at this address.
+
 ## Step 5. Locations and quality checks
 
-- Every point inside NYC: PASS (425/425)
-- Building's borough matches the borough written in the source address: 420/425. Where they differ, the ZIP code and geocoder agree on the real borough, which the map uses:
+- Every point inside NYC: PASS (424/424)
+- Building's borough matches the borough written in the source address: 420/424. Where they differ, the ZIP code and geocoder agree on the real borough, which the map uses:
   - KIPP Beyond Charter School: "201 EAST 144TH STREET, Manhattan, NY 10451" is in Bronx
   - KIPP Beyond Charter School: "501 Gerard Avenue, Manhattan, NY 10451" is in Bronx
   - Amber Charter School Kingsbridge: "532 West 215Th Street, Bronx, NY 10034" is in Manhattan
   - Success Academy High School of the Liberal Arts – Harlem: "509 West 129 Street, Bronx, NY 10027" is in Manhattan
-  - Success Academy Bed Stuy 3 Lower Elementary School: "63-57 Fresh Pond Road, Brooklyn, NY 11385" is in Queens
-- Campuses in a different borough from the school's DOE borough: 8 (kept; a charter can run campuses in several boroughs)
+- Campuses in a different borough from the school's DOE borough: 7 (kept; a charter can run campuses in several boroughs)
   - Success Academy Queens Village 3 Elementary School (Brooklyn school) at 92-53 Springfield Boulevard, Queens, NY 11428
   - Success Academy Queens Village 1 Elementary School (Brooklyn school) at 92-53 Springfield Boulevard, Queens, NY 11428
   - KIPP Beyond Charter School (Manhattan school) at 201 EAST 144TH STREET, Manhattan, NY 10451
   - KIPP Beyond Charter School (Manhattan school) at 501 Gerard Avenue, Manhattan, NY 10451
   - Amber Charter School Kingsbridge (Bronx school) at 532 West 215Th Street, Bronx, NY 10034
   - Success Academy High School of the Liberal Arts – Harlem (Bronx school) at 509 West 129 Street, Bronx, NY 10027
-  - Success Academy Bed Stuy 3 Lower Elementary School (Brooklyn school) at 63-57 Fresh Pond Road, Brooklyn, NY 11385
   - JVL Wildcat Academy Charter School Bronx Campus (Manhattan school) at 1239 LAFAYETTE AVENUE, Bronx, NY 10474
 - Schools whose DOE address is not one of their campus buildings: 15, of which 1 DOE addresses could not be found in the city's address database (the DOE lists one address per school, often an older or administrative site; the map uses the campus list)
   - Success Academy Charter School - Bed Stuy 2: DOE 92-53 Springfield Boulevard, Brooklyn, NY 11428; campuses: 211 THROOP AVENUE, Brooklyn, NY 11206
@@ -130,24 +134,36 @@ Schools not on the campus map (mostly new in 2026); placed at their DOE address:
   - NYC Charter High School for Architecture, Engineering and Construction Industries (AECI): DOE 838 BROOK AVENUE, Bronx, NY 10451; campuses: 116 E 169 Street, Bronx, NY 10456
   - AECI II: NYC Charter High School for Computer Engineering and Innovation: DOE 1000 Walton Avenue, Bronx, NY 10452; campuses: 116 East 169 Street, Bronx, NY 10452; 1275 Grand Concourse, Bronx, NY 10452
   - Earl Monroe New Renaissance Basketball Charter School: DOE 647 Elton Avenue, Bronx, NY 10455; campuses: 1617 PARKVIEW AVE, Bronx, NY 10461
-  - Success Academy Charter School – Bronx 5 Upper: DOE 101 East  150 Street, Bronx, NY 10451; campuses: 604 East 139th Street, Bronx, NY 10454
+  - Success Academy Charter School – Bronx 5 Upper: DOE 101 East  150 Street, Bronx, NY 10451; campuses: 101 East 150 Street, Bronx, NY 10451
   - Bronx Charter School for Excellence 9: DOE 681 Kelly Street, Bronx, NY 10455; campuses: 1160 BEACH AVENUE, Bronx, NY 10472
   - Icahn Charter School 1: DOE 1506 Brook Avenue, Bronx, NY 10457; campuses: 1525 BROOK AVENUE, Bronx, NY 10457
-- Geocoded to the exact building: 422/425
+- Geocoded to the exact building: 420/424; placed with coordinates published by the school (building too new for the city database): 1
 - Address not in the city's address database, placed at the nearest address on the same side of the same street (marked approximate on the map): 3
   - Elm Community Charter School: 79-20 Queens Boulevard, Queens, NY 11373 -> 79-10 QUEENS BOULEVARD, Elmhurst, NY, USA
   - Capital Preparatory Bronx Charter School: 755 Co-Op City Boulevard, Bronx, NY 10475 -> 773 CO-OP CITY BOULEVARD, Bronx, NY, USA
   - Bedford Stuyvesant New Beginnings Charter Schools High School: 217 N 10th Street, Brooklyn, NY 11211 -> 229 NORTH 10 STREET, Brooklyn, NY, USA
 - Duplicate campus rows (same school, same building): 0 removed
 - Addresses that look like an office or mailing address (suite, floor, apt, room): 0
-- Campus grades: single-campus schools use DOE 2026-27 grades (183 campuses); multi-campus schools whose campus grades add up to the DOE grades: 73 schools; multi-campus schools where they differ (campus grades shown as 2025-26): 31 schools
+  - Grade conflict: Girls Preparatory Charter Elementary School - Bronx at 1160 BEACH AVENUE, Bronx, NY 10472 lists 9-12, but the school's DOE 2026-27 grades are K-8; showing the school's grades
+  - Grade conflict: Boys Prep Bronx Elementary School at 1160 BEACH AVENUE, Bronx, NY 10472 lists 9-12, but the school's DOE 2026-27 grades are K-8; showing the school's grades
+- Campus grades: single-campus schools use DOE 2026-27 grades (183 campuses); multi-campus schools whose campus grades add up to the DOE grades: 72 schools; multi-campus schools where they differ (campus grades shown as 2025-26): 32 schools
 - Campuses with no grades listed: 0
 - Every school has at least one campus: PASS
 - Buildings shared by two or more schools: 34 (largest: 4 schools in one building)
 
+## Step 6. Cross-check against a school network's own website
+
+Success Academy publishes its locations with coordinates (snapshot: `data/crosscheck/success_academy_locations_2026-11.csv`, from successacademies.org/locations, Nov 2026). A location counts as found when the address is the same, or the published pin is within 150 m of a campus.
+
+- Locations listed: 59; marked as opening or reopening in 2027-28 (not open now): 3 (Bensonhurst Middle School, Bronx 1 Middle School, Laurelton Middle School)
+- Open locations found on this map: 55/56
+  - Not on this map: Astor Place Middle School (grades 5-8), 215 East 6th Street, NY 10003. City and state records do not tie this site to a charter school, so it is listed as a known gap rather than guessed.
+- Success Academy campuses on this map that match a published location: 53/53
+- Published pin far from its own address: Lafayette Middle School (787 Lafayette Avenue, NY 11221) is pinned 901 m away; the city address database places the address where this map shows it.
+
 ## Result
 
-- **287 schools** at **425 campuses** in **384 buildings**
+- **287 schools** at **424 campuses** in **382 buildings**
 - Authorizer SUNY: 191 schools
 - Authorizer Board of Regents: 61 schools
 - Authorizer NYC DOE: 35 schools

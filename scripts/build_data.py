@@ -465,12 +465,37 @@ def main():
             "campus_source": "DOE report", "listed_borough": r.borough,
         })
     camp = pd.concat([camp, pd.DataFrame(extra)], ignore_index=True)
+    camp["lat_override"] = None
+    camp["lon_override"] = None
+
+    # Documented manual corrections (data/overrides.csv), each with its source.
+    fixes = overrides[overrides.action.isin(["move_campus", "drop_campus"])]
+    say(f"\nManual campus corrections from `data/overrides.csv`: {len(fixes)}\n")
+    for _, o in fixes.iterrows():
+        hit = (camp.doe_code == o.doe_code) & camp.address.str.contains(o.match_address, case=False, regex=False)
+        assert hit.sum() == 1, f"override matched {hit.sum()} campuses: {o.to_dict()}"
+        before = camp.loc[hit, "address"].iloc[0]
+        if o.action == "drop_campus":
+            camp = camp[~hit].copy()
+            say(f"- Dropped {before} (`{o.doe_code}`): {o.reason}")
+        else:
+            camp.loc[hit, "address"] = o.new_address
+            camp.loc[hit, "campus_source"] = "Charter Center campus map, address corrected"
+            if o.lat:
+                camp.loc[hit, "lat_override"] = float(o.lat)
+                camp.loc[hit, "lon_override"] = float(o.lon)
+            say(f"- Moved `{o.doe_code}` from {before} to {o.new_address}: {o.reason}")
 
     # ---- 5. geocode + checks
     say("\n## Step 5. Locations and quality checks\n")
     camp["address"] = camp.address.str.replace(r"\s+", " ", regex=True).str.strip()
     geo = geocode(s, camp.address.tolist(), args.refresh)
     camp["geo"] = camp.address.map(geo)
+    pinned = camp.lat_override.notna()
+    camp.loc[pinned, "geo"] = [
+        {"lon": r.lon_override, "lat": r.lat_override, "label": r.address, "borough": r.listed_borough
+         if isinstance(r.listed_borough, str) else r.address.split(",")[1].strip(),
+         "bin": None, "quality": "coordinates from school website"} for _, r in camp[pinned].iterrows()]
     failed = camp[camp.geo.isna()]
     assert failed.empty, f"geocode failed: {failed.address.tolist()}"
     camp["lon"] = camp.geo.map(lambda g: g["lon"])
@@ -504,7 +529,9 @@ def main():
         say(f"  - {m.set_index('doe_code').doe_name[c]}: DOE {a}; campuses: "
             + "; ".join(camp[camp.doe_code == c].address))
     approx = camp[camp.geo.map(lambda g: g["quality"] == "approximate")]
-    say(f"- Geocoded to the exact building: {len(camp) - len(approx)}/{len(camp)}")
+    pinned_n = (camp.location == "coordinates from school website").sum()
+    say(f"- Geocoded to the exact building: {len(camp) - len(approx) - pinned_n}/{len(camp)}; "
+        f"placed with coordinates published by the school (building too new for the city database): {pinned_n}")
     say(f"- Address not in the city's address database, placed at the nearest address on the same side of the same street (marked approximate on the map): {len(approx)}")
     for _, r in approx.iterrows():
         say(f"  - {r.campus_name}: {r.address} -> {r.geo['label']}")
@@ -520,11 +547,24 @@ def main():
     n_by_school = camp.groupby("doe_code").doe_code.transform("size")
     union = camp.groupby("doe_code").grades_list.apply(lambda s: set().union(*map(set, s)))
     single = n_by_school == 1
-    agrees = camp.doe_code.map(lambda c: union[c] == set(doe_gr[c]))
-    camp.loc[single, "grades_list"] = camp.loc[single, "doe_code"].map(doe_gr)
+    # DOE grade lists for charters leave out Pre-K, so Pre-K is compared and kept from the campus map.
+    k12 = lambda g: set(g) - {"PK"}
+    agrees = camp.doe_code.map(lambda c: k12(union[c]) == set(doe_gr[c]))
+    with_pk = lambda own, doe: (["PK"] if "PK" in own else []) + list(doe)
+    camp.loc[single, "grades_list"] = pd.Series(
+        [with_pk(g, doe_gr[c]) for g, c in zip(camp[single].grades_list, camp[single].doe_code)], index=camp[single].index)
     camp["grades_source"] = "DOE 2026-27"
     camp.loc[~single & agrees, "grades_source"] = "campus map, matches DOE 2026-27"
     camp.loc[~single & ~agrees, "grades_source"] = "campus map 2025-26"
+    # A campus whose grades share nothing with the school's 2026-27 grades (ignoring a Pre-K-only site) is
+    # contradicted by DOE: show the school's DOE grades instead and list it for review.
+    conflict = [bool(k12(g)) and not (k12(g) & set(doe_gr[c])) for g, c in zip(camp.grades_list, camp.doe_code)]
+    conflict = pd.Series(conflict, index=camp.index)
+    for _, r in camp[conflict].iterrows():
+        say(f"  - Grade conflict: {r.campus_name} at {r.address} lists {grade_span(r.grades_list)}, "
+            f"but the school's DOE 2026-27 grades are {grade_span(doe_gr[r.doe_code])}; showing the school's grades")
+    camp.loc[conflict, "grades_list"] = pd.Series([list(doe_gr[c]) for c in camp[conflict].doe_code], index=camp[conflict].index, dtype=object)
+    camp.loc[conflict, "grades_source"] = "DOE 2026-27 school grades (campus list conflicted)"
     say(f"- Campus grades: single-campus schools use DOE 2026-27 grades ({single.sum()} campuses); "
         f"multi-campus schools whose campus grades add up to the DOE grades: {camp[~single & agrees].doe_code.nunique()} schools; "
         f"multi-campus schools where they differ (campus grades shown as 2025-26): {camp[~single & ~agrees].doe_code.nunique()} schools")
@@ -535,6 +575,56 @@ def main():
     shared = camp.groupby("bin").doe_code.nunique()
     say(f"- Buildings shared by two or more schools: {(shared > 1).sum()} (largest: {shared.max()} schools in one building)")
 
+    # ---- 5b. cross-check against a network's own published locations
+    say("\n## Step 6. Cross-check against a school network's own website\n")
+    sa = pd.read_csv(OUT / "crosscheck" / "success_academy_locations_2026-11.csv", dtype=str)
+    sa["lat"], sa["lon"] = sa.lat.astype(float), sa.lon.astype(float)
+    ours = camp[camp.doe_code.map(m.set_index("doe_code").doe_name).str.contains("Success Academy")]
+
+    def addr_key(a):
+        num, street = split_address(clean_address(a))
+        return (num, street) if num else None
+
+    def dist(lat1, lon1, lat2, lon2):
+        return (((lat1 - lat2) * 111_000) ** 2 + ((lon1 - lon2) * 84_000) ** 2) ** 0.5
+
+    ours = ours.assign(key=ours.address.map(addr_key))
+    sa["key"] = sa.address.map(addr_key)
+
+    def match(r):
+        same = ours[ours.key == r.key]
+        if len(same):
+            return same.iloc[0], "same address"
+        d = ours.apply(lambda q: dist(r.lat, r.lon, q.lat, q.lon), axis=1)
+        return (ours.loc[d.idxmin()], "within 150 m") if d.min() <= 150 else (None, None)
+
+    not_open = sa.status.fillna("").str.contains("2027-28")
+    say("Success Academy publishes its locations with coordinates (snapshot: "
+        "`data/crosscheck/success_academy_locations_2026-11.csv`, from successacademies.org/locations, Nov 2026). "
+        "A location counts as found when the address is the same, or the published pin is within 150 m of a campus.\n")
+    say(f"- Locations listed: {len(sa)}; marked as opening or reopening in 2027-28 (not open now): {not_open.sum()} "
+        f"({', '.join(sa[not_open].name)})")
+    res = sa[~not_open].apply(lambda r: match(r), axis=1)
+    found = res.map(lambda x: x[0] is not None)
+    say(f"- Open locations found on this map: {found.sum()}/{(~not_open).sum()}")
+    matched_ids = set()
+    far_pins = []
+    for (_, r), (q, how) in zip(sa[~not_open].iterrows(), res):
+        if q is None:
+            say(f"  - Not on this map: {r['name']} (grades {r.grades}), {r.address}. City and state records do not tie "
+                "this site to a charter school, so it is listed as a known gap rather than guessed.")
+            continue
+        # every campus at that address or within 150 m (several schools can share one building)
+        matched_ids |= set(ours[(ours.key == r.key) | (ours.apply(lambda o: dist(r.lat, r.lon, o.lat, o.lon), axis=1) <= 150)].index)
+        if how == "same address" and dist(r.lat, r.lon, q.lat, q.lon) > 300:
+            far_pins.append((r, q))
+    say(f"- Success Academy campuses on this map that match a published location: {len(matched_ids)}/{len(ours)}")
+    for _, q in ours[~ours.index.isin(matched_ids)].iterrows():
+        say(f"  - Not listed by Success Academy: {q.campus_name}, {q.address}")
+    for r, q in far_pins:
+        say(f"- Published pin far from its own address: {r['name']} ({r.address}) is pinned "
+            f"{dist(r.lat, r.lon, q.lat, q.lon):.0f} m away; the city address database places the address where this map shows it.")
+
     # ---- 6. outputs
     m["authorizer"] = m.Authorizer.replace({"Regents": "Board of Regents", "NYCDOE": "NYC DOE"})
     m["grades"] = m.grades_list.map(grade_span)
@@ -544,8 +634,10 @@ def main():
     m["year_opened"] = m["Year Opened"]
     n_campus = camp.groupby("doe_code").size()
     m["campuses"] = m.doe_code.map(n_campus)
+    m["phone"] = m["Principal Phone Number"].fillna("").str.strip()
+    m["new_2026_27"] = m.open_date >= "2026-01-01"
     schools = m[["doe_code", "name", "nysed_name", "borough", "district", "grades", "authorizer", "year_opened",
-                 "website", "campuses", "sed_code", "match_how"]].sort_values("name")
+                 "website", "phone", "new_2026_27", "campuses", "sed_code", "match_how"]].sort_values("name")
     schools.to_csv(OUT / "schools.csv", index=False)
 
     info = schools.set_index("doe_code")
@@ -570,7 +662,8 @@ def main():
                           "address": r.address, "borough": r.borough, "district": r.district,
                           "grades": r.grades, "grades_2025_26": r.grades_source == "campus map 2025-26", "levels": r.levels,
                           "authorizer": sc.authorizer,
-                          "school_grades": sc.grades, "website": sc.website, "opened": sc.year_opened,
+                          "school_grades": sc.grades, "website": sc.website if isinstance(sc.website, str) else "",
+                          "phone": sc.phone, "new": bool(sc.new_2026_27), "opened": sc.year_opened,
                           "school_campuses": int(sc.campuses), "schools_in_building": int(r.schools_in_building),
                           "also_known_as": sc.nysed_name if norm_name(sc.nysed_name) != norm_name(sc["name"]) else "",
                           "approximate": r.location == "approximate", "doe_code": r.doe_code, "bin": r.bin,

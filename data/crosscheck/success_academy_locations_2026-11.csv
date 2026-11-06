@@ -1,0 +1,60 @@
+name,grades,address,status,lat,lon
+Bronx K-12 Campus,K-12,"101 East 150th Street, NY 10451",Now Open!,40.82067106500004,-73.92935280326304
+Bed-Stuy,K-4,"211 Throop Avenue, NY 11206",,40.697813,-73.943514
+Bensonhurst,K-3,"99 Avenue P, NY 11204",,40.607570,-73.984314
+Bergen Beach,K-4,"1420 East 68th Street, NY 11234",,40.620841,-73.912898
+Bronx 1,K-4,"339 Morris Avenue, NY 10451",,40.81365337388079,-73.92601241422786
+Bronx 2,K-4,"450 St. Pauls Place, NY 10456",,40.83616,-73.90490
+Bronx 3,K-4,"1000 Teller Avenue, NY 10456",,40.82787,-73.91425
+Bronx 4,K-4,"1880 Story Ave, NY 10473",,40.823742,-73.859733
+Bushwick,K-4,"139 Menahan Street, NY 11221",,40.696033,-73.919453
+Cobble Hill,K-4,"284 Baltic Street, NY 11201",,40.685277,-73.993432
+Crown Heights,K-4,"330 Crown Street, NY 11225",,40.665660,-73.949305
+Far Rockaway,K-4,"10-45 Nameoke St, NY 11691",,40.604018,-73.749909
+Flatbush,K-4,"15 Snyder Avenue, NY 11226",,40.648808,-73.957534
+Harlem 1,K-4,"34 West 118th Street, NY 10026",,40.802617,-73.948435
+Harlem 2,K-4,"144 East 128th Street, NY 10035",,40.805691,-73.935537
+Harlem 3,K-4,"410 East 100th Street, NY 10029",,40.785027,-73.942008
+Harlem 4,K-4,"240 West 113th Street, NY 10026",,40.801667,-73.955386
+Harlem 5,K-4,"301 West 140th Street, NY 10030",,40.820002,-73.944600
+Hell’s Kitchen,K-4,"439 West 49th Street, NY 10019",,40.76361,-73.99115
+Hudson Yards,K-4,"500 West 41st Street, NY 10036",,40.75897571,-73.99638891
+Kingsbridge Heights,K-4,"124 Eames Place, NY 10468",,40.86928517508587,-73.90171550797064
+Norwood,K-4,"268 E. 207th Street, NY 10467",,40.87539179321723,-73.87764805954201
+Prospect Heights,K-4,"801 Park Place, NY 11216",,40.673937,-73.951525
+Queens Village,K-4,"92-53 Springfield Boulevard, NY 11428",,40.723118460526635,-73.73687209471328
+Ridgewood,K-4,"58-23 Catalpa Ave, NY 11385",,40.702452739858764,-73.90225572883617
+Rosedale,K-4,"147-65 249th Street, NY 11422",,40.655533,-73.738565
+Sheepshead Bay,K-4,"3000 Avenue X, NY 11235",,40.59358563585255,-73.93689778888927
+South Jamaica,K-4,"120-27 141st Street, NY 11436",,40.674677,-73.799763
+Springfield Gardens,K-4,"132-55 Ridgedale Street, NY 11413",,40.681499,-73.753242
+Union Square,K-4,"40 Irving Place, NY 10003",,40.735520,-73.987499
+Upper West,K-4,"145 West 84th Street, NY 10024",,40.786101,-73.974235
+Washington Heights,K-4,"701 Fort Washington Avenue, NY 10040",,40.857917,-73.935649
+Williamsbridge,K-4,"760 E Gun Hill Rd., NY 10467",,40.876424293795935,-73.86366800920426
+Williamsburg,K-4,"183 South 3rd Street, NY 11211",,40.711622,-73.959701
+Astor Place Middle School,5-8,"215 East 6th Street, NY 10003",,40.72809595234983,-73.98966556451026
+Bed-Stuy Middle School,5-8,"70 Tompkins Avenue, NY 11206",,40.696777,-73.947557
+Bensonhurst Middle School,4-8,"7801 Bay Parkway, NY 11214",Reopening for the 2027-28 School Year!,40.60609861676768,-73.98896901700422
+Bronx 1 Middle School,5-8,"339 Morris Avenue, NY 10451",Reopening for the 2027-28 School Year!,40.81365337388079,-73.92601241422786
+Bronx 2 Middle School,5-8,"270 East 167 Street, NY 10456",,40.832450,-73.913939
+Bronx Middle School,5-8,"965 Longwood Avenue, NY 10459",,40.817953,-73.897892
+Ditmas Park Middle School,5-8,"72 Veronica Place, NY 11226",,40.64836469999999,-73.9534334
+East Flatbush Middle School,5-8,"3109 Newkirk Avenue, NY 11226",,40.640993,-73.947058
+Hamilton Heights Middle School,5-8,"509 West 129th Street, NY 10027",,40.815124,-73.954946
+Harlem East Middle School,5-8,"141 East 111th Street, NY 10029",,40.795854,-73.944510
+Harlem North Central Middle School,5-8,"175 West 134th Street, NY 10030",,40.814335,-73.942974
+Harlem West Middle School,5-8,"215 West 114th Street, NY 10026",,40.802456,-73.954540
+Howard Beach Middle School,5-8,"158-20 101st Street, NY 11414",,40.66117562704892,-73.83294171350035
+Hudson Yards Middle School,5-8,"500 West 41st Street, NY 10036",,40.75897571,-73.99638891
+Lafayette Middle School,5-8,"787 Lafayette Avenue, NY 11221",,40.6984026,-73.9463059
+Laurelton Middle School,5-8,"136-25 218th Street, NY 11413",Opening for the 2027-28 School Year!,40.676314438730884,-73.75302863413005
+Midtown West Middle School,5-8,"439 West 49th Street, NY 10019",,40.76361,-73.99115
+Ozone Park Middle School,5-8,"109-55 128th Street South, NY 11420",,40.683050,-73.813510
+Queens Village Middle School,5-8,"92-53 Springfield Boulevard, NY 11428",,40.723118460526635,-73.73687209471328
+Rockaway Park Middle School,5-8,"190 Beach 110th St, NY 11694",,40.58165165712347,-73.83130925396983
+Springfield Gardens Middle School,5-8,"132-55 Ridgedale Street, NY 11413",,40.681499,-73.753242
+Unionport Middle School,5-8,"2169 Blackrock Avenue, NY 10472",,40.829153045667354,-73.85101924908305
+Washington Heights Middle School,5-8,"701 Fort Washington Avenue, NY 10040",,40.857917,-73.935649
+High School of the Liberal Arts – Brooklyn,9-12,"70 Tompkins Avenue, NY 11206",,40.696777,-73.947557
+High School of the Liberal Arts – Manhattan,9-12,"111 East 33rd Street, NY 10016",,40.746449,-73.981102
