@@ -46,6 +46,7 @@ LCGMS_BUTTON = "ctl00$ContentPlaceHolder1$LCGMSDataDownload$Button1"
 CSC_MAP_KML = "https://www.google.com/maps/d/kml?mid=1928n9fge2TsZ2GTuejF2S-6Ml0QYpiQ&forcekml=1"
 CSC_FACTS_PDF = "https://nyccharterschools.org/wp-content/uploads/2025/04/NYCCSC-General-Facts-2026-27SY.pdf"
 GEOSEARCH = "https://geosearch.planninglabs.nyc/v2/search"
+ZIP_AREAS = "https://data.cityofnewyork.us/resource/pri4-ifjk.geojson?$limit=500"  # NYC DOHMH MODZCTA boundaries
 
 # Official benchmark: NYC Charter School Center, "NYC Charter School Facts 2026-2027", as of August 2026.
 BENCHMARK = {"total": 286, "Bronx": 100, "Brooklyn": 92, "Manhattan": 52, "Queens": 34, "Staten Island": 8}
@@ -331,6 +332,25 @@ def pick_location(address, feats):
     if best and best[0] <= 120:
         return {**best[1], "quality": "approximate"}
     return None
+
+
+def zip_centroids(s, refresh):
+    """ZIP -> [lat, lon] for the map's 'search near a ZIP' box (GeoSearch does not handle bare ZIPs)."""
+    path = cached(RAW / "modzcta.geojson", refresh, lambda: s.get(ZIP_AREAS, timeout=120).content)
+    out = {}
+    for f in json.loads(path.read_text())["features"]:
+        polys = f["geometry"]["coordinates"] if f["geometry"]["type"] == "MultiPolygon" else [f["geometry"]["coordinates"]]
+        ring = max((p[0] for p in polys), key=len)  # outer ring of the largest part
+        a = cx = cy = 0.0
+        for (x1, y1), (x2, y2) in zip(ring, ring[1:] + ring[:1]):
+            c = x1 * y2 - x2 * y1
+            a += c
+            cx += (x1 + x2) * c
+            cy += (y1 + y2) * c
+        lon, lat = cx / (3 * a), cy / (3 * a)
+        for z in re.findall(r"\d{5}", f["properties"].get("zcta") or f["properties"]["modzcta"]):
+            out[z] = [round(lat, 5), round(lon, 5)]
+    return out
 
 
 # --------------------------------------------------------------------------- build
@@ -666,11 +686,14 @@ def main():
                           "phone": sc.phone, "new": bool(sc.new_2026_27), "opened": sc.year_opened,
                           "school_campuses": int(sc.campuses), "schools_in_building": int(r.schools_in_building),
                           "also_known_as": sc.nysed_name if norm_name(sc.nysed_name) != norm_name(sc["name"]) else "",
-                          "approximate": r.location == "approximate", "doe_code": r.doe_code, "bin": r.bin,
+                          "approximate": r.location == "approximate", "doe_code": r.doe_code,
+                          "bin": r.bin if isinstance(r.bin, str) else None,
                       }})
     gj = {"type": "FeatureCollection", "features": feats}
-    (OUT / "campuses.geojson").write_text(json.dumps(gj, indent=0))
-    (SITE_DATA / "campuses.geojson").write_text(json.dumps(gj, separators=(",", ":")))
+    (OUT / "campuses.geojson").write_text(json.dumps(gj, indent=0, allow_nan=False))
+    (SITE_DATA / "campuses.geojson").write_text(json.dumps(gj, separators=(",", ":"), allow_nan=False))
+    zips = zip_centroids(s, args.refresh)
+    (SITE_DATA / "zip_centroids.json").write_text(json.dumps(zips, separators=(",", ":"), sort_keys=True))
 
     say("\n## Result\n")
     say(f"- **{len(schools)} schools** at **{len(camp)} campuses** in **{camp.bin.nunique()} buildings**")

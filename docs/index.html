@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NYC Charter Schools Map</title>
+  <meta name="description" content="Every NYC charter school campus for the 2026-27 school year, built from official NYC DOE, NYSED and NYC Charter School Center data.">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="vendor/leaflet.markercluster/MarkerCluster.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="title">
+      <h1>NYC Charter Schools <span class="year">2026-27</span></h1>
+      <p class="summary" id="summary" aria-live="polite">Loading…</p>
+    </div>
+    <nav class="boroughs" aria-label="Zoom to a borough">
+      <button type="button" data-borough="all">All NYC</button>
+      <button type="button" data-borough="Bronx">Bronx</button>
+      <button type="button" data-borough="Brooklyn">Brooklyn</button>
+      <button type="button" data-borough="Manhattan">Manhattan</button>
+      <button type="button" data-borough="Queens">Queens</button>
+      <button type="button" data-borough="Staten Island">Staten Island</button>
+    </nav>
+  </header>
+
+  <main class="layout">
+    <div id="map" role="region" aria-label="Map of charter school campuses"></div>
+  </main>
+
+  <footer class="credits">
+    Data: NYC DOE school report (Nov 2026), NYSED Charter Schools Directory, NYC Charter School Center campus list,
+    NYC Planning GeoSearch. <a href="https://github.com/a7madifar7an/nyc-charter-schools-map">How this map was built</a>
+  </footer>
+
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="vendor/leaflet.markercluster/leaflet.markercluster.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
