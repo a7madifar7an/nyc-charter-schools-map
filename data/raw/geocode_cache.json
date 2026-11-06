@@ -187,6 +187,100 @@
    }
   ]
  },
+ "10-45 Nameoke St, NY 11691": {
+  "features": [
+   {
+    "bin": "4298234",
+    "borough": "Queens",
+    "housenumber": "10-45",
+    "label": "10-45 NAMEOKE STREET, Far Rockaway, NY, USA",
+    "lat": 40.604006,
+    "lon": -73.749862,
+    "street": "NAMEOKE STREET"
+   },
+   {
+    "bin": "4298234",
+    "borough": "Queens",
+    "housenumber": "10-45",
+    "label": "10-45 NAMEOKE AVENUE, Far Rockaway, NY, USA",
+    "lat": 40.604006,
+    "lon": -73.749862,
+    "street": "NAMEOKE AVENUE"
+   },
+   {
+    "bin": "4532733",
+    "borough": "Queens",
+    "housenumber": "11-45",
+    "label": "11-45 NAMEOKE STREET, Far Rockaway, NY, USA",
+    "lat": 40.605782,
+    "lon": -73.750056,
+    "street": "NAMEOKE STREET"
+   },
+   {
+    "bin": "4297814",
+    "borough": "Queens",
+    "housenumber": "21-10",
+    "label": "21-10 NAMEOKE STREET, Far Rockaway, NY, USA",
+    "lat": 40.608013,
+    "lon": -73.752791,
+    "street": "NAMEOKE STREET"
+   },
+   {
+    "bin": "4298008",
+    "borough": "Queens",
+    "housenumber": "11-10",
+    "label": "11-10 NAMEOKE STREET, Far Rockaway, NY, USA",
+    "lat": 40.605014,
+    "lon": -73.749236,
+    "street": "NAMEOKE STREET"
+   },
+   {
+    "bin": "4298218",
+    "borough": "Queens",
+    "housenumber": "10-44",
+    "label": "10-44 NAMEOKE STREET, Far Rockaway, NY, USA",
+    "lat": 40.604115,
+    "lon": -73.748998,
+    "street": "NAMEOKE STREET"
+   },
+   {
+    "bin": "4298234",
+    "borough": "Queens",
+    "housenumber": "10-35",
+    "label": "10-35 NAMEOKE STREET, Far Rockaway, NY, USA",
+    "lat": 40.604006,
+    "lon": -73.749862,
+    "street": "NAMEOKE STREET"
+   },
+   {
+    "bin": "4298234",
+    "borough": "Queens",
+    "housenumber": "10-29",
+    "label": "10-29 NAMEOKE STREET, Far Rockaway, NY, USA",
+    "lat": 40.604006,
+    "lon": -73.749862,
+    "street": "NAMEOKE STREET"
+   },
+   {
+    "bin": "4298234",
+    "borough": "Queens",
+    "housenumber": "10-31",
+    "label": "10-31 NAMEOKE STREET, Far Rockaway, NY, USA",
+    "lat": 40.604006,
+    "lon": -73.749862,
+    "street": "NAMEOKE STREET"
+   },
+   {
+    "bin": "4298234",
+    "borough": "Queens",
+    "housenumber": "10-33",
+    "label": "10-33 NAMEOKE STREET, Far Rockaway, NY, USA",
+    "lat": 40.604006,
+    "lon": -73.749862,
+    "street": "NAMEOKE STREET"
+   }
+  ]
+ },
  "100 ATTORNEY STREET, Manhattan, NY 10002": {
   "features": [
    {
@@ -470,6 +564,100 @@
   ]
  },
  "1000 TELLER AVENUE, Bronx, NY 10456": {
+  "features": [
+   {
+    "bin": "2097111",
+    "borough": "Bronx",
+    "housenumber": "1000",
+    "label": "1000 TELLER AVENUE, Bronx, NY, USA",
+    "lat": 40.827729,
+    "lon": -73.913814,
+    "street": "TELLER AVENUE"
+   },
+   {
+    "bin": "2002366",
+    "borough": "Bronx",
+    "housenumber": "1263",
+    "label": "1263 TELLER AVENUE, Bronx, NY, USA",
+    "lat": 40.833857,
+    "lon": -73.910938,
+    "street": "TELLER AVENUE"
+   },
+   {
+    "bin": "2002027",
+    "borough": "Bronx",
+    "housenumber": "981",
+    "label": "981 TELLER AVENUE, Bronx, NY, USA",
+    "lat": 40.827502,
+    "lon": -73.915111,
+    "street": "TELLER AVENUE"
+   },
+   {
+    "bin": "2002029",
+    "borough": "Bronx",
+    "housenumber": "977",
+    "label": "977 TELLER AVENUE, Bronx, NY, USA",
+    "lat": 40.827385,
+    "lon": -73.915189,
+    "street": "TELLER AVENUE"
+   },
+   {
+    "bin": "2114154",
+    "borough": "Bronx",
+    "housenumber": "965",
+    "label": "965 TELLER AVENUE, Bronx, NY, USA",
+    "lat": 40.827028,
+    "lon": -73.915355,
+    "street": "TELLER AVENUE"
+   },
+   {
+    "bin": "2097111",
+    "borough": "Bronx",
+    "housenumber": "994",
+    "label": "994 TELLER AVENUE, Bronx, NY, USA",
+    "lat": 40.827729,
+    "lon": -73.913814,
+    "street": "TELLER AVENUE"
+   },
+   {
+    "bin": "2097111",
+    "borough": "Bronx",
+    "housenumber": "996",
+    "label": "996 TELLER AVENUE, Bronx, NY, USA",
+    "lat": 40.827729,
+    "lon": -73.913814,
+    "street": "TELLER AVENUE"
+   },
+   {
+    "bin": "2097111",
+    "borough": "Bronx",
+    "housenumber": "998",
+    "label": "998 TELLER AVENUE, Bronx, NY, USA",
+    "lat": 40.827729,
+    "lon": -73.913814,
+    "street": "TELLER AVENUE"
+   },
+   {
+    "bin": "2097111",
+    "borough": "Bronx",
+    "housenumber": "1010",
+    "label": "1010 TELLER AVENUE, Bronx, NY, USA",
+    "lat": 40.827729,
+    "lon": -73.913814,
+    "street": "TELLER AVENUE"
+   },
+   {
+    "bin": "2097111",
+    "borough": "Bronx",
+    "housenumber": "1012",
+    "label": "1012 TELLER AVENUE, Bronx, NY, USA",
+    "lat": 40.827729,
+    "lon": -73.913814,
+    "street": "TELLER AVENUE"
+   }
+  ]
+ },
+ "1000 Teller Avenue, NY 10456": {
   "features": [
    {
     "bin": "2097111",
@@ -1222,6 +1410,100 @@
   ]
  },
  "101 East  150 Street, Bronx, NY 10451": {
+  "features": [
+   {
+    "bin": "2001053",
+    "borough": "Bronx",
+    "housenumber": "150",
+    "label": "150 EAST 150 STREET, Bronx, NY, USA",
+    "lat": 40.819494,
+    "lon": -73.927478,
+    "street": "EAST 150 STREET"
+   },
+   {
+    "bin": "2000923",
+    "borough": "Bronx",
+    "housenumber": "292",
+    "label": "292 EAST 150 STREET, Bronx, NY, USA",
+    "lat": 40.81759,
+    "lon": -73.92161,
+    "street": "EAST 150 STREET"
+   },
+   {
+    "bin": "2000927",
+    "borough": "Bronx",
+    "housenumber": "310",
+    "label": "310 EAST 150 STREET, Bronx, NY, USA",
+    "lat": 40.817321,
+    "lon": -73.920897,
+    "street": "EAST 150 STREET"
+   },
+   {
+    "bin": "2000929",
+    "borough": "Bronx",
+    "housenumber": "322",
+    "label": "322 EAST 150 STREET, Bronx, NY, USA",
+    "lat": 40.817373,
+    "lon": -73.920394,
+    "street": "EAST 150 STREET"
+   },
+   {
+    "bin": "2000000",
+    "borough": "Bronx",
+    "housenumber": "340",
+    "label": "340 EAST 150 STREET, Bronx, NY, USA",
+    "lat": 40.81711,
+    "lon": -73.91979,
+    "street": "EAST 150 STREET"
+   },
+   {
+    "bin": "2001071",
+    "borough": "Bronx",
+    "housenumber": "145",
+    "label": "145 EAST 150 STREET, Bronx, NY, USA",
+    "lat": 40.819871,
+    "lon": -73.927554,
+    "street": "EAST 150 STREET"
+   },
+   {
+    "bin": "2001073",
+    "borough": "Bronx",
+    "housenumber": "141",
+    "label": "141 EAST 150 STREET, Bronx, NY, USA",
+    "lat": 40.819904,
+    "lon": -73.927668,
+    "street": "EAST 150 STREET"
+   },
+   {
+    "bin": "2001101",
+    "borough": "Bronx",
+    "housenumber": "102",
+    "label": "102 EAST 150 STREET, Bronx, NY, USA",
+    "lat": 40.819886,
+    "lon": -73.929329,
+    "street": "EAST 150 STREET"
+   },
+   {
+    "bin": "2001101",
+    "borough": "Bronx",
+    "housenumber": "106",
+    "label": "106 EAST 150 STREET, Bronx, NY, USA",
+    "lat": 40.819886,
+    "lon": -73.929329,
+    "street": "EAST 150 STREET"
+   },
+   {
+    "bin": "2001101",
+    "borough": "Bronx",
+    "housenumber": "114",
+    "label": "114 EAST 150 STREET, Bronx, NY, USA",
+    "lat": 40.819886,
+    "lon": -73.929329,
+    "street": "EAST 150 STREET"
+   }
+  ]
+ },
+ "101 East 150th Street, NY 10451": {
   "features": [
    {
     "bin": "2001053",
@@ -2349,6 +2631,19 @@
    }
   ]
  },
+ "109-55 128th Street South, NY 11420": {
+  "features": [
+   {
+    "bin": "4448916",
+    "borough": "Queens",
+    "housenumber": "109-55",
+    "label": "109-55 128 STREET, Richmond Hill, NY, USA",
+    "lat": 40.683083,
+    "lon": -73.813242,
+    "street": "128 STREET"
+   }
+  ]
+ },
  "1093 Southern Boulevard, Bronx, NY 10459": {
   "features": [
    {
@@ -2632,6 +2927,100 @@
   ]
  },
  "111 East 33Rd Street, Manhattan, NY 10016": {
+  "features": [
+   {
+    "bin": "1087537",
+    "borough": "Manhattan",
+    "housenumber": "111",
+    "label": "111 EAST 33 STREET, New York, NY, USA",
+    "lat": 40.746449,
+    "lon": -73.981003,
+    "street": "EAST 33 STREET"
+   },
+   {
+    "bin": "1017083",
+    "borough": "Manhattan",
+    "housenumber": "33",
+    "label": "33 EAST 33 STREET, New York, NY, USA",
+    "lat": 40.746994,
+    "lon": -73.982622,
+    "street": "EAST 33 STREET"
+   },
+   {
+    "bin": "1017019",
+    "borough": "Manhattan",
+    "housenumber": "40",
+    "label": "40 EAST 33 STREET, New York, NY, USA",
+    "lat": 40.746342,
+    "lon": -73.982595,
+    "street": "EAST 33 STREET"
+   },
+   {
+    "bin": "1017019",
+    "borough": "Manhattan",
+    "housenumber": "46",
+    "label": "46 EAST 33 STREET, New York, NY, USA",
+    "lat": 40.746342,
+    "lon": -73.982595,
+    "street": "EAST 33 STREET"
+   },
+   {
+    "bin": "1017020",
+    "borough": "Manhattan",
+    "housenumber": "34",
+    "label": "34 EAST 33 STREET, New York, NY, USA",
+    "lat": 40.746663,
+    "lon": -73.982954,
+    "street": "EAST 33 STREET"
+   },
+   {
+    "bin": "1080790",
+    "borough": "Manhattan",
+    "housenumber": "28A",
+    "label": "28A EAST 33 STREET, New York, NY, USA",
+    "lat": 40.746881,
+    "lon": -73.983236,
+    "street": "EAST 33 STREET"
+   },
+   {
+    "bin": "1017033",
+    "borough": "Manhattan",
+    "housenumber": "2",
+    "label": "2 EAST 33 STREET, New York, NY, USA",
+    "lat": 40.747565,
+    "lon": -73.984864,
+    "street": "EAST 33 STREET"
+   },
+   {
+    "bin": "1017030",
+    "borough": "Manhattan",
+    "housenumber": "16",
+    "label": "16 EAST 33 STREET, New York, NY, USA",
+    "lat": 40.747234,
+    "lon": -73.984312,
+    "street": "EAST 33 STREET"
+   },
+   {
+    "bin": "1087309",
+    "borough": "Manhattan",
+    "housenumber": "4",
+    "label": "4 EAST 33 STREET, New York, NY, USA",
+    "lat": 40.747361,
+    "lon": -73.984994,
+    "street": "EAST 33 STREET"
+   },
+   {
+    "bin": "1087309",
+    "borough": "Manhattan",
+    "housenumber": "6",
+    "label": "6 EAST 33 STREET, New York, NY, USA",
+    "lat": 40.747361,
+    "lon": -73.984994,
+    "street": "EAST 33 STREET"
+   }
+  ]
+ },
+ "111 East 33rd Street, NY 10016": {
   "features": [
    {
     "bin": "1087537",
@@ -4699,6 +5088,100 @@
    }
   ]
  },
+ "120-27 141st Street, NY 11436": {
+  "features": [
+   {
+    "bin": "4261207",
+    "borough": "Queens",
+    "housenumber": "120-27",
+    "label": "120-27 141 STREET, Jamaica, NY, USA",
+    "lat": 40.675604,
+    "lon": -73.799784,
+    "street": "141 STREET"
+   },
+   {
+    "bin": "4261179",
+    "borough": "Queens",
+    "housenumber": "120-16",
+    "label": "120-16 141 STREET, Jamaica, NY, USA",
+    "lat": 40.675642,
+    "lon": -73.80026,
+    "street": "141 STREET"
+   },
+   {
+    "bin": "4261182",
+    "borough": "Queens",
+    "housenumber": "120-24",
+    "label": "120-24 141 STREET, Jamaica, NY, USA",
+    "lat": 40.675437,
+    "lon": -73.800184,
+    "street": "141 STREET"
+   },
+   {
+    "bin": "4261178",
+    "borough": "Queens",
+    "housenumber": "120-14",
+    "label": "120-14 141 STREET, Jamaica, NY, USA",
+    "lat": 40.675693,
+    "lon": -73.800253,
+    "street": "141 STREET"
+   },
+   {
+    "bin": "4261180",
+    "borough": "Queens",
+    "housenumber": "120-18",
+    "label": "120-18 141 STREET, Jamaica, NY, USA",
+    "lat": 40.675582,
+    "lon": -73.800243,
+    "street": "141 STREET"
+   },
+   {
+    "bin": "4261184",
+    "borough": "Queens",
+    "housenumber": "120-28",
+    "label": "120-28 141 STREET, Jamaica, NY, USA",
+    "lat": 40.675246,
+    "lon": -73.80025,
+    "street": "141 STREET"
+   },
+   {
+    "bin": "4261206",
+    "borough": "Queens",
+    "housenumber": "120-41",
+    "label": "120-41 141 STREET, Jamaica, NY, USA",
+    "lat": 40.675184,
+    "lon": -73.799689,
+    "street": "141 STREET"
+   },
+   {
+    "bin": "4261207",
+    "borough": "Queens",
+    "housenumber": "120-25",
+    "label": "120-25 141 STREET, Jamaica, NY, USA",
+    "lat": 40.675604,
+    "lon": -73.799784,
+    "street": "141 STREET"
+   },
+   {
+    "bin": "4261181",
+    "borough": "Queens",
+    "housenumber": "120-22",
+    "label": "120-22 141 STREET, Jamaica, NY, USA",
+    "lat": 40.675506,
+    "lon": -73.800197,
+    "street": "141 STREET"
+   },
+   {
+    "bin": "4261175",
+    "borough": "Queens",
+    "housenumber": "120-02",
+    "label": "120-02 141 STREET, Jamaica, NY, USA",
+    "lat": 40.675995,
+    "lon": -73.800326,
+    "street": "141 STREET"
+   }
+  ]
+ },
  "121 Avenue Of The Americas, Manhattan, NY 10013": {
   "features": [
    {
@@ -5827,6 +6310,100 @@
    }
   ]
  },
+ "124 Eames Place, NY 10468": {
+  "features": [
+   {
+    "bin": "2115783",
+    "borough": "Bronx",
+    "housenumber": "124",
+    "label": "124 EAMES PLACE, Bronx, NY, USA",
+    "lat": 40.869146,
+    "lon": -73.901973,
+    "street": "EAMES PLACE"
+   },
+   {
+    "bin": "2000000",
+    "borough": "Bronx",
+    "housenumber": "129",
+    "label": "129 EAMES PLACE, Bronx, NY, USA",
+    "lat": 40.86942,
+    "lon": -73.90151,
+    "street": "EAMES PLACE"
+   },
+   {
+    "bin": "2115783",
+    "borough": "Bronx",
+    "housenumber": "138",
+    "label": "138 EAMES PLACE, Bronx, NY, USA",
+    "lat": 40.869146,
+    "lon": -73.901973,
+    "street": "EAMES PLACE"
+   },
+   {
+    "bin": "2015262",
+    "borough": "Bronx",
+    "housenumber": "122",
+    "label": "122 EAMES PLACE, Bronx, NY, USA",
+    "lat": 40.869081,
+    "lon": -73.901522,
+    "street": "EAMES PLACE"
+   },
+   {
+    "bin": "2015264",
+    "borough": "Bronx",
+    "housenumber": "117",
+    "label": "117 EAMES PLACE, Bronx, NY, USA",
+    "lat": 40.869334,
+    "lon": -73.900986,
+    "street": "EAMES PLACE"
+   },
+   {
+    "bin": "2000000",
+    "borough": "Bronx",
+    "housenumber": "125",
+    "label": "125 EAMES PLACE, Bronx, NY, USA",
+    "lat": 40.86942,
+    "lon": -73.90151,
+    "street": "EAMES PLACE"
+   },
+   {
+    "bin": "2115783",
+    "borough": "Bronx",
+    "housenumber": "128",
+    "label": "128 EAMES PLACE, Bronx, NY, USA",
+    "lat": 40.869146,
+    "lon": -73.901973,
+    "street": "EAMES PLACE"
+   },
+   {
+    "bin": "2115783",
+    "borough": "Bronx",
+    "housenumber": "136",
+    "label": "136 EAMES PLACE, Bronx, NY, USA",
+    "lat": 40.869146,
+    "lon": -73.901973,
+    "street": "EAMES PLACE"
+   },
+   {
+    "bin": "2000000",
+    "borough": "Bronx",
+    "housenumber": "127",
+    "label": "127 EAMES PLACE, Bronx, NY, USA",
+    "lat": 40.86942,
+    "lon": -73.90151,
+    "street": "EAMES PLACE"
+   },
+   {
+    "bin": "2115783",
+    "borough": "Bronx",
+    "housenumber": "130",
+    "label": "130 EAMES PLACE, Bronx, NY, USA",
+    "lat": 40.869146,
+    "lon": -73.901973,
+    "street": "EAMES PLACE"
+   }
+  ]
+ },
  "1248 NELSON AVENUE, Bronx, NY 10452": {
   "features": [
    {
@@ -6768,6 +7345,100 @@
   ]
  },
  "132-55 RIDGEDALE STREET, Queens, NY 11413": {
+  "features": [
+   {
+    "bin": "4274083",
+    "borough": "Queens",
+    "housenumber": "132-55",
+    "label": "132-55 RIDGEDALE STREET, Springfield Gardens, NY, USA",
+    "lat": 40.681895,
+    "lon": -73.753044,
+    "street": "RIDGEDALE STREET"
+   },
+   {
+    "bin": "4274083",
+    "borough": "Queens",
+    "housenumber": "132-55",
+    "label": "132-55 RIDGEDALE AVENUE, Springfield Gardens, NY, USA",
+    "lat": 40.681895,
+    "lon": -73.753044,
+    "street": "RIDGEDALE AVENUE"
+   },
+   {
+    "bin": "4266214",
+    "borough": "Queens",
+    "housenumber": "132-55",
+    "label": "132-55 154 STREET, Jamaica, NY, USA",
+    "lat": 40.670754,
+    "lon": -73.782183,
+    "street": "154 STREET"
+   },
+   {
+    "bin": "4266245",
+    "borough": "Queens",
+    "housenumber": "132-55",
+    "label": "132-55 155 STREET, Jamaica, NY, USA",
+    "lat": 40.671247,
+    "lon": -73.781441,
+    "street": "155 STREET"
+   },
+   {
+    "bin": "4266357",
+    "borough": "Queens",
+    "housenumber": "132-55",
+    "label": "132-55 159 STREET, Jamaica, NY, USA",
+    "lat": 40.672802,
+    "lon": -73.778236,
+    "street": "159 STREET"
+   },
+   {
+    "bin": "4510399",
+    "borough": "Queens",
+    "housenumber": "132-55 GAR",
+    "label": "132-55 GAR 154 STREET, Jamaica, NY, USA",
+    "lat": 40.670907,
+    "lon": -73.782293,
+    "street": "154 STREET"
+   },
+   {
+    "bin": "3014856",
+    "borough": "Brooklyn",
+    "housenumber": "132",
+    "label": "132 55 STREET, Brooklyn, NY, USA",
+    "lat": 40.6466,
+    "lon": -74.02109,
+    "street": "55 STREET"
+   },
+   {
+    "bin": "3101531",
+    "borough": "Brooklyn",
+    "housenumber": "132",
+    "label": "132 EAST 55 STREET, Brooklyn, NY, USA",
+    "lat": 40.654942,
+    "lon": -73.926112,
+    "street": "EAST 55 STREET"
+   },
+   {
+    "bin": "1083720",
+    "borough": "Manhattan",
+    "housenumber": "132",
+    "label": "132 WEST 55 STREET, New York, NY, USA",
+    "lat": 40.763271,
+    "lon": -73.979671,
+    "street": "WEST 55 STREET"
+   },
+   {
+    "bin": "3353505",
+    "borough": "Brooklyn",
+    "housenumber": "132 GARAGE",
+    "label": "132 GARAGE EAST 55 STREET, Brooklyn, NY, USA",
+    "lat": 40.654918,
+    "lon": -73.926315,
+    "street": "EAST 55 STREET"
+   }
+  ]
+ },
+ "132-55 Ridgedale Street, NY 11413": {
   "features": [
    {
     "bin": "4274083",
@@ -7895,6 +8566,100 @@
    }
   ]
  },
+ "136-25 218th Street, NY 11413": {
+  "features": [
+   {
+    "bin": "4280082",
+    "borough": "Queens",
+    "housenumber": "136-25",
+    "label": "136-25 218 STREET, Laurelton, NY, USA",
+    "lat": 40.676342,
+    "lon": -73.752996,
+    "street": "218 STREET"
+   },
+   {
+    "bin": "4280082",
+    "borough": "Queens",
+    "housenumber": "136-29",
+    "label": "136-29 218 STREET, Laurelton, NY, USA",
+    "lat": 40.676342,
+    "lon": -73.752996,
+    "street": "218 STREET"
+   },
+   {
+    "bin": "4280082",
+    "borough": "Queens",
+    "housenumber": "136-31",
+    "label": "136-31 218 STREET, Laurelton, NY, USA",
+    "lat": 40.676342,
+    "lon": -73.752996,
+    "street": "218 STREET"
+   },
+   {
+    "bin": "4280082",
+    "borough": "Queens",
+    "housenumber": "136-33",
+    "label": "136-33 218 STREET, Laurelton, NY, USA",
+    "lat": 40.676342,
+    "lon": -73.752996,
+    "street": "218 STREET"
+   },
+   {
+    "bin": "4430494",
+    "borough": "Queens",
+    "housenumber": "136-07",
+    "label": "136-07 218 STREET, Laurelton, NY, USA",
+    "lat": 40.676996,
+    "lon": -73.752706,
+    "street": "218 STREET"
+   },
+   {
+    "bin": "4280082",
+    "borough": "Queens",
+    "housenumber": "136-35",
+    "label": "136-35 218 STREET, Laurelton, NY, USA",
+    "lat": 40.676342,
+    "lon": -73.752996,
+    "street": "218 STREET"
+   },
+   {
+    "bin": "4280082",
+    "borough": "Queens",
+    "housenumber": "136-39",
+    "label": "136-39 218 STREET, Laurelton, NY, USA",
+    "lat": 40.676342,
+    "lon": -73.752996,
+    "street": "218 STREET"
+   },
+   {
+    "bin": "4280083",
+    "borough": "Queens",
+    "housenumber": "136-17",
+    "label": "136-17 218 STREET, Laurelton, NY, USA",
+    "lat": 40.676714,
+    "lon": -73.752549,
+    "street": "218 STREET"
+   },
+   {
+    "bin": "4594918",
+    "borough": "Queens",
+    "housenumber": "136-20",
+    "label": "136-20 218 STREET, Laurelton, NY, USA",
+    "lat": 40.67664,
+    "lon": -73.7527,
+    "street": "218 STREET"
+   },
+   {
+    "bin": "4280082",
+    "borough": "Queens",
+    "housenumber": "136-27",
+    "label": "136-27 218 STREET, Laurelton, NY, USA",
+    "lat": 40.676342,
+    "lon": -73.752996,
+    "street": "218 STREET"
+   }
+  ]
+ },
  "1366 Cromwell Ave, Bronx, NY 10452": {
   "features": [
    {
@@ -8084,6 +8849,100 @@
   ]
  },
  "139 Menahan Street, Brooklyn, NY 11221": {
+  "features": [
+   {
+    "bin": "3325706",
+    "borough": "Brooklyn",
+    "housenumber": "139",
+    "label": "139 MENAHAN STREET, Brooklyn, NY, USA",
+    "lat": 40.696035,
+    "lon": -73.919467,
+    "street": "MENAHAN STREET"
+   },
+   {
+    "bin": "3000000",
+    "borough": "Brooklyn",
+    "housenumber": "17",
+    "label": "17 MENAHAN STREET, Brooklyn, NY, USA",
+    "lat": 40.69297,
+    "lon": -73.92253,
+    "street": "MENAHAN STREET"
+   },
+   {
+    "bin": "3000000",
+    "borough": "Brooklyn",
+    "housenumber": "19",
+    "label": "19 MENAHAN STREET, Brooklyn, NY, USA",
+    "lat": 40.69297,
+    "lon": -73.92253,
+    "street": "MENAHAN STREET"
+   },
+   {
+    "bin": "3075594",
+    "borough": "Brooklyn",
+    "housenumber": "7",
+    "label": "7 MENAHAN STREET, Brooklyn, NY, USA",
+    "lat": 40.692472,
+    "lon": -73.92284,
+    "street": "MENAHAN STREET"
+   },
+   {
+    "bin": "3393060",
+    "borough": "Brooklyn",
+    "housenumber": "31",
+    "label": "31 MENAHAN STREET, Brooklyn, NY, USA",
+    "lat": 40.693368,
+    "lon": -73.922117,
+    "street": "MENAHAN STREET"
+   },
+   {
+    "bin": "3392454",
+    "borough": "Brooklyn",
+    "housenumber": "103",
+    "label": "103 MENAHAN STREET, Brooklyn, NY, USA",
+    "lat": 40.694971,
+    "lon": -73.920554,
+    "street": "MENAHAN STREET"
+   },
+   {
+    "bin": "3075632",
+    "borough": "Brooklyn",
+    "housenumber": "81A",
+    "label": "81A MENAHAN STREET, Brooklyn, NY, USA",
+    "lat": 40.694474,
+    "lon": -73.920992,
+    "street": "MENAHAN STREET"
+   },
+   {
+    "bin": "3343385",
+    "borough": "Brooklyn",
+    "housenumber": "79",
+    "label": "79 MENAHAN STREET, Brooklyn, NY, USA",
+    "lat": 40.69445,
+    "lon": -73.921067,
+    "street": "MENAHAN STREET"
+   },
+   {
+    "bin": "3075634",
+    "borough": "Brooklyn",
+    "housenumber": "71",
+    "label": "71 MENAHAN STREET, Brooklyn, NY, USA",
+    "lat": 40.694238,
+    "lon": -73.921219,
+    "street": "MENAHAN STREET"
+   },
+   {
+    "bin": "3392481",
+    "borough": "Brooklyn",
+    "housenumber": "97",
+    "label": "97 MENAHAN STREET, Brooklyn, NY, USA",
+    "lat": 40.694824,
+    "lon": -73.920687,
+    "street": "MENAHAN STREET"
+   }
+  ]
+ },
+ "139 Menahan Street, NY 11221": {
   "features": [
    {
     "bin": "3325706",
@@ -8647,6 +9506,100 @@
    }
   ]
  },
+ "141 East 111th Street, NY 10029": {
+  "features": [
+   {
+    "bin": "1081346",
+    "borough": "Manhattan",
+    "housenumber": "141",
+    "label": "141 EAST 111 STREET, New York, NY, USA",
+    "lat": 40.796327,
+    "lon": -73.944552,
+    "street": "EAST 111 STREET"
+   },
+   {
+    "bin": "1000000",
+    "borough": "Manhattan",
+    "housenumber": "111",
+    "label": "111 EAST 111 STREET, New York, NY, USA",
+    "lat": 40.79631,
+    "lon": -73.94503,
+    "street": "EAST 111 STREET"
+   },
+   {
+    "bin": "1085254",
+    "borough": "Manhattan",
+    "housenumber": "8",
+    "label": "8 EAST 111 STREET, New York, NY, USA",
+    "lat": 40.796664,
+    "lon": -73.947856,
+    "street": "EAST 111 STREET"
+   },
+   {
+    "bin": "1051620",
+    "borough": "Manhattan",
+    "housenumber": "88",
+    "label": "88 EAST 111 STREET, New York, NY, USA",
+    "lat": 40.796158,
+    "lon": -73.946154,
+    "street": "EAST 111 STREET"
+   },
+   {
+    "bin": "1051620",
+    "borough": "Manhattan",
+    "housenumber": "92",
+    "label": "92 EAST 111 STREET, New York, NY, USA",
+    "lat": 40.796158,
+    "lon": -73.946154,
+    "street": "EAST 111 STREET"
+   },
+   {
+    "bin": "1088912",
+    "borough": "Manhattan",
+    "housenumber": "64",
+    "label": "64 EAST 111 STREET, New York, NY, USA",
+    "lat": 40.796307,
+    "lon": -73.946442,
+    "street": "EAST 111 STREET"
+   },
+   {
+    "bin": "1088912",
+    "borough": "Manhattan",
+    "housenumber": "66",
+    "label": "66 EAST 111 STREET, New York, NY, USA",
+    "lat": 40.796307,
+    "lon": -73.946442,
+    "street": "EAST 111 STREET"
+   },
+   {
+    "bin": "1088912",
+    "borough": "Manhattan",
+    "housenumber": "80",
+    "label": "80 EAST 111 STREET, New York, NY, USA",
+    "lat": 40.796307,
+    "lon": -73.946442,
+    "street": "EAST 111 STREET"
+   },
+   {
+    "bin": "1051622",
+    "borough": "Manhattan",
+    "housenumber": "62",
+    "label": "62 EAST 111 STREET, New York, NY, USA",
+    "lat": 40.796586,
+    "lon": -73.946983,
+    "street": "EAST 111 STREET"
+   },
+   {
+    "bin": "1051628",
+    "borough": "Manhattan",
+    "housenumber": "7",
+    "label": "7 EAST 111 STREET, New York, NY, USA",
+    "lat": 40.797329,
+    "lon": -73.947118,
+    "street": "EAST 111 STREET"
+   }
+  ]
+ },
  "141 MACON STREET, Brooklyn, NY 11216": {
   "features": [
    {
@@ -8926,6 +9879,194 @@
     "lat": 40.623699,
     "lon": -73.915471,
     "street": "EAST 68 STREET"
+   }
+  ]
+ },
+ "1420 East 68th Street, NY 11234": {
+  "features": [
+   {
+    "bin": "3236496",
+    "borough": "Brooklyn",
+    "housenumber": "1420",
+    "label": "1420 EAST 68 STREET, Brooklyn, NY, USA",
+    "lat": 40.620792,
+    "lon": -73.913132,
+    "street": "EAST 68 STREET"
+   },
+   {
+    "bin": "3235557",
+    "borough": "Brooklyn",
+    "housenumber": "1232",
+    "label": "1232 EAST 68 STREET, Brooklyn, NY, USA",
+    "lat": 40.623913,
+    "lon": -73.916571,
+    "street": "EAST 68 STREET"
+   },
+   {
+    "bin": "3235561",
+    "borough": "Brooklyn",
+    "housenumber": "1242",
+    "label": "1242 EAST 68 STREET, Brooklyn, NY, USA",
+    "lat": 40.623735,
+    "lon": -73.916327,
+    "street": "EAST 68 STREET"
+   },
+   {
+    "bin": "3235565",
+    "borough": "Brooklyn",
+    "housenumber": "1252",
+    "label": "1252 EAST 68 STREET, Brooklyn, NY, USA",
+    "lat": 40.623534,
+    "lon": -73.916107,
+    "street": "EAST 68 STREET"
+   },
+   {
+    "bin": "3235566",
+    "borough": "Brooklyn",
+    "housenumber": "1254",
+    "label": "1254 EAST 68 STREET, Brooklyn, NY, USA",
+    "lat": 40.623499,
+    "lon": -73.916066,
+    "street": "EAST 68 STREET"
+   },
+   {
+    "bin": "3235568",
+    "borough": "Brooklyn",
+    "housenumber": "1260",
+    "label": "1260 EAST 68 STREET, Brooklyn, NY, USA",
+    "lat": 40.623366,
+    "lon": -73.915962,
+    "street": "EAST 68 STREET"
+   },
+   {
+    "bin": "3235603",
+    "borough": "Brooklyn",
+    "housenumber": "1273",
+    "label": "1273 EAST 68 STREET, Brooklyn, NY, USA",
+    "lat": 40.623449,
+    "lon": -73.91519,
+    "street": "EAST 68 STREET"
+   },
+   {
+    "bin": "3235605",
+    "borough": "Brooklyn",
+    "housenumber": "1267",
+    "label": "1267 EAST 68 STREET, Brooklyn, NY, USA",
+    "lat": 40.623575,
+    "lon": -73.915332,
+    "street": "EAST 68 STREET"
+   },
+   {
+    "bin": "3235606",
+    "borough": "Brooklyn",
+    "housenumber": "1265",
+    "label": "1265 EAST 68 STREET, Brooklyn, NY, USA",
+    "lat": 40.623624,
+    "lon": -73.915386,
+    "street": "EAST 68 STREET"
+   },
+   {
+    "bin": "3235607",
+    "borough": "Brooklyn",
+    "housenumber": "1259",
+    "label": "1259 EAST 68 STREET, Brooklyn, NY, USA",
+    "lat": 40.623699,
+    "lon": -73.915471,
+    "street": "EAST 68 STREET"
+   }
+  ]
+ },
+ "144 East 128th Street, NY 10035": {
+  "features": [
+   {
+    "bin": "1054502",
+    "borough": "Manhattan",
+    "housenumber": "144",
+    "label": "144 EAST 128 STREET, New York, NY, USA",
+    "lat": 40.805707,
+    "lon": -73.935082,
+    "street": "EAST 128 STREET"
+   },
+   {
+    "bin": "1054499",
+    "borough": "Manhattan",
+    "housenumber": "128",
+    "label": "128 EAST 128 STREET, New York, NY, USA",
+    "lat": 40.806198,
+    "lon": -73.936455,
+    "street": "EAST 128 STREET"
+   },
+   {
+    "bin": "1090930",
+    "borough": "Manhattan",
+    "housenumber": "110",
+    "label": "110 EAST 128 STREET, New York, NY, USA",
+    "lat": 40.806344,
+    "lon": -73.93779,
+    "street": "EAST 128 STREET"
+   },
+   {
+    "bin": "1054500",
+    "borough": "Manhattan",
+    "housenumber": "108",
+    "label": "108 EAST 128 STREET, New York, NY, USA",
+    "lat": 40.806583,
+    "lon": -73.937158,
+    "street": "EAST 128 STREET"
+   },
+   {
+    "bin": "1000000",
+    "borough": "Manhattan",
+    "housenumber": "102",
+    "label": "102 EAST 128 STREET, New York, NY, USA",
+    "lat": 40.80629,
+    "lon": -73.93723,
+    "street": "EAST 128 STREET"
+   },
+   {
+    "bin": "1054502",
+    "borough": "Manhattan",
+    "housenumber": "170",
+    "label": "170 EAST 128 STREET, New York, NY, USA",
+    "lat": 40.805707,
+    "lon": -73.935082,
+    "street": "EAST 128 STREET"
+   },
+   {
+    "bin": "1054503",
+    "borough": "Manhattan",
+    "housenumber": "101",
+    "label": "101 EAST 128 STREET, New York, NY, USA",
+    "lat": 40.806972,
+    "lon": -73.937198,
+    "street": "EAST 128 STREET"
+   },
+   {
+    "bin": "1054505",
+    "borough": "Manhattan",
+    "housenumber": "107",
+    "label": "107 EAST 128 STREET, New York, NY, USA",
+    "lat": 40.806905,
+    "lon": -73.936017,
+    "street": "EAST 128 STREET"
+   },
+   {
+    "bin": "1054505",
+    "borough": "Manhattan",
+    "housenumber": "109",
+    "label": "109 EAST 128 STREET, New York, NY, USA",
+    "lat": 40.806905,
+    "lon": -73.936017,
+    "street": "EAST 128 STREET"
+   },
+   {
+    "bin": "1054505",
+    "borough": "Manhattan",
+    "housenumber": "111",
+    "label": "111 EAST 128 STREET, New York, NY, USA",
+    "lat": 40.806905,
+    "lon": -73.936017,
+    "street": "EAST 128 STREET"
    }
   ]
  },
@@ -9349,6 +10490,100 @@
    }
   ]
  },
+ "145 West 84th Street, NY 10024": {
+  "features": [
+   {
+    "bin": "1032128",
+    "borough": "Manhattan",
+    "housenumber": "145",
+    "label": "145 WEST 84 STREET, New York, NY, USA",
+    "lat": 40.785962,
+    "lon": -73.974008,
+    "street": "WEST 84 STREET"
+   },
+   {
+    "bin": "1081038",
+    "borough": "Manhattan",
+    "housenumber": "14",
+    "label": "14 WEST 84 STREET, New York, NY, USA",
+    "lat": 40.78412,
+    "lon": -73.97122,
+    "street": "WEST 84 STREET"
+   },
+   {
+    "bin": "1031238",
+    "borough": "Manhattan",
+    "housenumber": "48",
+    "label": "48 WEST 84 STREET, New York, NY, USA",
+    "lat": 40.784626,
+    "lon": -73.972306,
+    "street": "WEST 84 STREET"
+   },
+   {
+    "bin": "1031243",
+    "borough": "Manhattan",
+    "housenumber": "64",
+    "label": "64 WEST 84 STREET, New York, NY, USA",
+    "lat": 40.784811,
+    "lon": -73.972747,
+    "street": "WEST 84 STREET"
+   },
+   {
+    "bin": "1031253",
+    "borough": "Manhattan",
+    "housenumber": "62",
+    "label": "62 WEST 84 STREET, New York, NY, USA",
+    "lat": 40.784789,
+    "lon": -73.972693,
+    "street": "WEST 84 STREET"
+   },
+   {
+    "bin": "1031254",
+    "borough": "Manhattan",
+    "housenumber": "18",
+    "label": "18 WEST 84 STREET, New York, NY, USA",
+    "lat": 40.784248,
+    "lon": -73.971473,
+    "street": "WEST 84 STREET"
+   },
+   {
+    "bin": "1031254",
+    "borough": "Manhattan",
+    "housenumber": "22",
+    "label": "22 WEST 84 STREET, New York, NY, USA",
+    "lat": 40.784248,
+    "lon": -73.971473,
+    "street": "WEST 84 STREET"
+   },
+   {
+    "bin": "1085067",
+    "borough": "Manhattan",
+    "housenumber": "53",
+    "label": "53 WEST 84 STREET, New York, NY, USA",
+    "lat": 40.785108,
+    "lon": -73.972452,
+    "street": "WEST 84 STREET"
+   },
+   {
+    "bin": "1031298",
+    "borough": "Manhattan",
+    "housenumber": "41",
+    "label": "41 WEST 84 STREET, New York, NY, USA",
+    "lat": 40.784943,
+    "lon": -73.972106,
+    "street": "WEST 84 STREET"
+   },
+   {
+    "bin": "1031306",
+    "borough": "Manhattan",
+    "housenumber": "19",
+    "label": "19 WEST 84 STREET, New York, NY, USA",
+    "lat": 40.784588,
+    "lon": -73.971166,
+    "street": "WEST 84 STREET"
+   }
+  ]
+ },
  "147-65 249 Street, Queens, NY 11422": {
   "features": [
    {
@@ -9444,6 +10679,100 @@
   ]
  },
  "147-65 249TH STREET, Queens, NY 11422": {
+  "features": [
+   {
+    "bin": "4289717",
+    "borough": "Queens",
+    "housenumber": "147-65",
+    "label": "147-65 249 STREET, Rosedale, NY, USA",
+    "lat": 40.655521,
+    "lon": -73.738289,
+    "street": "249 STREET"
+   },
+   {
+    "bin": "4289618",
+    "borough": "Queens",
+    "housenumber": "147-12",
+    "label": "147-12 249 STREET, Rosedale, NY, USA",
+    "lat": 40.6569,
+    "lon": -73.738995,
+    "street": "249 STREET"
+   },
+   {
+    "bin": "4289653",
+    "borough": "Queens",
+    "housenumber": "147-17",
+    "label": "147-17 249 STREET, Rosedale, NY, USA",
+    "lat": 40.656758,
+    "lon": -73.738442,
+    "street": "249 STREET"
+   },
+   {
+    "bin": "4289655",
+    "borough": "Queens",
+    "housenumber": "147-07",
+    "label": "147-07 249 STREET, Rosedale, NY, USA",
+    "lat": 40.657012,
+    "lon": -73.738465,
+    "street": "249 STREET"
+   },
+   {
+    "bin": "4289678",
+    "borough": "Queens",
+    "housenumber": "147-33",
+    "label": "147-33 249 STREET, Rosedale, NY, USA",
+    "lat": 40.656305,
+    "lon": -73.73851,
+    "street": "249 STREET"
+   },
+   {
+    "bin": "4533905",
+    "borough": "Queens",
+    "housenumber": "147-64",
+    "label": "147-64 249 STREET, Rosedale, NY, USA",
+    "lat": 40.655508,
+    "lon": -73.739023,
+    "street": "249 STREET"
+   },
+   {
+    "bin": "4289619",
+    "borough": "Queens",
+    "housenumber": "147-16",
+    "label": "147-16 249 STREET, Rosedale, NY, USA",
+    "lat": 40.656781,
+    "lon": -73.73905,
+    "street": "249 STREET"
+   },
+   {
+    "bin": "4289654",
+    "borough": "Queens",
+    "housenumber": "147-11",
+    "label": "147-11 249 STREET, Rosedale, NY, USA",
+    "lat": 40.656898,
+    "lon": -73.738474,
+    "street": "249 STREET"
+   },
+   {
+    "bin": "4289677",
+    "borough": "Queens",
+    "housenumber": "147-57",
+    "label": "147-57 249 STREET, Rosedale, NY, USA",
+    "lat": 40.65608,
+    "lon": -73.738274,
+    "street": "249 STREET"
+   },
+   {
+    "bin": "4289679",
+    "borough": "Queens",
+    "housenumber": "147-27",
+    "label": "147-27 249 STREET, Rosedale, NY, USA",
+    "lat": 40.656437,
+    "lon": -73.738502,
+    "street": "249 STREET"
+   }
+  ]
+ },
+ "147-65 249th Street, NY 11422": {
   "features": [
    {
     "bin": "4289717",
@@ -9820,6 +11149,100 @@
   ]
  },
  "15 Snyder Avenue, Brooklyn, NY 11226": {
+  "features": [
+   {
+    "bin": "3117232",
+    "borough": "Brooklyn",
+    "housenumber": "15",
+    "label": "15 SNYDER AVENUE, Brooklyn, NY, USA",
+    "lat": 40.648795,
+    "lon": -73.957499,
+    "street": "SNYDER AVENUE"
+   },
+   {
+    "bin": "3109260",
+    "borough": "Brooklyn",
+    "housenumber": "3009",
+    "label": "3009 SNYDER AVENUE, Brooklyn, NY, USA",
+    "lat": 40.649084,
+    "lon": -73.949092,
+    "street": "SNYDER AVENUE"
+   },
+   {
+    "bin": "3109260",
+    "borough": "Brooklyn",
+    "housenumber": "3011",
+    "label": "3011 SNYDER AVENUE, Brooklyn, NY, USA",
+    "lat": 40.649084,
+    "lon": -73.949092,
+    "street": "SNYDER AVENUE"
+   },
+   {
+    "bin": "3109303",
+    "borough": "Brooklyn",
+    "housenumber": "3113",
+    "label": "3113 SNYDER AVENUE, Brooklyn, NY, USA",
+    "lat": 40.649229,
+    "lon": -73.947919,
+    "street": "SNYDER AVENUE"
+   },
+   {
+    "bin": "3109307",
+    "borough": "Brooklyn",
+    "housenumber": "3103",
+    "label": "3103 SNYDER AVENUE, Brooklyn, NY, USA",
+    "lat": 40.649219,
+    "lon": -73.948209,
+    "street": "SNYDER AVENUE"
+   },
+   {
+    "bin": "3109347",
+    "borough": "Brooklyn",
+    "housenumber": "3209",
+    "label": "3209 SNYDER AVENUE, Brooklyn, NY, USA",
+    "lat": 40.649302,
+    "lon": -73.947109,
+    "street": "SNYDER AVENUE"
+   },
+   {
+    "bin": "3109347",
+    "borough": "Brooklyn",
+    "housenumber": "3211",
+    "label": "3211 SNYDER AVENUE, Brooklyn, NY, USA",
+    "lat": 40.649302,
+    "lon": -73.947109,
+    "street": "SNYDER AVENUE"
+   },
+   {
+    "bin": "3109348",
+    "borough": "Brooklyn",
+    "housenumber": "3203",
+    "label": "3203 SNYDER AVENUE, Brooklyn, NY, USA",
+    "lat": 40.649292,
+    "lon": -73.947296,
+    "street": "SNYDER AVENUE"
+   },
+   {
+    "bin": "3117295",
+    "borough": "Brooklyn",
+    "housenumber": "2301",
+    "label": "2301 SNYDER AVENUE, Brooklyn, NY, USA",
+    "lat": 40.648796,
+    "lon": -73.955404,
+    "street": "SNYDER AVENUE"
+   },
+   {
+    "bin": "3117295",
+    "borough": "Brooklyn",
+    "housenumber": "2305",
+    "label": "2305 SNYDER AVENUE, Brooklyn, NY, USA",
+    "lat": 40.648796,
+    "lon": -73.955404,
+    "street": "SNYDER AVENUE"
+   }
+  ]
+ },
+ "15 Snyder Avenue, NY 11226": {
   "features": [
    {
     "bin": "3117232",
@@ -11418,6 +12841,100 @@
   ]
  },
  "158-20 101st St, Queens, NY 11414": {
+  "features": [
+   {
+    "bin": "4295194",
+    "borough": "Queens",
+    "housenumber": "158-20",
+    "label": "158-20 101 STREET, Howard Beach, NY, USA",
+    "lat": 40.661348,
+    "lon": -73.833086,
+    "street": "101 STREET"
+   },
+   {
+    "bin": "4295194",
+    "borough": "Queens",
+    "housenumber": "158-04",
+    "label": "158-04 101 STREET, Howard Beach, NY, USA",
+    "lat": 40.661348,
+    "lon": -73.833086,
+    "street": "101 STREET"
+   },
+   {
+    "bin": "4295194",
+    "borough": "Queens",
+    "housenumber": "158-14",
+    "label": "158-14 101 STREET, Howard Beach, NY, USA",
+    "lat": 40.661348,
+    "lon": -73.833086,
+    "street": "101 STREET"
+   },
+   {
+    "bin": "4295194",
+    "borough": "Queens",
+    "housenumber": "158-16",
+    "label": "158-16 101 STREET, Howard Beach, NY, USA",
+    "lat": 40.661348,
+    "lon": -73.833086,
+    "street": "101 STREET"
+   },
+   {
+    "bin": "4295214",
+    "borough": "Queens",
+    "housenumber": "158-37",
+    "label": "158-37 101 STREET, Howard Beach, NY, USA",
+    "lat": 40.660916,
+    "lon": -73.832306,
+    "street": "101 STREET"
+   },
+   {
+    "bin": "4295217",
+    "borough": "Queens",
+    "housenumber": "158-23",
+    "label": "158-23 101 STREET, Howard Beach, NY, USA",
+    "lat": 40.661237,
+    "lon": -73.832431,
+    "street": "101 STREET"
+   },
+   {
+    "bin": "4295218",
+    "borough": "Queens",
+    "housenumber": "158-21",
+    "label": "158-21 101 STREET, Howard Beach, NY, USA",
+    "lat": 40.661325,
+    "lon": -73.832464,
+    "street": "101 STREET"
+   },
+   {
+    "bin": "4295220",
+    "borough": "Queens",
+    "housenumber": "158-15",
+    "label": "158-15 101 STREET, Howard Beach, NY, USA",
+    "lat": 40.661451,
+    "lon": -73.832478,
+    "street": "101 STREET"
+   },
+   {
+    "bin": "4295194",
+    "borough": "Queens",
+    "housenumber": "158-08",
+    "label": "158-08 101 STREET, Howard Beach, NY, USA",
+    "lat": 40.661348,
+    "lon": -73.833086,
+    "street": "101 STREET"
+   },
+   {
+    "bin": "4295194",
+    "borough": "Queens",
+    "housenumber": "158-12",
+    "label": "158-12 101 STREET, Howard Beach, NY, USA",
+    "lat": 40.661348,
+    "lon": -73.833086,
+    "street": "101 STREET"
+   }
+  ]
+ },
+ "158-20 101st Street, NY 11414": {
   "features": [
    {
     "bin": "4295194",
@@ -13297,6 +14814,100 @@
    }
   ]
  },
+ "175 West 134th Street, NY 10030": {
+  "features": [
+   {
+    "bin": "1058248",
+    "borough": "Manhattan",
+    "housenumber": "175",
+    "label": "175 WEST 134 STREET, New York, NY, USA",
+    "lat": 40.814414,
+    "lon": -73.942687,
+    "street": "WEST 134 STREET"
+   },
+   {
+    "bin": "1000000",
+    "borough": "Manhattan",
+    "housenumber": "134",
+    "label": "134 WEST 134 STREET, New York, NY, USA",
+    "lat": 40.81405,
+    "lon": -73.9434,
+    "street": "WEST 134 STREET"
+   },
+   {
+    "bin": "1000000",
+    "borough": "Manhattan",
+    "housenumber": "246",
+    "label": "246 WEST 134 STREET, New York, NY, USA",
+    "lat": 40.81522,
+    "lon": -73.94656,
+    "street": "WEST 134 STREET"
+   },
+   {
+    "bin": "1000000",
+    "borough": "Manhattan",
+    "housenumber": "250",
+    "label": "250 WEST 134 STREET, New York, NY, USA",
+    "lat": 40.81522,
+    "lon": -73.94656,
+    "street": "WEST 134 STREET"
+   },
+   {
+    "bin": "1000000",
+    "borough": "Manhattan",
+    "housenumber": "254",
+    "label": "254 WEST 134 STREET, New York, NY, USA",
+    "lat": 40.81522,
+    "lon": -73.94656,
+    "street": "WEST 134 STREET"
+   },
+   {
+    "bin": "1000000",
+    "borough": "Manhattan",
+    "housenumber": "220",
+    "label": "220 WEST 134 STREET, New York, NY, USA",
+    "lat": 40.81493,
+    "lon": -73.94585,
+    "street": "WEST 134 STREET"
+   },
+   {
+    "bin": "1000000",
+    "borough": "Manhattan",
+    "housenumber": "234",
+    "label": "234 WEST 134 STREET, New York, NY, USA",
+    "lat": 40.81493,
+    "lon": -73.94585,
+    "street": "WEST 134 STREET"
+   },
+   {
+    "bin": "1058809",
+    "borough": "Manhattan",
+    "housenumber": "208",
+    "label": "208 WEST 134 STREET, New York, NY, USA",
+    "lat": 40.814523,
+    "lon": -73.944999,
+    "street": "WEST 134 STREET"
+   },
+   {
+    "bin": "1058826",
+    "borough": "Manhattan",
+    "housenumber": "259",
+    "label": "259 WEST 134 STREET, New York, NY, USA",
+    "lat": 40.815604,
+    "lon": -73.946043,
+    "street": "WEST 134 STREET"
+   },
+   {
+    "bin": "1058833",
+    "borough": "Manhattan",
+    "housenumber": "229",
+    "label": "229 WEST 134 STREET, New York, NY, USA",
+    "lat": 40.815274,
+    "lon": -73.945248,
+    "street": "WEST 134 STREET"
+   }
+  ]
+ },
  "1776 MANSION STREET, Bronx, NY 10460": {
   "features": [
    {
@@ -14237,6 +15848,100 @@
    }
   ]
  },
+ "183 South 3rd Street, NY 11211": {
+  "features": [
+   {
+    "bin": "3063128",
+    "borough": "Brooklyn",
+    "housenumber": "183",
+    "label": "183 SOUTH 3 STREET, Brooklyn, NY, USA",
+    "lat": 40.711864,
+    "lon": -73.96017,
+    "street": "SOUTH 3 STREET"
+   },
+   {
+    "bin": "3388874",
+    "borough": "Brooklyn",
+    "housenumber": "155",
+    "label": "155 SOUTH 3 STREET, Brooklyn, NY, USA",
+    "lat": 40.712417,
+    "lon": -73.96162,
+    "street": "SOUTH 3 STREET"
+   },
+   {
+    "bin": "3063128",
+    "borough": "Brooklyn",
+    "housenumber": "179",
+    "label": "179 SOUTH 3 STREET, Brooklyn, NY, USA",
+    "lat": 40.711864,
+    "lon": -73.96017,
+    "street": "SOUTH 3 STREET"
+   },
+   {
+    "bin": "3063128",
+    "borough": "Brooklyn",
+    "housenumber": "191",
+    "label": "191 SOUTH 3 STREET, Brooklyn, NY, USA",
+    "lat": 40.711864,
+    "lon": -73.96017,
+    "street": "SOUTH 3 STREET"
+   },
+   {
+    "bin": "3063128",
+    "borough": "Brooklyn",
+    "housenumber": "193",
+    "label": "193 SOUTH 3 STREET, Brooklyn, NY, USA",
+    "lat": 40.711864,
+    "lon": -73.96017,
+    "street": "SOUTH 3 STREET"
+   },
+   {
+    "bin": "3063157",
+    "borough": "Brooklyn",
+    "housenumber": "225",
+    "label": "225 SOUTH 3 STREET, Brooklyn, NY, USA",
+    "lat": 40.711173,
+    "lon": -73.958346,
+    "street": "SOUTH 3 STREET"
+   },
+   {
+    "bin": "3421342",
+    "borough": "Brooklyn",
+    "housenumber": "203",
+    "label": "203 SOUTH 3 STREET, Brooklyn, NY, USA",
+    "lat": 40.711533,
+    "lon": -73.959157,
+    "street": "SOUTH 3 STREET"
+   },
+   {
+    "bin": "3063187",
+    "borough": "Brooklyn",
+    "housenumber": "239",
+    "label": "239 SOUTH 3 STREET, Brooklyn, NY, USA",
+    "lat": 40.710955,
+    "lon": -73.957775,
+    "street": "SOUTH 3 STREET"
+   },
+   {
+    "bin": "3000000",
+    "borough": "Brooklyn",
+    "housenumber": "281",
+    "label": "281 SOUTH 3 STREET, Brooklyn, NY, USA",
+    "lat": 40.71026,
+    "lon": -73.95557,
+    "street": "SOUTH 3 STREET"
+   },
+   {
+    "bin": "3000000",
+    "borough": "Brooklyn",
+    "housenumber": "283",
+    "label": "283 SOUTH 3 STREET, Brooklyn, NY, USA",
+    "lat": 40.71026,
+    "lon": -73.95557,
+    "street": "SOUTH 3 STREET"
+   }
+  ]
+ },
  "1833 Nostrand Avenue, Brooklyn, NY 11226": {
   "features": [
    {
@@ -14425,6 +16130,100 @@
    }
   ]
  },
+ "1880 Story Ave, NY 10473": {
+  "features": [
+   {
+    "bin": "2103869",
+    "borough": "Bronx",
+    "housenumber": "1880",
+    "label": "1880 STORY AVENUE, Bronx, NY, USA",
+    "lat": 40.822951,
+    "lon": -73.860087,
+    "street": "STORY AVENUE"
+   },
+   {
+    "bin": "2092742",
+    "borough": "Bronx",
+    "housenumber": "1662",
+    "label": "1662 STORY AVENUE, Bronx, NY, USA",
+    "lat": 40.822454,
+    "lon": -73.870468,
+    "street": "STORY AVENUE"
+   },
+   {
+    "bin": "2022544",
+    "borough": "Bronx",
+    "housenumber": "1422",
+    "label": "1422 STORY AVENUE, Bronx, NY, USA",
+    "lat": 40.820829,
+    "lon": -73.880788,
+    "street": "STORY AVENUE"
+   },
+   {
+    "bin": "2022544",
+    "borough": "Bronx",
+    "housenumber": "1432",
+    "label": "1432 STORY AVENUE, Bronx, NY, USA",
+    "lat": 40.820829,
+    "lon": -73.880788,
+    "street": "STORY AVENUE"
+   },
+   {
+    "bin": "2022544",
+    "borough": "Bronx",
+    "housenumber": "1436",
+    "label": "1436 STORY AVENUE, Bronx, NY, USA",
+    "lat": 40.820829,
+    "lon": -73.880788,
+    "street": "STORY AVENUE"
+   },
+   {
+    "bin": "2022544",
+    "borough": "Bronx",
+    "housenumber": "1440",
+    "label": "1440 STORY AVENUE, Bronx, NY, USA",
+    "lat": 40.820829,
+    "lon": -73.880788,
+    "street": "STORY AVENUE"
+   },
+   {
+    "bin": "2128970",
+    "borough": "Bronx",
+    "housenumber": "1516",
+    "label": "1516 STORY AVENUE, Bronx, NY, USA",
+    "lat": 40.821224,
+    "lon": -73.878998,
+    "street": "STORY AVENUE"
+   },
+   {
+    "bin": "2095246",
+    "borough": "Bronx",
+    "housenumber": "1692",
+    "label": "1692 STORY AVENUE, Bronx, NY, USA",
+    "lat": 40.822487,
+    "lon": -73.869239,
+    "street": "STORY AVENUE"
+   },
+   {
+    "bin": "2095246",
+    "borough": "Bronx",
+    "housenumber": "1698",
+    "label": "1698 STORY AVENUE, Bronx, NY, USA",
+    "lat": 40.822487,
+    "lon": -73.869239,
+    "street": "STORY AVENUE"
+   },
+   {
+    "bin": "2000000",
+    "borough": "Bronx",
+    "housenumber": "1782",
+    "label": "1782 STORY AVENUE, Bronx, NY, USA",
+    "lat": 40.82231,
+    "lon": -73.86495,
+    "street": "STORY AVENUE"
+   }
+  ]
+ },
  "1886 NOSTRAND AVENUE, Brooklyn, NY 11226": {
   "features": [
    {
@@ -14520,6 +16319,100 @@
   ]
  },
  "190 BEACH 110 STREET, Queens, NY 11694": {
+  "features": [
+   {
+    "bin": "4303853",
+    "borough": "Queens",
+    "housenumber": "190",
+    "label": "190 BEACH 110 STREET, Rockaway Park, NY, USA",
+    "lat": 40.580689,
+    "lon": -73.83135,
+    "street": "BEACH 110 STREET"
+   },
+   {
+    "bin": "4303853",
+    "borough": "Queens",
+    "housenumber": "188",
+    "label": "188 BEACH 110 STREET, Rockaway Park, NY, USA",
+    "lat": 40.580689,
+    "lon": -73.83135,
+    "street": "BEACH 110 STREET"
+   },
+   {
+    "bin": "4442336",
+    "borough": "Queens",
+    "housenumber": "136",
+    "label": "136 BEACH 110 STREET, Rockaway Park, NY, USA",
+    "lat": 40.580082,
+    "lon": -73.830709,
+    "street": "BEACH 110 STREET"
+   },
+   {
+    "bin": "4442336",
+    "borough": "Queens",
+    "housenumber": "160",
+    "label": "160 BEACH 110 STREET, Rockaway Park, NY, USA",
+    "lat": 40.580082,
+    "lon": -73.830709,
+    "street": "BEACH 110 STREET"
+   },
+   {
+    "bin": "4442336",
+    "borough": "Queens",
+    "housenumber": "164",
+    "label": "164 BEACH 110 STREET, Rockaway Park, NY, USA",
+    "lat": 40.580082,
+    "lon": -73.830709,
+    "street": "BEACH 110 STREET"
+   },
+   {
+    "bin": "4442336",
+    "borough": "Queens",
+    "housenumber": "180",
+    "label": "180 BEACH 110 STREET, Rockaway Park, NY, USA",
+    "lat": 40.580082,
+    "lon": -73.830709,
+    "street": "BEACH 110 STREET"
+   },
+   {
+    "bin": "4435667",
+    "borough": "Queens",
+    "housenumber": "173E",
+    "label": "173E BEACH 110 STREET, Rockaway Park, NY, USA",
+    "lat": 40.580492,
+    "lon": -73.832013,
+    "street": "BEACH 110 STREET"
+   },
+   {
+    "bin": "4448999",
+    "borough": "Queens",
+    "housenumber": "135",
+    "label": "135 BEACH 110 STREET, Rockaway Park, NY, USA",
+    "lat": 40.57978,
+    "lon": -73.831975,
+    "street": "BEACH 110 STREET"
+   },
+   {
+    "bin": "4303855",
+    "borough": "Queens",
+    "housenumber": "173B",
+    "label": "173B BEACH 110 STREET, Rockaway Park, NY, USA",
+    "lat": 40.580453,
+    "lon": -73.831841,
+    "street": "BEACH 110 STREET"
+   },
+   {
+    "bin": "4442336",
+    "borough": "Queens",
+    "housenumber": "140",
+    "label": "140 BEACH 110 STREET, Rockaway Park, NY, USA",
+    "lat": 40.580082,
+    "lon": -73.830709,
+    "street": "BEACH 110 STREET"
+   }
+  ]
+ },
+ "190 Beach 110th St, NY 11694": {
   "features": [
    {
     "bin": "4303853",
@@ -17965,6 +19858,100 @@
    }
   ]
  },
+ "211 Throop Avenue, NY 11206": {
+  "features": [
+   {
+    "bin": "3048546",
+    "borough": "Brooklyn",
+    "housenumber": "211",
+    "label": "211 THROOP AVENUE, Brooklyn, NY, USA",
+    "lat": 40.697276,
+    "lon": -73.943365,
+    "street": "THROOP AVENUE"
+   },
+   {
+    "bin": "3048853",
+    "borough": "Brooklyn",
+    "housenumber": "266",
+    "label": "266 THROOP AVENUE, Brooklyn, NY, USA",
+    "lat": 40.69515,
+    "lon": -73.943589,
+    "street": "THROOP AVENUE"
+   },
+   {
+    "bin": "3000000",
+    "borough": "Brooklyn",
+    "housenumber": "263",
+    "label": "263 THROOP AVENUE, Brooklyn, NY, USA",
+    "lat": 40.69504,
+    "lon": -73.94306,
+    "street": "THROOP AVENUE"
+   },
+   {
+    "bin": "3049204",
+    "borough": "Brooklyn",
+    "housenumber": "281",
+    "label": "281 THROOP AVENUE, Brooklyn, NY, USA",
+    "lat": 40.694046,
+    "lon": -73.942932,
+    "street": "THROOP AVENUE"
+   },
+   {
+    "bin": "3339805",
+    "borough": "Brooklyn",
+    "housenumber": "152",
+    "label": "152 THROOP AVENUE, Brooklyn, NY, USA",
+    "lat": 40.699875,
+    "lon": -73.944503,
+    "street": "THROOP AVENUE"
+   },
+   {
+    "bin": "3341831",
+    "borough": "Brooklyn",
+    "housenumber": "148",
+    "label": "148 THROOP AVENUE, Brooklyn, NY, USA",
+    "lat": 40.700202,
+    "lon": -73.944541,
+    "street": "THROOP AVENUE"
+   },
+   {
+    "bin": "3399593",
+    "borough": "Brooklyn",
+    "housenumber": "131",
+    "label": "131 THROOP AVENUE, Brooklyn, NY, USA",
+    "lat": 40.700214,
+    "lon": -73.944069,
+    "street": "THROOP AVENUE"
+   },
+   {
+    "bin": "3429254",
+    "borough": "Brooklyn",
+    "housenumber": "169",
+    "label": "169 THROOP AVENUE, Brooklyn, NY, USA",
+    "lat": 40.69886,
+    "lon": -73.94377,
+    "street": "THROOP AVENUE"
+   },
+   {
+    "bin": "3429254",
+    "borough": "Brooklyn",
+    "housenumber": "175",
+    "label": "175 THROOP AVENUE, Brooklyn, NY, USA",
+    "lat": 40.69886,
+    "lon": -73.94377,
+    "street": "THROOP AVENUE"
+   },
+   {
+    "bin": "3428572",
+    "borough": "Brooklyn",
+    "housenumber": "184",
+    "label": "184 THROOP AVENUE, Brooklyn, NY, USA",
+    "lat": 40.69871,
+    "lon": -73.94438,
+    "street": "THROOP AVENUE"
+   }
+  ]
+ },
  "2116 Adam Clayton Powell Jr. Blvd, Manhattan, NY 10027": {
   "features": [
    {
@@ -18341,6 +20328,100 @@
    }
   ]
  },
+ "215 East 6th Street, NY 10003": {
+  "features": [
+   {
+    "bin": "1006643",
+    "borough": "Manhattan",
+    "housenumber": "215",
+    "label": "215 EAST 6 STREET, New York, NY, USA",
+    "lat": 40.728132,
+    "lon": -73.98973,
+    "street": "EAST 6 STREET"
+   },
+   {
+    "bin": "1077682",
+    "borough": "Manhattan",
+    "housenumber": "306",
+    "label": "306 EAST 6 STREET, New York, NY, USA",
+    "lat": 40.727027,
+    "lon": -73.98815,
+    "street": "EAST 6 STREET"
+   },
+   {
+    "bin": "1076957",
+    "borough": "Manhattan",
+    "housenumber": "320A",
+    "label": "320A EAST 6 STREET, New York, NY, USA",
+    "lat": 40.726674,
+    "lon": -73.987682,
+    "street": "EAST 6 STREET"
+   },
+   {
+    "bin": "1006235",
+    "borough": "Manhattan",
+    "housenumber": "326",
+    "label": "326 EAST 6 STREET, New York, NY, USA",
+    "lat": 40.726724,
+    "lon": -73.98734,
+    "street": "EAST 6 STREET"
+   },
+   {
+    "bin": "1006260",
+    "borough": "Manhattan",
+    "housenumber": "302",
+    "label": "302 EAST 6 STREET, New York, NY, USA",
+    "lat": 40.727151,
+    "lon": -73.988248,
+    "street": "EAST 6 STREET"
+   },
+   {
+    "bin": "1006296",
+    "borough": "Manhattan",
+    "housenumber": "329",
+    "label": "329 EAST 6 STREET, New York, NY, USA",
+    "lat": 40.726994,
+    "lon": -73.98704,
+    "street": "EAST 6 STREET"
+   },
+   {
+    "bin": "1006297",
+    "borough": "Manhattan",
+    "housenumber": "325",
+    "label": "325 EAST 6 STREET, New York, NY, USA",
+    "lat": 40.727066,
+    "lon": -73.987172,
+    "street": "EAST 6 STREET"
+   },
+   {
+    "bin": "1006299",
+    "borough": "Manhattan",
+    "housenumber": "319",
+    "label": "319 EAST 6 STREET, New York, NY, USA",
+    "lat": 40.727142,
+    "lon": -73.987417,
+    "street": "EAST 6 STREET"
+   },
+   {
+    "bin": "1006303",
+    "borough": "Manhattan",
+    "housenumber": "311",
+    "label": "311 EAST 6 STREET, New York, NY, USA",
+    "lat": 40.72727,
+    "lon": -73.987669,
+    "street": "EAST 6 STREET"
+   },
+   {
+    "bin": "1090311",
+    "borough": "Manhattan",
+    "housenumber": "200",
+    "label": "200 EAST 6 STREET, New York, NY, USA",
+    "lat": 40.728089,
+    "lon": -73.990646,
+    "street": "EAST 6 STREET"
+   }
+  ]
+ },
  "215 HEYWARD STREET, Brooklyn, NY 11206": {
   "features": [
    {
@@ -18623,7 +20704,195 @@
    }
   ]
  },
+ "215 West 114th Street, NY 10026": {
+  "features": [
+   {
+    "bin": "1055204",
+    "borough": "Manhattan",
+    "housenumber": "215",
+    "label": "215 WEST 114 STREET, New York, NY, USA",
+    "lat": 40.802623,
+    "lon": -73.954302,
+    "street": "WEST 114 STREET"
+   },
+   {
+    "bin": "1055025",
+    "borough": "Manhattan",
+    "housenumber": "114",
+    "label": "114 WEST 114 STREET, New York, NY, USA",
+    "lat": 40.80101,
+    "lon": -73.95175,
+    "street": "WEST 114 STREET"
+   },
+   {
+    "bin": "1055019",
+    "borough": "Manhattan",
+    "housenumber": "100",
+    "label": "100 WEST 114 STREET, New York, NY, USA",
+    "lat": 40.800773,
+    "lon": -73.951053,
+    "street": "WEST 114 STREET"
+   },
+   {
+    "bin": "1055028",
+    "borough": "Manhattan",
+    "housenumber": "118",
+    "label": "118 WEST 114 STREET, New York, NY, USA",
+    "lat": 40.801056,
+    "lon": -73.951915,
+    "street": "WEST 114 STREET"
+   },
+   {
+    "bin": "1055029",
+    "borough": "Manhattan",
+    "housenumber": "120",
+    "label": "120 WEST 114 STREET, New York, NY, USA",
+    "lat": 40.801087,
+    "lon": -73.951994,
+    "street": "WEST 114 STREET"
+   },
+   {
+    "bin": "1055033",
+    "borough": "Manhattan",
+    "housenumber": "130",
+    "label": "130 WEST 114 STREET, New York, NY, USA",
+    "lat": 40.801636,
+    "lon": -73.953198,
+    "street": "WEST 114 STREET"
+   },
+   {
+    "bin": "1055035",
+    "borough": "Manhattan",
+    "housenumber": "159",
+    "label": "159 WEST 114 STREET, New York, NY, USA",
+    "lat": 40.801865,
+    "lon": -73.952931,
+    "street": "WEST 114 STREET"
+   },
+   {
+    "bin": "1000000",
+    "borough": "Manhattan",
+    "housenumber": "113",
+    "label": "113 WEST 114 STREET, New York, NY, USA",
+    "lat": 40.80136,
+    "lon": -73.95157,
+    "street": "WEST 114 STREET"
+   },
+   {
+    "bin": "1055158",
+    "borough": "Manhattan",
+    "housenumber": "200",
+    "label": "200 WEST 114 STREET, New York, NY, USA",
+    "lat": 40.801901,
+    "lon": -73.953989,
+    "street": "WEST 114 STREET"
+   },
+   {
+    "bin": "1000000",
+    "borough": "Manhattan",
+    "housenumber": "202",
+    "label": "202 WEST 114 STREET, New York, NY, USA",
+    "lat": 40.80216,
+    "lon": -73.95464,
+    "street": "WEST 114 STREET"
+   }
+  ]
+ },
  "2169 Blackrock Avenue, Bronx, NY 10472": {
+  "features": [
+   {
+    "bin": "2026397",
+    "borough": "Bronx",
+    "housenumber": "2169",
+    "label": "2169 BLACKROCK AVENUE, Bronx, NY, USA",
+    "lat": 40.829482,
+    "lon": -73.850984,
+    "street": "BLACKROCK AVENUE"
+   },
+   {
+    "bin": "2025989",
+    "borough": "Bronx",
+    "housenumber": "2004",
+    "label": "2004 BLACKROCK AVENUE, Bronx, NY, USA",
+    "lat": 40.828106,
+    "lon": -73.85609,
+    "street": "BLACKROCK AVENUE"
+   },
+   {
+    "bin": "2025998",
+    "borough": "Bronx",
+    "housenumber": "2030",
+    "label": "2030 BLACKROCK AVENUE, Bronx, NY, USA",
+    "lat": 40.828225,
+    "lon": -73.855233,
+    "street": "BLACKROCK AVENUE"
+   },
+   {
+    "bin": "2026001",
+    "borough": "Bronx",
+    "housenumber": "2036",
+    "label": "2036 BLACKROCK AVENUE, Bronx, NY, USA",
+    "lat": 40.82825,
+    "lon": -73.855039,
+    "street": "BLACKROCK AVENUE"
+   },
+   {
+    "bin": "2026009",
+    "borough": "Bronx",
+    "housenumber": "2060",
+    "label": "2060 BLACKROCK AVENUE, Bronx, NY, USA",
+    "lat": 40.828376,
+    "lon": -73.854243,
+    "street": "BLACKROCK AVENUE"
+   },
+   {
+    "bin": "2026011",
+    "borough": "Bronx",
+    "housenumber": "2064",
+    "label": "2064 BLACKROCK AVENUE, Bronx, NY, USA",
+    "lat": 40.828381,
+    "lon": -73.854053,
+    "street": "BLACKROCK AVENUE"
+   },
+   {
+    "bin": "2117678",
+    "borough": "Bronx",
+    "housenumber": "2017",
+    "label": "2017 BLACKROCK AVENUE, Bronx, NY, USA",
+    "lat": 40.828525,
+    "lon": -73.855834,
+    "street": "BLACKROCK AVENUE"
+   },
+   {
+    "bin": "2026075",
+    "borough": "Bronx",
+    "housenumber": "2009",
+    "label": "2009 BLACKROCK AVENUE, Bronx, NY, USA",
+    "lat": 40.828411,
+    "lon": -73.85625,
+    "street": "BLACKROCK AVENUE"
+   },
+   {
+    "bin": "2026347",
+    "borough": "Bronx",
+    "housenumber": "2132",
+    "label": "2132 BLACKROCK AVENUE, Bronx, NY, USA",
+    "lat": 40.828658,
+    "lon": -73.851996,
+    "street": "BLACKROCK AVENUE"
+   },
+   {
+    "bin": "2000000",
+    "borough": "Bronx",
+    "housenumber": "2166",
+    "label": "2166 BLACKROCK AVENUE, Bronx, NY, USA",
+    "lat": 40.82879,
+    "lon": -73.85067,
+    "street": "BLACKROCK AVENUE"
+   }
+  ]
+ },
+ "2169 Blackrock Avenue, NY 10472": {
   "features": [
    {
     "bin": "2026397",
@@ -22007,6 +24276,100 @@
    }
   ]
  },
+ "240 West 113th Street, NY 10026": {
+  "features": [
+   {
+    "bin": "1055111",
+    "borough": "Manhattan",
+    "housenumber": "240",
+    "label": "240 WEST 113 STREET, New York, NY, USA",
+    "lat": 40.801594,
+    "lon": -73.955213,
+    "street": "WEST 113 STREET"
+   },
+   {
+    "bin": "1055010",
+    "borough": "Manhattan",
+    "housenumber": "113",
+    "label": "113 WEST 113 STREET, New York, NY, USA",
+    "lat": 40.800643,
+    "lon": -73.951885,
+    "street": "WEST 113 STREET"
+   },
+   {
+    "bin": "1054988",
+    "borough": "Manhattan",
+    "housenumber": "106",
+    "label": "106 WEST 113 STREET, New York, NY, USA",
+    "lat": 40.800165,
+    "lon": -73.951815,
+    "street": "WEST 113 STREET"
+   },
+   {
+    "bin": "1054989",
+    "borough": "Manhattan",
+    "housenumber": "108",
+    "label": "108 WEST 113 STREET, New York, NY, USA",
+    "lat": 40.800199,
+    "lon": -73.951899,
+    "street": "WEST 113 STREET"
+   },
+   {
+    "bin": "1055007",
+    "borough": "Manhattan",
+    "housenumber": "131",
+    "label": "131 WEST 113 STREET, New York, NY, USA",
+    "lat": 40.801071,
+    "lon": -73.952789,
+    "street": "WEST 113 STREET"
+   },
+   {
+    "bin": "1055008",
+    "borough": "Manhattan",
+    "housenumber": "119",
+    "label": "119 WEST 113 STREET, New York, NY, USA",
+    "lat": 40.800811,
+    "lon": -73.952143,
+    "street": "WEST 113 STREET"
+   },
+   {
+    "bin": "1055014",
+    "borough": "Manhattan",
+    "housenumber": "101",
+    "label": "101 WEST 113 STREET, New York, NY, USA",
+    "lat": 40.800377,
+    "lon": -73.951366,
+    "street": "WEST 113 STREET"
+   },
+   {
+    "bin": "1055111",
+    "borough": "Manhattan",
+    "housenumber": "242",
+    "label": "242 WEST 113 STREET, New York, NY, USA",
+    "lat": 40.801594,
+    "lon": -73.955213,
+    "street": "WEST 113 STREET"
+   },
+   {
+    "bin": "1055111",
+    "borough": "Manhattan",
+    "housenumber": "244",
+    "label": "244 WEST 113 STREET, New York, NY, USA",
+    "lat": 40.801594,
+    "lon": -73.955213,
+    "street": "WEST 113 STREET"
+   },
+   {
+    "bin": "1055111",
+    "borough": "Manhattan",
+    "housenumber": "252",
+    "label": "252 WEST 113 STREET, New York, NY, USA",
+    "lat": 40.801594,
+    "lon": -73.955213,
+    "street": "WEST 113 STREET"
+   }
+  ]
+ },
  "2403 Third Ave, Bronx, NY 10451": {
   "features": [
    {
@@ -24169,6 +26532,100 @@
    }
   ]
  },
+ "268 E. 207th Street, NY 10467": {
+  "features": [
+   {
+    "bin": "2110131",
+    "borough": "Bronx",
+    "housenumber": "268",
+    "label": "268 EAST 207 STREET, Bronx, NY, USA",
+    "lat": 40.87536,
+    "lon": -73.877524,
+    "street": "EAST 207 STREET"
+   },
+   {
+    "bin": "2018137",
+    "borough": "Bronx",
+    "housenumber": "250",
+    "label": "250 EAST 207 STREET, Bronx, NY, USA",
+    "lat": 40.875433,
+    "lon": -73.878187,
+    "street": "EAST 207 STREET"
+   },
+   {
+    "bin": "2018138",
+    "borough": "Bronx",
+    "housenumber": "260",
+    "label": "260 EAST 207 STREET, Bronx, NY, USA",
+    "lat": 40.875426,
+    "lon": -73.877967,
+    "street": "EAST 207 STREET"
+   },
+   {
+    "bin": "2018139",
+    "borough": "Bronx",
+    "housenumber": "290",
+    "label": "290 EAST 207 STREET, Bronx, NY, USA",
+    "lat": 40.875152,
+    "lon": -73.877133,
+    "street": "EAST 207 STREET"
+   },
+   {
+    "bin": "2090494",
+    "borough": "Bronx",
+    "housenumber": "225",
+    "label": "225 EAST 207 STREET, Bronx, NY, USA",
+    "lat": 40.875897,
+    "lon": -73.879261,
+    "street": "EAST 207 STREET"
+   },
+   {
+    "bin": "2018170",
+    "borough": "Bronx",
+    "housenumber": "291",
+    "label": "291 EAST 207 STREET, Bronx, NY, USA",
+    "lat": 40.875731,
+    "lon": -73.876974,
+    "street": "EAST 207 STREET"
+   },
+   {
+    "bin": "2018174",
+    "borough": "Bronx",
+    "housenumber": "243",
+    "label": "243 EAST 207 STREET, Bronx, NY, USA",
+    "lat": 40.875885,
+    "lon": -73.878356,
+    "street": "EAST 207 STREET"
+   },
+   {
+    "bin": "2018337",
+    "borough": "Bronx",
+    "housenumber": "308",
+    "label": "308 EAST 207 STREET, Bronx, NY, USA",
+    "lat": 40.875216,
+    "lon": -73.876215,
+    "street": "EAST 207 STREET"
+   },
+   {
+    "bin": "2018566",
+    "borough": "Bronx",
+    "housenumber": "366",
+    "label": "366 EAST 207 STREET, Bronx, NY, USA",
+    "lat": 40.874716,
+    "lon": -73.874434,
+    "street": "EAST 207 STREET"
+   },
+   {
+    "bin": "2018136",
+    "borough": "Bronx",
+    "housenumber": "248",
+    "label": "248 EAST 207 STREET, Bronx, NY, USA",
+    "lat": 40.875436,
+    "lon": -73.878275,
+    "street": "EAST 207 STREET"
+   }
+  ]
+ },
  "268 East 207 Street, Bronx, NY 10467": {
   "features": [
    {
@@ -24452,6 +26909,100 @@
   ]
  },
  "270 EAST 167 STREET, Bronx, NY 10456": {
+  "features": [
+   {
+    "bin": "2002410",
+    "borough": "Bronx",
+    "housenumber": "270",
+    "label": "270 EAST 167 STREET, Bronx, NY, USA",
+    "lat": 40.8324,
+    "lon": -73.914268,
+    "street": "EAST 167 STREET"
+   },
+   {
+    "bin": "2004293",
+    "borough": "Bronx",
+    "housenumber": "587",
+    "label": "587 EAST 167 STREET, Bronx, NY, USA",
+    "lat": 40.828776,
+    "lon": -73.90436,
+    "street": "EAST 167 STREET"
+   },
+   {
+    "bin": "2004293",
+    "borough": "Bronx",
+    "housenumber": "593",
+    "label": "593 EAST 167 STREET, Bronx, NY, USA",
+    "lat": 40.828776,
+    "lon": -73.90436,
+    "street": "EAST 167 STREET"
+   },
+   {
+    "bin": "2001294",
+    "borough": "Bronx",
+    "housenumber": "488",
+    "label": "488 EAST 167 STREET, Bronx, NY, USA",
+    "lat": 40.82959,
+    "lon": -73.90756,
+    "street": "EAST 167 STREET"
+   },
+   {
+    "bin": "2092203",
+    "borough": "Bronx",
+    "housenumber": "500",
+    "label": "500 EAST 167 STREET, Bronx, NY, USA",
+    "lat": 40.82944,
+    "lon": -73.906975,
+    "street": "EAST 167 STREET"
+   },
+   {
+    "bin": "2001312",
+    "borough": "Bronx",
+    "housenumber": "491",
+    "label": "491 EAST 167 STREET, Bronx, NY, USA",
+    "lat": 40.829978,
+    "lon": -73.907207,
+    "street": "EAST 167 STREET"
+   },
+   {
+    "bin": "2098317",
+    "borough": "Bronx",
+    "housenumber": "495",
+    "label": "495 EAST 167 STREET, Bronx, NY, USA",
+    "lat": 40.829892,
+    "lon": -73.906736,
+    "street": "EAST 167 STREET"
+   },
+   {
+    "bin": "2098317",
+    "borough": "Bronx",
+    "housenumber": "497",
+    "label": "497 EAST 167 STREET, Bronx, NY, USA",
+    "lat": 40.829892,
+    "lon": -73.906736,
+    "street": "EAST 167 STREET"
+   },
+   {
+    "bin": "2001326",
+    "borough": "Bronx",
+    "housenumber": "499",
+    "label": "499 EAST 167 STREET, Bronx, NY, USA",
+    "lat": 40.829744,
+    "lon": -73.906877,
+    "street": "EAST 167 STREET"
+   },
+   {
+    "bin": "2001584",
+    "borough": "Bronx",
+    "housenumber": "462",
+    "label": "462 EAST 167 STREET, Bronx, NY, USA",
+    "lat": 40.829735,
+    "lon": -73.908092,
+    "street": "EAST 167 STREET"
+   }
+  ]
+ },
+ "270 East 167 Street, NY 10456": {
   "features": [
    {
     "bin": "2002410",
@@ -24922,6 +27473,100 @@
   ]
  },
  "284 Baltic Street, Brooklyn, NY 11201": {
+  "features": [
+   {
+    "bin": "3006401",
+    "borough": "Brooklyn",
+    "housenumber": "284",
+    "label": "284 BALTIC STREET, Brooklyn, NY, USA",
+    "lat": 40.685164,
+    "lon": -73.993287,
+    "street": "BALTIC STREET"
+   },
+   {
+    "bin": "3343461",
+    "borough": "Brooklyn",
+    "housenumber": "95",
+    "label": "95 BALTIC STREET, Brooklyn, NY, USA",
+    "lat": 40.688431,
+    "lon": -74.000551,
+    "street": "BALTIC STREET"
+   },
+   {
+    "bin": "3397444",
+    "borough": "Brooklyn",
+    "housenumber": "105",
+    "label": "105 BALTIC STREET, Brooklyn, NY, USA",
+    "lat": 40.688319,
+    "lon": -74.000096,
+    "street": "BALTIC STREET"
+   },
+   {
+    "bin": "3397444",
+    "borough": "Brooklyn",
+    "housenumber": "109",
+    "label": "109 BALTIC STREET, Brooklyn, NY, USA",
+    "lat": 40.688319,
+    "lon": -74.000096,
+    "street": "BALTIC STREET"
+   },
+   {
+    "bin": "3397444",
+    "borough": "Brooklyn",
+    "housenumber": "111",
+    "label": "111 BALTIC STREET, Brooklyn, NY, USA",
+    "lat": 40.688319,
+    "lon": -74.000096,
+    "street": "BALTIC STREET"
+   },
+   {
+    "bin": "3003314",
+    "borough": "Brooklyn",
+    "housenumber": "161",
+    "label": "161 BALTIC STREET, Brooklyn, NY, USA",
+    "lat": 40.687543,
+    "lon": -73.998079,
+    "street": "BALTIC STREET"
+   },
+   {
+    "bin": "3003317",
+    "borough": "Brooklyn",
+    "housenumber": "147",
+    "label": "147 BALTIC STREET, Brooklyn, NY, USA",
+    "lat": 40.687687,
+    "lon": -73.998505,
+    "street": "BALTIC STREET"
+   },
+   {
+    "bin": "3003371",
+    "borough": "Brooklyn",
+    "housenumber": "203",
+    "label": "203 BALTIC STREET, Brooklyn, NY, USA",
+    "lat": 40.68694,
+    "lon": -73.996251,
+    "street": "BALTIC STREET"
+   },
+   {
+    "bin": "3003375",
+    "borough": "Brooklyn",
+    "housenumber": "195",
+    "label": "195 BALTIC STREET, Brooklyn, NY, USA",
+    "lat": 40.68711,
+    "lon": -73.996632,
+    "street": "BALTIC STREET"
+   },
+   {
+    "bin": "3003379",
+    "borough": "Brooklyn",
+    "housenumber": "187",
+    "label": "187 BALTIC STREET, Brooklyn, NY, USA",
+    "lat": 40.687192,
+    "lon": -73.996889,
+    "street": "BALTIC STREET"
+   }
+  ]
+ },
+ "284 Baltic Street, NY 11201": {
   "features": [
    {
     "bin": "3006401",
@@ -25861,6 +28506,100 @@
    }
   ]
  },
+ "3000 Avenue X, NY 11235": {
+  "features": [
+   {
+    "bin": "3203631",
+    "borough": "Brooklyn",
+    "housenumber": "3000",
+    "label": "3000 AVENUE X, Brooklyn, NY, USA",
+    "lat": 40.593525,
+    "lon": -73.936676,
+    "street": "AVENUE X"
+   },
+   {
+    "bin": "3203631",
+    "borough": "Brooklyn",
+    "housenumber": "3000",
+    "label": "3000 X AVENUE, Brooklyn, NY, USA",
+    "lat": 40.593525,
+    "lon": -73.936676,
+    "street": "X AVENUE"
+   },
+   {
+    "bin": "3195443",
+    "borough": "Brooklyn",
+    "housenumber": "502",
+    "label": "502 X AVENUE, Brooklyn, NY, USA",
+    "lat": 40.591034,
+    "lon": -73.96457,
+    "street": "X AVENUE"
+   },
+   {
+    "bin": "3195445",
+    "borough": "Brooklyn",
+    "housenumber": "516",
+    "label": "516 AVENUE X, Brooklyn, NY, USA",
+    "lat": 40.590994,
+    "lon": -73.964336,
+    "street": "AVENUE X"
+   },
+   {
+    "bin": "3000000",
+    "borough": "Brooklyn",
+    "housenumber": "518",
+    "label": "518 X AVENUE, Brooklyn, NY, USA",
+    "lat": 40.59096,
+    "lon": -73.96422,
+    "street": "X AVENUE"
+   },
+   {
+    "bin": "3254054",
+    "borough": "Brooklyn",
+    "housenumber": "530",
+    "label": "530 AVENUE X, Brooklyn, NY, USA",
+    "lat": 40.591035,
+    "lon": -73.963882,
+    "street": "AVENUE X"
+   },
+   {
+    "bin": "3195466",
+    "borough": "Brooklyn",
+    "housenumber": "618",
+    "label": "618 X AVENUE, Brooklyn, NY, USA",
+    "lat": 40.59111,
+    "lon": -73.963091,
+    "street": "X AVENUE"
+   },
+   {
+    "bin": "3195521",
+    "borough": "Brooklyn",
+    "housenumber": "626",
+    "label": "626 AVENUE X, Brooklyn, NY, USA",
+    "lat": 40.591185,
+    "lon": -73.962965,
+    "street": "AVENUE X"
+   },
+   {
+    "bin": "3195521",
+    "borough": "Brooklyn",
+    "housenumber": "626",
+    "label": "626 X AVENUE, Brooklyn, NY, USA",
+    "lat": 40.591185,
+    "lon": -73.962965,
+    "street": "X AVENUE"
+   },
+   {
+    "bin": "3195524",
+    "borough": "Brooklyn",
+    "housenumber": "704",
+    "label": "704 X AVENUE, Brooklyn, NY, USA",
+    "lat": 40.591143,
+    "lon": -73.962656,
+    "street": "X AVENUE"
+   }
+  ]
+ },
  "3002 FORT HAMILTON PARKWAY, Brooklyn, NY 11218": {
   "features": [
    {
@@ -26144,6 +28883,100 @@
   ]
  },
  "301 West 140 Street, Manhattan, NY 10030": {
+  "features": [
+   {
+    "bin": "1060726",
+    "borough": "Manhattan",
+    "housenumber": "301",
+    "label": "301 WEST 140 STREET, New York, NY, USA",
+    "lat": 40.820184,
+    "lon": -73.944468,
+    "street": "WEST 140 STREET"
+   },
+   {
+    "bin": "1060056",
+    "borough": "Manhattan",
+    "housenumber": "140",
+    "label": "140 WEST 140 STREET, New York, NY, USA",
+    "lat": 40.817896,
+    "lon": -73.940581,
+    "street": "WEST 140 STREET"
+   },
+   {
+    "bin": "1060054",
+    "borough": "Manhattan",
+    "housenumber": "112",
+    "label": "112 WEST 140 STREET, New York, NY, USA",
+    "lat": 40.817646,
+    "lon": -73.939929,
+    "street": "WEST 140 STREET"
+   },
+   {
+    "bin": "1060054",
+    "borough": "Manhattan",
+    "housenumber": "114",
+    "label": "114 WEST 140 STREET, New York, NY, USA",
+    "lat": 40.817646,
+    "lon": -73.939929,
+    "street": "WEST 140 STREET"
+   },
+   {
+    "bin": "1060054",
+    "borough": "Manhattan",
+    "housenumber": "132",
+    "label": "132 WEST 140 STREET, New York, NY, USA",
+    "lat": 40.817646,
+    "lon": -73.939929,
+    "street": "WEST 140 STREET"
+   },
+   {
+    "bin": "1060056",
+    "borough": "Manhattan",
+    "housenumber": "144",
+    "label": "144 WEST 140 STREET, New York, NY, USA",
+    "lat": 40.817896,
+    "lon": -73.940581,
+    "street": "WEST 140 STREET"
+   },
+   {
+    "bin": "1075486",
+    "borough": "Manhattan",
+    "housenumber": "152",
+    "label": "152 WEST 140 STREET, New York, NY, USA",
+    "lat": 40.818133,
+    "lon": -73.941132,
+    "street": "WEST 140 STREET"
+   },
+   {
+    "bin": "1075486",
+    "borough": "Manhattan",
+    "housenumber": "166",
+    "label": "166 WEST 140 STREET, New York, NY, USA",
+    "lat": 40.818133,
+    "lon": -73.941132,
+    "street": "WEST 140 STREET"
+   },
+   {
+    "bin": "1075486",
+    "borough": "Manhattan",
+    "housenumber": "172",
+    "label": "172 WEST 140 STREET, New York, NY, USA",
+    "lat": 40.818133,
+    "lon": -73.941132,
+    "street": "WEST 140 STREET"
+   },
+   {
+    "bin": "1060062",
+    "borough": "Manhattan",
+    "housenumber": "163",
+    "label": "163 WEST 140 STREET, New York, NY, USA",
+    "lat": 40.818325,
+    "lon": -73.940407,
+    "street": "WEST 140 STREET"
+   }
+  ]
+ },
+ "301 West 140th Street, NY 10030": {
   "features": [
    {
     "bin": "1060726",
@@ -26708,6 +29541,100 @@
   ]
  },
  "3109 NEWKIRK AVENUE, Brooklyn, NY 11226": {
+  "features": [
+   {
+    "bin": "3112334",
+    "borough": "Brooklyn",
+    "housenumber": "3109",
+    "label": "3109 NEWKIRK AVENUE, Brooklyn, NY, USA",
+    "lat": 40.640381,
+    "lon": -73.946916,
+    "street": "NEWKIRK AVENUE"
+   },
+   {
+    "bin": "3120225",
+    "borough": "Brooklyn",
+    "housenumber": "1823",
+    "label": "1823 NEWKIRK AVENUE, Brooklyn, NY, USA",
+    "lat": 40.637428,
+    "lon": -73.960133,
+    "street": "NEWKIRK AVENUE"
+   },
+   {
+    "bin": "3120243",
+    "borough": "Brooklyn",
+    "housenumber": "1931",
+    "label": "1931 NEWKIRK AVENUE, Brooklyn, NY, USA",
+    "lat": 40.637882,
+    "lon": -73.959023,
+    "street": "NEWKIRK AVENUE"
+   },
+   {
+    "bin": "3120246",
+    "borough": "Brooklyn",
+    "housenumber": "1917",
+    "label": "1917 NEWKIRK AVENUE, Brooklyn, NY, USA",
+    "lat": 40.637617,
+    "lon": -73.959468,
+    "street": "NEWKIRK AVENUE"
+   },
+   {
+    "bin": "3120247",
+    "borough": "Brooklyn",
+    "housenumber": "1901",
+    "label": "1901 NEWKIRK AVENUE, Brooklyn, NY, USA",
+    "lat": 40.637572,
+    "lon": -73.959602,
+    "street": "NEWKIRK AVENUE"
+   },
+   {
+    "bin": "3120270",
+    "borough": "Brooklyn",
+    "housenumber": "2115",
+    "label": "2115 NEWKIRK AVENUE, Brooklyn, NY, USA",
+    "lat": 40.638863,
+    "lon": -73.95716,
+    "street": "NEWKIRK AVENUE"
+   },
+   {
+    "bin": "3120271",
+    "borough": "Brooklyn",
+    "housenumber": "2103",
+    "label": "2103 NEWKIRK AVENUE, Brooklyn, NY, USA",
+    "lat": 40.638542,
+    "lon": -73.95748,
+    "street": "NEWKIRK AVENUE"
+   },
+   {
+    "bin": "3120379",
+    "borough": "Brooklyn",
+    "housenumber": "2532",
+    "label": "2532 NEWKIRK AVENUE, Brooklyn, NY, USA",
+    "lat": 40.639513,
+    "lon": -73.952448,
+    "street": "NEWKIRK AVENUE"
+   },
+   {
+    "bin": "3120379",
+    "borough": "Brooklyn",
+    "housenumber": "2528",
+    "label": "2528 NEWKIRK AVENUE, Brooklyn, NY, USA",
+    "lat": 40.639513,
+    "lon": -73.952448,
+    "street": "NEWKIRK AVENUE"
+   },
+   {
+    "bin": "3120454",
+    "borough": "Brooklyn",
+    "housenumber": "2710",
+    "label": "2710 NEWKIRK AVENUE, Brooklyn, NY, USA",
+    "lat": 40.639651,
+    "lon": -73.950861,
+    "street": "NEWKIRK AVENUE"
+   }
+  ]
+ },
+ "3109 Newkirk Avenue, NY 11226": {
   "features": [
    {
     "bin": "3112334",
@@ -27647,6 +30574,100 @@
    }
   ]
  },
+ "330 Crown Street, NY 11225": {
+  "features": [
+   {
+    "bin": "3034181",
+    "borough": "Brooklyn",
+    "housenumber": "330",
+    "label": "330 CROWN STREET, Brooklyn, NY, USA",
+    "lat": 40.665898,
+    "lon": -73.949228,
+    "street": "CROWN STREET"
+   },
+   {
+    "bin": "3029715",
+    "borough": "Brooklyn",
+    "housenumber": "45",
+    "label": "45 CROWN STREET, Brooklyn, NY, USA",
+    "lat": 40.667765,
+    "lon": -73.95982,
+    "street": "CROWN STREET"
+   },
+   {
+    "bin": "3029719",
+    "borough": "Brooklyn",
+    "housenumber": "8",
+    "label": "8 CROWN STREET, Brooklyn, NY, USA",
+    "lat": 40.667383,
+    "lon": -73.961473,
+    "street": "CROWN STREET"
+   },
+   {
+    "bin": "3000000",
+    "borough": "Brooklyn",
+    "housenumber": "62",
+    "label": "62 CROWN STREET, Brooklyn, NY, USA",
+    "lat": 40.66685,
+    "lon": -73.95995,
+    "street": "CROWN STREET"
+   },
+   {
+    "bin": "3033770",
+    "borough": "Brooklyn",
+    "housenumber": "75",
+    "label": "75 CROWN STREET, Brooklyn, NY, USA",
+    "lat": 40.66727,
+    "lon": -73.95871,
+    "street": "CROWN STREET"
+   },
+   {
+    "bin": "3033791",
+    "borough": "Brooklyn",
+    "housenumber": "123",
+    "label": "123 CROWN STREET, Brooklyn, NY, USA",
+    "lat": 40.667012,
+    "lon": -73.957222,
+    "street": "CROWN STREET"
+   },
+   {
+    "bin": "3033819",
+    "borough": "Brooklyn",
+    "housenumber": "205",
+    "label": "205 CROWN STREET, Brooklyn, NY, USA",
+    "lat": 40.666728,
+    "lon": -73.953886,
+    "street": "CROWN STREET"
+   },
+   {
+    "bin": "3033821",
+    "borough": "Brooklyn",
+    "housenumber": "195",
+    "label": "195 CROWN STREET, Brooklyn, NY, USA",
+    "lat": 40.666667,
+    "lon": -73.954217,
+    "street": "CROWN STREET"
+   },
+   {
+    "bin": "3033825",
+    "borough": "Brooklyn",
+    "housenumber": "187",
+    "label": "187 CROWN STREET, Brooklyn, NY, USA",
+    "lat": 40.666704,
+    "lon": -73.954503,
+    "street": "CROWN STREET"
+   },
+   {
+    "bin": "3033830",
+    "borough": "Brooklyn",
+    "housenumber": "177",
+    "label": "177 CROWN STREET, Brooklyn, NY, USA",
+    "lat": 40.666723,
+    "lon": -73.954862,
+    "street": "CROWN STREET"
+   }
+  ]
+ },
  "333 EAST 135 STREET, Bronx, NY 10454": {
   "features": [
    {
@@ -27929,7 +30950,195 @@
    }
   ]
  },
+ "339 Morris Avenue, NY 10451": {
+  "features": [
+   {
+    "bin": "2000957",
+    "borough": "Bronx",
+    "housenumber": "339",
+    "label": "339 MORRIS AVENUE, Bronx, NY, USA",
+    "lat": 40.813783,
+    "lon": -73.925932,
+    "street": "MORRIS AVENUE"
+   },
+   {
+    "bin": "2097853",
+    "borough": "Bronx",
+    "housenumber": "418",
+    "label": "418 MORRIS AVENUE, Bronx, NY, USA",
+    "lat": 40.815449,
+    "lon": -73.923268,
+    "street": "MORRIS AVENUE"
+   },
+   {
+    "bin": "2091127",
+    "borough": "Bronx",
+    "housenumber": "342",
+    "label": "342 MORRIS AVENUE, Bronx, NY, USA",
+    "lat": 40.813691,
+    "lon": -73.924739,
+    "street": "MORRIS AVENUE"
+   },
+   {
+    "bin": "2091127",
+    "borough": "Bronx",
+    "housenumber": "352",
+    "label": "352 MORRIS AVENUE, Bronx, NY, USA",
+    "lat": 40.813691,
+    "lon": -73.924739,
+    "street": "MORRIS AVENUE"
+   },
+   {
+    "bin": "2091127",
+    "borough": "Bronx",
+    "housenumber": "360",
+    "label": "360 MORRIS AVENUE, Bronx, NY, USA",
+    "lat": 40.813691,
+    "lon": -73.924739,
+    "street": "MORRIS AVENUE"
+   },
+   {
+    "bin": "2091151",
+    "borough": "Bronx",
+    "housenumber": "522",
+    "label": "522 MORRIS AVENUE, Bronx, NY, USA",
+    "lat": 40.81674,
+    "lon": -73.922785,
+    "street": "MORRIS AVENUE"
+   },
+   {
+    "bin": "2000914",
+    "borough": "Bronx",
+    "housenumber": "552",
+    "label": "552 MORRIS AVENUE, Bronx, NY, USA",
+    "lat": 40.8175,
+    "lon": -73.922428,
+    "street": "MORRIS AVENUE"
+   },
+   {
+    "bin": "2000917",
+    "borough": "Bronx",
+    "housenumber": "558",
+    "label": "558 MORRIS AVENUE, Bronx, NY, USA",
+    "lat": 40.817703,
+    "lon": -73.922351,
+    "street": "MORRIS AVENUE"
+   },
+   {
+    "bin": "2097049",
+    "borough": "Bronx",
+    "housenumber": "439",
+    "label": "439 MORRIS AVENUE, Bronx, NY, USA",
+    "lat": 40.816138,
+    "lon": -73.924584,
+    "street": "MORRIS AVENUE"
+   },
+   {
+    "bin": "2097049",
+    "borough": "Bronx",
+    "housenumber": "447",
+    "label": "447 MORRIS AVENUE, Bronx, NY, USA",
+    "lat": 40.816138,
+    "lon": -73.924584,
+    "street": "MORRIS AVENUE"
+   }
+  ]
+ },
  "34 West 118 Street, Manhattan, NY 10026": {
+  "features": [
+   {
+    "bin": "1051434",
+    "borough": "Manhattan",
+    "housenumber": "34",
+    "label": "34 WEST 118 STREET, New York, NY, USA",
+    "lat": 40.802671,
+    "lon": -73.948127,
+    "street": "WEST 118 STREET"
+   },
+   {
+    "bin": "1057440",
+    "borough": "Manhattan",
+    "housenumber": "118",
+    "label": "118 WEST 118 STREET, New York, NY, USA",
+    "lat": 40.803569,
+    "lon": -73.949801,
+    "street": "WEST 118 STREET"
+   },
+   {
+    "bin": "1086232",
+    "borough": "Manhattan",
+    "housenumber": "276",
+    "label": "276 WEST 118 STREET, New York, NY, USA",
+    "lat": 40.805176,
+    "lon": -73.954342,
+    "street": "WEST 118 STREET"
+   },
+   {
+    "bin": "1058399",
+    "borough": "Manhattan",
+    "housenumber": "270",
+    "label": "270 WEST 118 STREET, New York, NY, USA",
+    "lat": 40.805152,
+    "lon": -73.953627,
+    "street": "WEST 118 STREET"
+   },
+   {
+    "bin": "1058403",
+    "borough": "Manhattan",
+    "housenumber": "282",
+    "label": "282 WEST 118 STREET, New York, NY, USA",
+    "lat": 40.805516,
+    "lon": -73.954227,
+    "street": "WEST 118 STREET"
+   },
+   {
+    "bin": "1058417",
+    "borough": "Manhattan",
+    "housenumber": "269",
+    "label": "269 WEST 118 STREET, New York, NY, USA",
+    "lat": 40.805505,
+    "lon": -73.953397,
+    "street": "WEST 118 STREET"
+   },
+   {
+    "bin": "1081322",
+    "borough": "Manhattan",
+    "housenumber": "205",
+    "label": "205 WEST 118 STREET, New York, NY, USA",
+    "lat": 40.804989,
+    "lon": -73.952155,
+    "street": "WEST 118 STREET"
+   },
+   {
+    "bin": "1081326",
+    "borough": "Manhattan",
+    "housenumber": "207",
+    "label": "207 WEST 118 STREET, New York, NY, USA",
+    "lat": 40.805045,
+    "lon": -73.952286,
+    "street": "WEST 118 STREET"
+   },
+   {
+    "bin": "1051434",
+    "borough": "Manhattan",
+    "housenumber": "42",
+    "label": "42 WEST 118 STREET, New York, NY, USA",
+    "lat": 40.802671,
+    "lon": -73.948127,
+    "street": "WEST 118 STREET"
+   },
+   {
+    "bin": "1051434",
+    "borough": "Manhattan",
+    "housenumber": "48",
+    "label": "48 WEST 118 STREET, New York, NY, USA",
+    "lat": 40.802671,
+    "lon": -73.948127,
+    "street": "WEST 118 STREET"
+   }
+  ]
+ },
+ "34 West 118th Street, NY 10026": {
   "features": [
    {
     "bin": "1051434",
@@ -31756,6 +34965,82 @@
    }
   ]
  },
+ "40 Irving Place, NY 10003": {
+  "features": [
+   {
+    "bin": "1017828",
+    "borough": "Manhattan",
+    "housenumber": "40",
+    "label": "40 IRVING PLACE, New York, NY, USA",
+    "lat": 40.735361,
+    "lon": -73.987057,
+    "street": "IRVING PLACE"
+   },
+   {
+    "bin": "1084936",
+    "borough": "Manhattan",
+    "housenumber": "2",
+    "label": "2 IRVING PLACE, New York, NY, USA",
+    "lat": 40.734081,
+    "lon": -73.987895,
+    "street": "IRVING PLACE"
+   },
+   {
+    "bin": "1083247",
+    "borough": "Manhattan",
+    "housenumber": "11",
+    "label": "11 IRVING PLACE, New York, NY, USA",
+    "lat": 40.73467,
+    "lon": -73.989158,
+    "street": "IRVING PLACE"
+   },
+   {
+    "bin": "1083247",
+    "borough": "Manhattan",
+    "housenumber": "1",
+    "label": "1 IRVING PLACE, New York, NY, USA",
+    "lat": 40.73467,
+    "lon": -73.989158,
+    "street": "IRVING PLACE"
+   },
+   {
+    "bin": "1083247",
+    "borough": "Manhattan",
+    "housenumber": "3",
+    "label": "3 IRVING PLACE, New York, NY, USA",
+    "lat": 40.73467,
+    "lon": -73.989158,
+    "street": "IRVING PLACE"
+   },
+   {
+    "bin": "1083247",
+    "borough": "Manhattan",
+    "housenumber": "13",
+    "label": "13 IRVING PLACE, New York, NY, USA",
+    "lat": 40.73467,
+    "lon": -73.989158,
+    "street": "IRVING PLACE"
+   },
+   {
+    "bin": "1083247",
+    "borough": "Manhattan",
+    "housenumber": "9",
+    "label": "9 IRVING PLACE, New York, NY, USA",
+    "lat": 40.73467,
+    "lon": -73.989158,
+    "street": "IRVING PLACE"
+   },
+   {
+    "bin": "1017814",
+    "borough": "Manhattan",
+    "housenumber": "31",
+    "label": "31 IRVING PLACE, New York, NY, USA",
+    "lat": 40.735166,
+    "lon": -73.988236,
+    "street": "IRVING PLACE"
+   }
+  ]
+ },
  "400 W 219Th Street, Manhattan, NY 10034": {
   "features": [
    {
@@ -32133,6 +35418,100 @@
   ]
  },
  "410 East 100 Street, Manhattan, NY 10029": {
+  "features": [
+   {
+    "bin": "1052998",
+    "borough": "Manhattan",
+    "housenumber": "410",
+    "label": "410 EAST 100 STREET, New York, NY, USA",
+    "lat": 40.785265,
+    "lon": -73.942282,
+    "street": "EAST 100 STREET"
+   },
+   {
+    "bin": "1086037",
+    "borough": "Manhattan",
+    "housenumber": "100",
+    "label": "100 EAST 100 STREET, New York, NY, USA",
+    "lat": 40.78844,
+    "lon": -73.950054,
+    "street": "EAST 100 STREET"
+   },
+   {
+    "bin": "1086037",
+    "borough": "Manhattan",
+    "housenumber": "106",
+    "label": "106 EAST 100 STREET, New York, NY, USA",
+    "lat": 40.78844,
+    "lon": -73.950054,
+    "street": "EAST 100 STREET"
+   },
+   {
+    "bin": "1086037",
+    "borough": "Manhattan",
+    "housenumber": "108",
+    "label": "108 EAST 100 STREET, New York, NY, USA",
+    "lat": 40.78844,
+    "lon": -73.950054,
+    "street": "EAST 100 STREET"
+   },
+   {
+    "bin": "1086037",
+    "borough": "Manhattan",
+    "housenumber": "114",
+    "label": "114 EAST 100 STREET, New York, NY, USA",
+    "lat": 40.78844,
+    "lon": -73.950054,
+    "street": "EAST 100 STREET"
+   },
+   {
+    "bin": "1086037",
+    "borough": "Manhattan",
+    "housenumber": "118",
+    "label": "118 EAST 100 STREET, New York, NY, USA",
+    "lat": 40.78844,
+    "lon": -73.950054,
+    "street": "EAST 100 STREET"
+   },
+   {
+    "bin": "1051774",
+    "borough": "Manhattan",
+    "housenumber": "176",
+    "label": "176 EAST 100 STREET, New York, NY, USA",
+    "lat": 40.787768,
+    "lon": -73.947804,
+    "street": "EAST 100 STREET"
+   },
+   {
+    "bin": "1051774",
+    "borough": "Manhattan",
+    "housenumber": "180",
+    "label": "180 EAST 100 STREET, New York, NY, USA",
+    "lat": 40.787768,
+    "lon": -73.947804,
+    "street": "EAST 100 STREET"
+   },
+   {
+    "bin": "1051777",
+    "borough": "Manhattan",
+    "housenumber": "164",
+    "label": "164 EAST 100 STREET, New York, NY, USA",
+    "lat": 40.787925,
+    "lon": -73.948326,
+    "street": "EAST 100 STREET"
+   },
+   {
+    "bin": "1051778",
+    "borough": "Manhattan",
+    "housenumber": "162",
+    "label": "162 EAST 100 STREET, New York, NY, USA",
+    "lat": 40.787956,
+    "lon": -73.948406,
+    "street": "EAST 100 STREET"
+   }
+  ]
+ },
+ "410 East 100th Street, NY 10029": {
   "features": [
    {
     "bin": "1052998",
@@ -33824,6 +37203,100 @@
    }
   ]
  },
+ "439 West 49th Street, NY 10019": {
+  "features": [
+   {
+    "bin": "1026646",
+    "borough": "Manhattan",
+    "housenumber": "439",
+    "label": "439 WEST 49 STREET, New York, NY, USA",
+    "lat": 40.763835,
+    "lon": -73.990412,
+    "street": "WEST 49 STREET"
+   },
+   {
+    "bin": "1000000",
+    "borough": "Manhattan",
+    "housenumber": "140",
+    "label": "140 WEST 49 STREET, New York, NY, USA",
+    "lat": 40.75967,
+    "lon": -73.98295,
+    "street": "WEST 49 STREET"
+   },
+   {
+    "bin": "1022693",
+    "borough": "Manhattan",
+    "housenumber": "106",
+    "label": "106 WEST 49 STREET, New York, NY, USA",
+    "lat": 40.759492,
+    "lon": -73.982461,
+    "street": "WEST 49 STREET"
+   },
+   {
+    "bin": "1022693",
+    "borough": "Manhattan",
+    "housenumber": "108",
+    "label": "108 WEST 49 STREET, New York, NY, USA",
+    "lat": 40.759492,
+    "lon": -73.982461,
+    "street": "WEST 49 STREET"
+   },
+   {
+    "bin": "1022693",
+    "borough": "Manhattan",
+    "housenumber": "112",
+    "label": "112 WEST 49 STREET, New York, NY, USA",
+    "lat": 40.759492,
+    "lon": -73.982461,
+    "street": "WEST 49 STREET"
+   },
+   {
+    "bin": "1022693",
+    "borough": "Manhattan",
+    "housenumber": "116",
+    "label": "116 WEST 49 STREET, New York, NY, USA",
+    "lat": 40.759492,
+    "lon": -73.982461,
+    "street": "WEST 49 STREET"
+   },
+   {
+    "bin": "1022693",
+    "borough": "Manhattan",
+    "housenumber": "118",
+    "label": "118 WEST 49 STREET, New York, NY, USA",
+    "lat": 40.759492,
+    "lon": -73.982461,
+    "street": "WEST 49 STREET"
+   },
+   {
+    "bin": "1022693",
+    "borough": "Manhattan",
+    "housenumber": "122",
+    "label": "122 WEST 49 STREET, New York, NY, USA",
+    "lat": 40.759492,
+    "lon": -73.982461,
+    "street": "WEST 49 STREET"
+   },
+   {
+    "bin": "1022693",
+    "borough": "Manhattan",
+    "housenumber": "128",
+    "label": "128 WEST 49 STREET, New York, NY, USA",
+    "lat": 40.759492,
+    "lon": -73.982461,
+    "street": "WEST 49 STREET"
+   },
+   {
+    "bin": "1022693",
+    "borough": "Manhattan",
+    "housenumber": "130",
+    "label": "130 WEST 49 STREET, New York, NY, USA",
+    "lat": 40.759492,
+    "lon": -73.982461,
+    "street": "WEST 49 STREET"
+   }
+  ]
+ },
  "447 Wales Avenue, Bronx, NY 10455": {
   "features": [
    {
@@ -34107,6 +37580,100 @@
   ]
  },
  "450 SAINT PAUL'S PLACE, Bronx, NY 10456": {
+  "features": [
+   {
+    "bin": "2009463",
+    "borough": "Bronx",
+    "housenumber": "450",
+    "label": "450 SAINT PAUL'S PLACE, Bronx, NY, USA",
+    "lat": 40.83608,
+    "lon": -73.904934,
+    "street": "SAINT PAUL'S PLACE"
+   },
+   {
+    "bin": "2009463",
+    "borough": "Bronx",
+    "housenumber": "450",
+    "label": "450 ST PAUL'S PLACE, Bronx, NY, USA",
+    "lat": 40.83608,
+    "lon": -73.904934,
+    "street": "ST PAUL'S PLACE"
+   },
+   {
+    "bin": "2009463",
+    "borough": "Bronx",
+    "housenumber": "450",
+    "label": "450 ST PAULS PLACE, Bronx, NY, USA",
+    "lat": 40.83608,
+    "lon": -73.904934,
+    "street": "ST PAULS PLACE"
+   },
+   {
+    "bin": "2009463",
+    "borough": "Bronx",
+    "housenumber": "450",
+    "label": "450 SAINT PAULS PLACE, Bronx, NY, USA",
+    "lat": 40.83608,
+    "lon": -73.904934,
+    "street": "SAINT PAULS PLACE"
+   },
+   {
+    "bin": "2009542",
+    "borough": "Bronx",
+    "housenumber": "481",
+    "label": "481 SAINT PAUL'S PLACE, Bronx, NY, USA",
+    "lat": 40.836291,
+    "lon": -73.903688,
+    "street": "SAINT PAUL'S PLACE"
+   },
+   {
+    "bin": "2009542",
+    "borough": "Bronx",
+    "housenumber": "481",
+    "label": "481 ST PAULS PLACE, Bronx, NY, USA",
+    "lat": 40.836291,
+    "lon": -73.903688,
+    "street": "ST PAULS PLACE"
+   },
+   {
+    "bin": "2009542",
+    "borough": "Bronx",
+    "housenumber": "487",
+    "label": "487 SAINT PAUL'S PLACE, Bronx, NY, USA",
+    "lat": 40.836291,
+    "lon": -73.903688,
+    "street": "SAINT PAUL'S PLACE"
+   },
+   {
+    "bin": "2009542",
+    "borough": "Bronx",
+    "housenumber": "487",
+    "label": "487 SAINT PAULS PLACE, Bronx, NY, USA",
+    "lat": 40.836291,
+    "lon": -73.903688,
+    "street": "SAINT PAULS PLACE"
+   },
+   {
+    "bin": "2009542",
+    "borough": "Bronx",
+    "housenumber": "489",
+    "label": "489 ST PAULS PLACE, Bronx, NY, USA",
+    "lat": 40.836291,
+    "lon": -73.903688,
+    "street": "ST PAULS PLACE"
+   },
+   {
+    "bin": "2009625",
+    "borough": "Bronx",
+    "housenumber": "530",
+    "label": "530 ST PAULS PLACE, Bronx, NY, USA",
+    "lat": 40.835642,
+    "lon": -73.902765,
+    "street": "ST PAULS PLACE"
+   }
+  ]
+ },
+ "450 St. Pauls Place, NY 10456": {
   "features": [
    {
     "bin": "2009463",
@@ -35892,6 +39459,100 @@
    }
   ]
  },
+ "500 West 41st Street, NY 10036": {
+  "features": [
+   {
+    "bin": "1089722",
+    "borough": "Manhattan",
+    "housenumber": "500",
+    "label": "500 WEST 41 STREET, New York, NY, USA",
+    "lat": 40.758714,
+    "lon": -73.996495,
+    "street": "WEST 41 STREET"
+   },
+   {
+    "bin": "1022563",
+    "borough": "Manhattan",
+    "housenumber": "126",
+    "label": "126 WEST 41 STREET, New York, NY, USA",
+    "lat": 40.754379,
+    "lon": -73.986279,
+    "street": "WEST 41 STREET"
+   },
+   {
+    "bin": "1022564",
+    "borough": "Manhattan",
+    "housenumber": "118",
+    "label": "118 WEST 41 STREET, New York, NY, USA",
+    "lat": 40.754201,
+    "lon": -73.985733,
+    "street": "WEST 41 STREET"
+   },
+   {
+    "bin": "1022568",
+    "borough": "Manhattan",
+    "housenumber": "132",
+    "label": "132 WEST 41 STREET, New York, NY, USA",
+    "lat": 40.754686,
+    "lon": -73.986293,
+    "street": "WEST 41 STREET"
+   },
+   {
+    "bin": "1022568",
+    "borough": "Manhattan",
+    "housenumber": "138",
+    "label": "138 WEST 41 STREET, New York, NY, USA",
+    "lat": 40.754686,
+    "lon": -73.986293,
+    "street": "WEST 41 STREET"
+   },
+   {
+    "bin": "1022569",
+    "borough": "Manhattan",
+    "housenumber": "156",
+    "label": "156 WEST 41 STREET, New York, NY, USA",
+    "lat": 40.755009,
+    "lon": -73.98717,
+    "street": "WEST 41 STREET"
+   },
+   {
+    "bin": "1086069",
+    "borough": "Manhattan",
+    "housenumber": "159",
+    "label": "159 WEST 41 STREET, New York, NY, USA",
+    "lat": 40.755526,
+    "lon": -73.986916,
+    "street": "WEST 41 STREET"
+   },
+   {
+    "bin": "1090617",
+    "borough": "Manhattan",
+    "housenumber": "111",
+    "label": "111 WEST 41 STREET, New York, NY, USA",
+    "lat": 40.754914,
+    "lon": -73.985376,
+    "street": "WEST 41 STREET"
+   },
+   {
+    "bin": "1090617",
+    "borough": "Manhattan",
+    "housenumber": "113",
+    "label": "113 WEST 41 STREET, New York, NY, USA",
+    "lat": 40.754914,
+    "lon": -73.985376,
+    "street": "WEST 41 STREET"
+   },
+   {
+    "bin": "1024925",
+    "borough": "Manhattan",
+    "housenumber": "347",
+    "label": "347 WEST 41 STREET, New York, NY, USA",
+    "lat": 40.757689,
+    "lon": -73.992247,
+    "street": "WEST 41 STREET"
+   }
+  ]
+ },
  "501 Gerard Avenue, Bronx, NY 10451": {
   "features": [
    {
@@ -36175,6 +39836,100 @@
   ]
  },
  "509 West 129 Street, Bronx, NY 10027": {
+  "features": [
+   {
+    "bin": "1059723",
+    "borough": "Manhattan",
+    "housenumber": "509",
+    "label": "509 WEST 129 STREET, New York, NY, USA",
+    "lat": 40.81573,
+    "lon": -73.955938,
+    "street": "WEST 129 STREET"
+   },
+   {
+    "bin": "1057981",
+    "borough": "Manhattan",
+    "housenumber": "129",
+    "label": "129 WEST 129 STREET, New York, NY, USA",
+    "lat": 40.810957,
+    "lon": -73.944666,
+    "street": "WEST 129 STREET"
+   },
+   {
+    "bin": "1081503",
+    "borough": "Manhattan",
+    "housenumber": "232",
+    "label": "232 WEST 129 STREET, New York, NY, USA",
+    "lat": 40.811865,
+    "lon": -73.948337,
+    "street": "WEST 129 STREET"
+   },
+   {
+    "bin": "1081503",
+    "borough": "Manhattan",
+    "housenumber": "238",
+    "label": "238 WEST 129 STREET, New York, NY, USA",
+    "lat": 40.811865,
+    "lon": -73.948337,
+    "street": "WEST 129 STREET"
+   },
+   {
+    "bin": "1089330",
+    "borough": "Manhattan",
+    "housenumber": "245",
+    "label": "245 WEST 129 STREET, New York, NY, USA",
+    "lat": 40.812639,
+    "lon": -73.948144,
+    "street": "WEST 129 STREET"
+   },
+   {
+    "bin": "1058685",
+    "borough": "Manhattan",
+    "housenumber": "201",
+    "label": "201 WEST 129 STREET, New York, NY, USA",
+    "lat": 40.811901,
+    "lon": -73.946768,
+    "street": "WEST 129 STREET"
+   },
+   {
+    "bin": "1058685",
+    "borough": "Manhattan",
+    "housenumber": "203",
+    "label": "203 WEST 129 STREET, New York, NY, USA",
+    "lat": 40.811901,
+    "lon": -73.946768,
+    "street": "WEST 129 STREET"
+   },
+   {
+    "bin": "1058685",
+    "borough": "Manhattan",
+    "housenumber": "205",
+    "label": "205 WEST 129 STREET, New York, NY, USA",
+    "lat": 40.811901,
+    "lon": -73.946768,
+    "street": "WEST 129 STREET"
+   },
+   {
+    "bin": "1058685",
+    "borough": "Manhattan",
+    "housenumber": "207",
+    "label": "207 WEST 129 STREET, New York, NY, USA",
+    "lat": 40.811901,
+    "lon": -73.946768,
+    "street": "WEST 129 STREET"
+   },
+   {
+    "bin": "1058685",
+    "borough": "Manhattan",
+    "housenumber": "209",
+    "label": "209 WEST 129 STREET, New York, NY, USA",
+    "lat": 40.811901,
+    "lon": -73.946768,
+    "street": "WEST 129 STREET"
+   }
+  ]
+ },
+ "509 West 129th Street, NY 10027": {
   "features": [
    {
     "bin": "1059723",
@@ -38436,6 +42191,100 @@
     "lat": 40.671027,
     "lon": -73.895953,
     "street": "PENNSYLVANIA AVENUE"
+   }
+  ]
+ },
+ "58-23 Catalpa Ave, NY 11385": {
+  "features": [
+   {
+    "bin": "4437726",
+    "borough": "Queens",
+    "housenumber": "58-23",
+    "label": "58-23 CATALPA AVENUE, Ridgewood, NY, USA",
+    "lat": 40.702316,
+    "lon": -73.902321,
+    "street": "CATALPA AVENUE"
+   },
+   {
+    "bin": "4083138",
+    "borough": "Queens",
+    "housenumber": "58-58",
+    "label": "58-58 CATALPA AVENUE, Ridgewood, NY, USA",
+    "lat": 40.702227,
+    "lon": -73.901048,
+    "street": "CATALPA AVENUE"
+   },
+   {
+    "bin": "4083123",
+    "borough": "Queens",
+    "housenumber": "58-26",
+    "label": "58-26 CATALPA AVENUE, Ridgewood, NY, USA",
+    "lat": 40.70184,
+    "lon": -73.902011,
+    "street": "CATALPA AVENUE"
+   },
+   {
+    "bin": "4083126",
+    "borough": "Queens",
+    "housenumber": "58-32",
+    "label": "58-32 CATALPA AVENUE, Ridgewood, NY, USA",
+    "lat": 40.701924,
+    "lon": -73.901825,
+    "street": "CATALPA AVENUE"
+   },
+   {
+    "bin": "4083128",
+    "borough": "Queens",
+    "housenumber": "58-36",
+    "label": "58-36 CATALPA AVENUE, Ridgewood, NY, USA",
+    "lat": 40.701986,
+    "lon": -73.901703,
+    "street": "CATALPA AVENUE"
+   },
+   {
+    "bin": "4083130",
+    "borough": "Queens",
+    "housenumber": "58-40",
+    "label": "58-40 CATALPA AVENUE, Ridgewood, NY, USA",
+    "lat": 40.702052,
+    "lon": -73.901589,
+    "street": "CATALPA AVENUE"
+   },
+   {
+    "bin": "4083135",
+    "borough": "Queens",
+    "housenumber": "58-52",
+    "label": "58-52 CATALPA AVENUE, Ridgewood, NY, USA",
+    "lat": 40.702221,
+    "lon": -73.901267,
+    "street": "CATALPA AVENUE"
+   },
+   {
+    "bin": "4434254",
+    "borough": "Queens",
+    "housenumber": "58-04",
+    "label": "58-04 CATALPA AVENUE, Ridgewood, NY, USA",
+    "lat": 40.70147,
+    "lon": -73.902652,
+    "street": "CATALPA AVENUE"
+   },
+   {
+    "bin": "4434254",
+    "borough": "Queens",
+    "housenumber": "58-08",
+    "label": "58-08 CATALPA AVENUE, Ridgewood, NY, USA",
+    "lat": 40.70147,
+    "lon": -73.902652,
+    "street": "CATALPA AVENUE"
+   },
+   {
+    "bin": "4445472",
+    "borough": "Queens",
+    "housenumber": "58-15",
+    "label": "58-15 CATALPA AVENUE, Ridgewood, NY, USA",
+    "lat": 40.701871,
+    "lon": -73.902689,
+    "street": "CATALPA AVENUE"
    }
   ]
  },
@@ -42199,7 +46048,195 @@
    }
   ]
  },
+ "70 Tompkins Avenue, NY 11206": {
+  "features": [
+   {
+    "bin": "3048517",
+    "borough": "Brooklyn",
+    "housenumber": "70",
+    "label": "70 TOMPKINS AVENUE, Brooklyn, NY, USA",
+    "lat": 40.696733,
+    "lon": -73.947308,
+    "street": "TOMPKINS AVENUE"
+   },
+   {
+    "bin": "3048818",
+    "borough": "Brooklyn",
+    "housenumber": "146",
+    "label": "146 TOMPKINS AVENUE, Brooklyn, NY, USA",
+    "lat": 40.694435,
+    "lon": -73.947475,
+    "street": "TOMPKINS AVENUE"
+   },
+   {
+    "bin": "3000000",
+    "borough": "Brooklyn",
+    "housenumber": "132",
+    "label": "132 TOMPKINS AVENUE, Brooklyn, NY, USA",
+    "lat": 40.69471,
+    "lon": -73.94636,
+    "street": "TOMPKINS AVENUE"
+   },
+   {
+    "bin": "3048826",
+    "borough": "Brooklyn",
+    "housenumber": "145",
+    "label": "145 TOMPKINS AVENUE, Brooklyn, NY, USA",
+    "lat": 40.69448,
+    "lon": -73.94591,
+    "street": "TOMPKINS AVENUE"
+   },
+   {
+    "bin": "3049133",
+    "borough": "Brooklyn",
+    "housenumber": "158",
+    "label": "158 TOMPKINS AVENUE, Brooklyn, NY, USA",
+    "lat": 40.693749,
+    "lon": -73.946251,
+    "street": "TOMPKINS AVENUE"
+   },
+   {
+    "bin": "3049135",
+    "borough": "Brooklyn",
+    "housenumber": "160A",
+    "label": "160A TOMPKINS AVENUE, Brooklyn, NY, USA",
+    "lat": 40.693649,
+    "lon": -73.946176,
+    "street": "TOMPKINS AVENUE"
+   },
+   {
+    "bin": "3398798",
+    "borough": "Brooklyn",
+    "housenumber": "169",
+    "label": "169 TOMPKINS AVENUE, Brooklyn, NY, USA",
+    "lat": 40.693688,
+    "lon": -73.945737,
+    "street": "TOMPKINS AVENUE"
+   },
+   {
+    "bin": "3049147",
+    "borough": "Brooklyn",
+    "housenumber": "163",
+    "label": "163 TOMPKINS AVENUE, Brooklyn, NY, USA",
+    "lat": 40.693823,
+    "lon": -73.945776,
+    "street": "TOMPKINS AVENUE"
+   },
+   {
+    "bin": "3000000",
+    "borough": "Brooklyn",
+    "housenumber": "12",
+    "label": "12 TOMPKINS AVENUE, Brooklyn, NY, USA",
+    "lat": 40.69958,
+    "lon": -73.9486,
+    "street": "TOMPKINS AVENUE"
+   },
+   {
+    "bin": "3338519",
+    "borough": "Brooklyn",
+    "housenumber": "4",
+    "label": "4 TOMPKINS AVENUE, Brooklyn, NY, USA",
+    "lat": 40.69982,
+    "lon": -73.947733,
+    "street": "TOMPKINS AVENUE"
+   }
+  ]
+ },
  "701 Fort Washington Avenue, Manhattan, NY 10040": {
+  "features": [
+   {
+    "bin": "1064382",
+    "borough": "Manhattan",
+    "housenumber": "701",
+    "label": "701 FT WASHINGTON AVENUE, New York, NY, USA",
+    "lat": 40.857939,
+    "lon": -73.935635,
+    "street": "FT WASHINGTON AVENUE"
+   },
+   {
+    "bin": "1064382",
+    "borough": "Manhattan",
+    "housenumber": "701",
+    "label": "701 FORT WASHINGTON AVENUE, New York, NY, USA",
+    "lat": 40.857939,
+    "lon": -73.935635,
+    "street": "FORT WASHINGTON AVENUE"
+   },
+   {
+    "bin": "1064370",
+    "borough": "Manhattan",
+    "housenumber": "613",
+    "label": "613 FORT WASHINGTON AVENUE, New York, NY, USA",
+    "lat": 40.855669,
+    "lon": -73.937,
+    "street": "FORT WASHINGTON AVENUE"
+   },
+   {
+    "bin": "1064371",
+    "borough": "Manhattan",
+    "housenumber": "619",
+    "label": "619 FORT WASHINGTON AVENUE, New York, NY, USA",
+    "lat": 40.856031,
+    "lon": -73.937019,
+    "street": "FORT WASHINGTON AVENUE"
+   },
+   {
+    "bin": "1064371",
+    "borough": "Manhattan",
+    "housenumber": "621",
+    "label": "621 FORT WASHINGTON AVENUE, New York, NY, USA",
+    "lat": 40.856031,
+    "lon": -73.937019,
+    "street": "FORT WASHINGTON AVENUE"
+   },
+   {
+    "bin": "1064371",
+    "borough": "Manhattan",
+    "housenumber": "627",
+    "label": "627 FT WASHINGTON AVENUE, New York, NY, USA",
+    "lat": 40.856031,
+    "lon": -73.937019,
+    "street": "FT WASHINGTON AVENUE"
+   },
+   {
+    "bin": "1064371",
+    "borough": "Manhattan",
+    "housenumber": "633",
+    "label": "633 FT WASHINGTON AVENUE, New York, NY, USA",
+    "lat": 40.856031,
+    "lon": -73.937019,
+    "street": "FT WASHINGTON AVENUE"
+   },
+   {
+    "bin": "1064371",
+    "borough": "Manhattan",
+    "housenumber": "637",
+    "label": "637 FORT WASHINGTON AVENUE, New York, NY, USA",
+    "lat": 40.856031,
+    "lon": -73.937019,
+    "street": "FORT WASHINGTON AVENUE"
+   },
+   {
+    "bin": "1064371",
+    "borough": "Manhattan",
+    "housenumber": "639",
+    "label": "639 FT WASHINGTON AVENUE, New York, NY, USA",
+    "lat": 40.856031,
+    "lon": -73.937019,
+    "street": "FT WASHINGTON AVENUE"
+   },
+   {
+    "bin": "1064371",
+    "borough": "Manhattan",
+    "housenumber": "645",
+    "label": "645 FT WASHINGTON AVENUE, New York, NY, USA",
+    "lat": 40.856031,
+    "lon": -73.937019,
+    "street": "FT WASHINGTON AVENUE"
+   }
+  ]
+ },
+ "701 Fort Washington Avenue, NY 10040": {
   "features": [
    {
     "bin": "1064382",
@@ -42670,6 +46707,100 @@
   ]
  },
  "72 VERONICA PLACE, Brooklyn, NY 11226": {
+  "features": [
+   {
+    "bin": "3117381",
+    "borough": "Brooklyn",
+    "housenumber": "72",
+    "label": "72 VERONICA PLACE, Brooklyn, NY, USA",
+    "lat": 40.648366,
+    "lon": -73.953816,
+    "street": "VERONICA PLACE"
+   },
+   {
+    "bin": "3119089",
+    "borough": "Brooklyn",
+    "housenumber": "232",
+    "label": "232 VERONICA PLACE, Brooklyn, NY, USA",
+    "lat": 40.644425,
+    "lon": -73.952654,
+    "street": "VERONICA PLACE"
+   },
+   {
+    "bin": "3339001",
+    "borough": "Brooklyn",
+    "housenumber": "4",
+    "label": "4 VERONICA PLACE, Brooklyn, NY, USA",
+    "lat": 40.650308,
+    "lon": -73.953244,
+    "street": "VERONICA PLACE"
+   },
+   {
+    "bin": "3339001",
+    "borough": "Brooklyn",
+    "housenumber": "16",
+    "label": "16 VERONICA PLACE, Brooklyn, NY, USA",
+    "lat": 40.650308,
+    "lon": -73.953244,
+    "street": "VERONICA PLACE"
+   },
+   {
+    "bin": "3339005",
+    "borough": "Brooklyn",
+    "housenumber": "24",
+    "label": "24 VERONICA PLACE, Brooklyn, NY, USA",
+    "lat": 40.649994,
+    "lon": -73.953198,
+    "street": "VERONICA PLACE"
+   },
+   {
+    "bin": "3117242",
+    "borough": "Brooklyn",
+    "housenumber": "3",
+    "label": "3 VERONICA PLACE, Brooklyn, NY, USA",
+    "lat": 40.650442,
+    "lon": -73.952755,
+    "street": "VERONICA PLACE"
+   },
+   {
+    "bin": "3117245",
+    "borough": "Brooklyn",
+    "housenumber": "13",
+    "label": "13 VERONICA PLACE, Brooklyn, NY, USA",
+    "lat": 40.65028,
+    "lon": -73.952661,
+    "street": "VERONICA PLACE"
+   },
+   {
+    "bin": "3117252",
+    "borough": "Brooklyn",
+    "housenumber": "29",
+    "label": "29 VERONICA PLACE, Brooklyn, NY, USA",
+    "lat": 40.64987,
+    "lon": -73.952729,
+    "street": "VERONICA PLACE"
+   },
+   {
+    "bin": "3117253",
+    "borough": "Brooklyn",
+    "housenumber": "27",
+    "label": "27 VERONICA PLACE, Brooklyn, NY, USA",
+    "lat": 40.64992,
+    "lon": -73.952734,
+    "street": "VERONICA PLACE"
+   },
+   {
+    "bin": "3256656",
+    "borough": "Brooklyn",
+    "housenumber": "50",
+    "label": "50 VERONICA PLACE, Brooklyn, NY, USA",
+    "lat": 40.649277,
+    "lon": -73.953059,
+    "street": "VERONICA PLACE"
+   }
+  ]
+ },
+ "72 Veronica Place, NY 11226": {
   "features": [
    {
     "bin": "3117381",
@@ -43891,6 +48022,100 @@
    }
   ]
  },
+ "760 E Gun Hill Rd., NY 10467": {
+  "features": [
+   {
+    "bin": "2057021",
+    "borough": "Bronx",
+    "housenumber": "760",
+    "label": "760 EAST GUN HILL ROAD, Bronx, NY, USA",
+    "lat": 40.876078,
+    "lon": -73.863806,
+    "street": "EAST GUN HILL ROAD"
+   },
+   {
+    "bin": "2057021",
+    "borough": "Bronx",
+    "housenumber": "760",
+    "label": "760 GUN HILL ROAD, Bronx, NY, USA",
+    "lat": 40.876078,
+    "lon": -73.863806,
+    "street": "GUN HILL ROAD"
+   },
+   {
+    "bin": "2118922",
+    "borough": "Bronx",
+    "housenumber": "747",
+    "label": "747 EAST GUN HILL ROAD, Bronx, NY, USA",
+    "lat": 40.876716,
+    "lon": -73.86371,
+    "street": "EAST GUN HILL ROAD"
+   },
+   {
+    "bin": "2102884",
+    "borough": "Bronx",
+    "housenumber": "126",
+    "label": "126 EAST GUN HILL ROAD, Bronx, NY, USA",
+    "lat": 40.88083,
+    "lon": -73.87995,
+    "street": "EAST GUN HILL ROAD"
+   },
+   {
+    "bin": "2102884",
+    "borough": "Bronx",
+    "housenumber": "148",
+    "label": "148 EAST GUN HILL ROAD, Bronx, NY, USA",
+    "lat": 40.88083,
+    "lon": -73.87995,
+    "street": "EAST GUN HILL ROAD"
+   },
+   {
+    "bin": "2102884",
+    "borough": "Bronx",
+    "housenumber": "150",
+    "label": "150 EAST GUN HILL ROAD, Bronx, NY, USA",
+    "lat": 40.88083,
+    "lon": -73.87995,
+    "street": "EAST GUN HILL ROAD"
+   },
+   {
+    "bin": "2017774",
+    "borough": "Bronx",
+    "housenumber": "4",
+    "label": "4 EAST GUN HILL ROAD, Bronx, NY, USA",
+    "lat": 40.882316,
+    "lon": -73.881226,
+    "street": "EAST GUN HILL ROAD"
+   },
+   {
+    "bin": "2017775",
+    "borough": "Bronx",
+    "housenumber": "10",
+    "label": "10 EAST GUN HILL ROAD, Bronx, NY, USA",
+    "lat": 40.882204,
+    "lon": -73.880984,
+    "street": "EAST GUN HILL ROAD"
+   },
+   {
+    "bin": "2017788",
+    "borough": "Bronx",
+    "housenumber": "25",
+    "label": "25 EAST GUN HILL ROAD, Bronx, NY, USA",
+    "lat": 40.882545,
+    "lon": -73.880405,
+    "street": "EAST GUN HILL ROAD"
+   },
+   {
+    "bin": "2017790",
+    "borough": "Bronx",
+    "housenumber": "11",
+    "label": "11 EAST GUN HILL ROAD, Bronx, NY, USA",
+    "lat": 40.882741,
+    "lon": -73.880817,
+    "street": "EAST GUN HILL ROAD"
+   }
+  ]
+ },
  "760 East Gun Hill Road, Bronx, NY 10467": {
   "features": [
    {
@@ -44267,6 +48492,100 @@
    }
   ]
  },
+ "7801 Bay Parkway, NY 11214": {
+  "features": [
+   {
+    "bin": "3256802",
+    "borough": "Brooklyn",
+    "housenumber": "7801",
+    "label": "7801 BAY PARKWAY, Brooklyn, NY, USA",
+    "lat": 40.606068,
+    "lon": -73.98899,
+    "street": "BAY PARKWAY"
+   },
+   {
+    "bin": "3418306",
+    "borough": "Brooklyn",
+    "housenumber": "7514",
+    "label": "7514 BAY PARKWAY, Brooklyn, NY, USA",
+    "lat": 40.607974,
+    "lon": -73.988026,
+    "street": "BAY PARKWAY"
+   },
+   {
+    "bin": "3418306",
+    "borough": "Brooklyn",
+    "housenumber": "7518",
+    "label": "7518 BAY PARKWAY, Brooklyn, NY, USA",
+    "lat": 40.607974,
+    "lon": -73.988026,
+    "street": "BAY PARKWAY"
+   },
+   {
+    "bin": "3161645",
+    "borough": "Brooklyn",
+    "housenumber": "7704",
+    "label": "7704 BAY PARKWAY, Brooklyn, NY, USA",
+    "lat": 40.607071,
+    "lon": -73.988902,
+    "street": "BAY PARKWAY"
+   },
+   {
+    "bin": "3161646",
+    "borough": "Brooklyn",
+    "housenumber": "7708",
+    "label": "7708 BAY PARKWAY, Brooklyn, NY, USA",
+    "lat": 40.607002,
+    "lon": -73.98897,
+    "street": "BAY PARKWAY"
+   },
+   {
+    "bin": "3161665",
+    "borough": "Brooklyn",
+    "housenumber": "7717",
+    "label": "7717 BAY PARKWAY, Brooklyn, NY, USA",
+    "lat": 40.606571,
+    "lon": -73.988519,
+    "street": "BAY PARKWAY"
+   },
+   {
+    "bin": "3000000",
+    "borough": "Brooklyn",
+    "housenumber": "7601",
+    "label": "7601 BAY PARKWAY, Brooklyn, NY, USA",
+    "lat": 40.60749,
+    "lon": -73.98767,
+    "street": "BAY PARKWAY"
+   },
+   {
+    "bin": "3161688",
+    "borough": "Brooklyn",
+    "housenumber": "7629",
+    "label": "7629 BAY PARKWAY, Brooklyn, NY, USA",
+    "lat": 40.606831,
+    "lon": -73.988295,
+    "street": "BAY PARKWAY"
+   },
+   {
+    "bin": "3161688",
+    "borough": "Brooklyn",
+    "housenumber": "7637",
+    "label": "7637 BAY PARKWAY, Brooklyn, NY, USA",
+    "lat": 40.606831,
+    "lon": -73.988295,
+    "street": "BAY PARKWAY"
+   },
+   {
+    "bin": "3161688",
+    "borough": "Brooklyn",
+    "housenumber": "7689",
+    "label": "7689 BAY PARKWAY, Brooklyn, NY, USA",
+    "lat": 40.606831,
+    "lon": -73.988295,
+    "street": "BAY PARKWAY"
+   }
+  ]
+ },
  "787 LAFAYETTE AVENUE, Brooklyn, NY 11221": {
   "features": [
    {
@@ -44362,6 +48681,100 @@
   ]
  },
  "787 Lafayette Avenue, Brooklyn, NY 11221": {
+  "features": [
+   {
+    "bin": "3049858",
+    "borough": "Brooklyn",
+    "housenumber": "787",
+    "label": "787 LAFAYETTE AVENUE, Brooklyn, NY, USA",
+    "lat": 40.691489,
+    "lon": -73.940689,
+    "street": "LAFAYETTE AVENUE"
+   },
+   {
+    "bin": "3043350",
+    "borough": "Brooklyn",
+    "housenumber": "889",
+    "label": "889 LAFAYETTE AVENUE, Brooklyn, NY, USA",
+    "lat": 40.691711,
+    "lon": -73.937109,
+    "street": "LAFAYETTE AVENUE"
+   },
+   {
+    "bin": "3043361",
+    "borough": "Brooklyn",
+    "housenumber": "869",
+    "label": "869 LAFAYETTE AVENUE, Brooklyn, NY, USA",
+    "lat": 40.691623,
+    "lon": -73.937845,
+    "street": "LAFAYETTE AVENUE"
+   },
+   {
+    "bin": "3043365",
+    "borough": "Brooklyn",
+    "housenumber": "863",
+    "label": "863 LAFAYETTE AVENUE, Brooklyn, NY, USA",
+    "lat": 40.691595,
+    "lon": -73.938113,
+    "street": "LAFAYETTE AVENUE"
+   },
+   {
+    "bin": "3000000",
+    "borough": "Brooklyn",
+    "housenumber": "859",
+    "label": "859 LAFAYETTE AVENUE, Brooklyn, NY, USA",
+    "lat": 40.69162,
+    "lon": -73.93825,
+    "street": "LAFAYETTE AVENUE"
+   },
+   {
+    "bin": "3043371",
+    "borough": "Brooklyn",
+    "housenumber": "851",
+    "label": "851 LAFAYETTE AVENUE, Brooklyn, NY, USA",
+    "lat": 40.69155,
+    "lon": -73.938514,
+    "street": "LAFAYETTE AVENUE"
+   },
+   {
+    "bin": "3043372",
+    "borough": "Brooklyn",
+    "housenumber": "849",
+    "label": "849 LAFAYETTE AVENUE, Brooklyn, NY, USA",
+    "lat": 40.691543,
+    "lon": -73.938582,
+    "street": "LAFAYETTE AVENUE"
+   },
+   {
+    "bin": "3000000",
+    "borough": "Brooklyn",
+    "housenumber": "825",
+    "label": "825 LAFAYETTE AVENUE, Brooklyn, NY, USA",
+    "lat": 40.69148,
+    "lon": -73.93939,
+    "street": "LAFAYETTE AVENUE"
+   },
+   {
+    "bin": "3324977",
+    "borough": "Brooklyn",
+    "housenumber": "827",
+    "label": "827 LAFAYETTE AVENUE, Brooklyn, NY, USA",
+    "lat": 40.691472,
+    "lon": -73.939423,
+    "street": "LAFAYETTE AVENUE"
+   },
+   {
+    "bin": "3324979",
+    "borough": "Brooklyn",
+    "housenumber": "957",
+    "label": "957 LAFAYETTE AVENUE, Brooklyn, NY, USA",
+    "lat": 40.69204,
+    "lon": -73.934041,
+    "street": "LAFAYETTE AVENUE"
+   }
+  ]
+ },
+ "787 Lafayette Avenue, NY 11221": {
   "features": [
    {
     "bin": "3049858",
@@ -45486,6 +49899,100 @@
     "lat": 40.679331,
     "lon": -73.891775,
     "street": "VAN SICLEN AVENUE"
+   }
+  ]
+ },
+ "801 Park Place, NY 11216": {
+  "features": [
+   {
+    "bin": "3330794",
+    "borough": "Brooklyn",
+    "housenumber": "801",
+    "label": "801 PARK PLACE, Brooklyn, NY, USA",
+    "lat": 40.673949,
+    "lon": -73.951355,
+    "street": "PARK PLACE"
+   },
+   {
+    "bin": "3000000",
+    "borough": "Brooklyn",
+    "housenumber": "643",
+    "label": "643 PARK PLACE, Brooklyn, NY, USA",
+    "lat": 40.67433,
+    "lon": -73.95633,
+    "street": "PARK PLACE"
+   },
+   {
+    "bin": "3429397",
+    "borough": "Brooklyn",
+    "housenumber": "645",
+    "label": "645 PARK PLACE, Brooklyn, NY, USA",
+    "lat": 40.67433,
+    "lon": -73.95633,
+    "street": "PARK PLACE"
+   },
+   {
+    "bin": "3031139",
+    "borough": "Brooklyn",
+    "housenumber": "701",
+    "label": "701 PARK PLACE, Brooklyn, NY, USA",
+    "lat": 40.673917,
+    "lon": -73.954533,
+    "street": "PARK PLACE"
+   },
+   {
+    "bin": "3031141",
+    "borough": "Brooklyn",
+    "housenumber": "697",
+    "label": "697 PARK PLACE, Brooklyn, NY, USA",
+    "lat": 40.673947,
+    "lon": -73.954651,
+    "street": "PARK PLACE"
+   },
+   {
+    "bin": "3031152",
+    "borough": "Brooklyn",
+    "housenumber": "673",
+    "label": "673 PARK PLACE, Brooklyn, NY, USA",
+    "lat": 40.674127,
+    "lon": -73.955443,
+    "street": "PARK PLACE"
+   },
+   {
+    "bin": "3031153",
+    "borough": "Brooklyn",
+    "housenumber": "671",
+    "label": "671 PARK PLACE, Brooklyn, NY, USA",
+    "lat": 40.67414,
+    "lon": -73.955506,
+    "street": "PARK PLACE"
+   },
+   {
+    "bin": "3031160",
+    "borough": "Brooklyn",
+    "housenumber": "657",
+    "label": "657 PARK PLACE, Brooklyn, NY, USA",
+    "lat": 40.674233,
+    "lon": -73.955946,
+    "street": "PARK PLACE"
+   },
+   {
+    "bin": "3031163",
+    "borough": "Brooklyn",
+    "housenumber": "651",
+    "label": "651 PARK PLACE, Brooklyn, NY, USA",
+    "lat": 40.674272,
+    "lon": -73.956131,
+    "street": "PARK PLACE"
+   },
+   {
+    "bin": "3031164",
+    "borough": "Brooklyn",
+    "housenumber": "691",
+    "label": "691 PARK PLACE, Brooklyn, NY, USA",
+    "lat": 40.673985,
+    "lon": -73.954848,
+    "street": "PARK PLACE"
    }
   ]
  },
@@ -47557,6 +52064,100 @@
    }
   ]
  },
+ "92-53 Springfield Boulevard, NY 11428": {
+  "features": [
+   {
+    "bin": "4229342",
+    "borough": "Queens",
+    "housenumber": "92-53",
+    "label": "92-53 SPRINGFIELD BOULEVARD, Queens Village, NY, USA",
+    "lat": 40.723399,
+    "lon": -73.736907,
+    "street": "SPRINGFIELD BOULEVARD"
+   },
+   {
+    "bin": "4229296",
+    "borough": "Queens",
+    "housenumber": "92-04",
+    "label": "92-04 SPRINGFIELD BOULEVARD, Queens Village, NY, USA",
+    "lat": 40.724372,
+    "lon": -73.739245,
+    "street": "SPRINGFIELD BOULEVARD"
+   },
+   {
+    "bin": "4229297",
+    "borough": "Queens",
+    "housenumber": "92-06",
+    "label": "92-06 SPRINGFIELD BOULEVARD, Queens Village, NY, USA",
+    "lat": 40.724318,
+    "lon": -73.739137,
+    "street": "SPRINGFIELD BOULEVARD"
+   },
+   {
+    "bin": "4229301",
+    "borough": "Queens",
+    "housenumber": "92-22",
+    "label": "92-22 SPRINGFIELD BOULEVARD, Queens Village, NY, USA",
+    "lat": 40.723989,
+    "lon": -73.73878,
+    "street": "SPRINGFIELD BOULEVARD"
+   },
+   {
+    "bin": "4229304",
+    "borough": "Queens",
+    "housenumber": "92-34",
+    "label": "92-34 SPRINGFIELD BOULEVARD, Queens Village, NY, USA",
+    "lat": 40.723729,
+    "lon": -73.738488,
+    "street": "SPRINGFIELD BOULEVARD"
+   },
+   {
+    "bin": "4229312",
+    "borough": "Queens",
+    "housenumber": "92-64",
+    "label": "92-64 SPRINGFIELD BOULEVARD, Queens Village, NY, USA",
+    "lat": 40.723051,
+    "lon": -73.73782,
+    "street": "SPRINGFIELD BOULEVARD"
+   },
+   {
+    "bin": "4229316",
+    "borough": "Queens",
+    "housenumber": "92-78",
+    "label": "92-78 SPRINGFIELD BOULEVARD, Queens Village, NY, USA",
+    "lat": 40.722645,
+    "lon": -73.737386,
+    "street": "SPRINGFIELD BOULEVARD"
+   },
+   {
+    "bin": "4229342",
+    "borough": "Queens",
+    "housenumber": "92-57",
+    "label": "92-57 SPRINGFIELD BOULEVARD, Queens Village, NY, USA",
+    "lat": 40.723399,
+    "lon": -73.736907,
+    "street": "SPRINGFIELD BOULEVARD"
+   },
+   {
+    "bin": "4229345",
+    "borough": "Queens",
+    "housenumber": "92-01",
+    "label": "92-01 SPRINGFIELD BOULEVARD, Queens Village, NY, USA",
+    "lat": 40.724651,
+    "lon": -73.738837,
+    "street": "SPRINGFIELD BOULEVARD"
+   },
+   {
+    "bin": "4229360",
+    "borough": "Queens",
+    "housenumber": "92-25",
+    "label": "92-25 SPRINGFIELD BOULEVARD, Queens Village, NY, USA",
+    "lat": 40.724117,
+    "lon": -73.738282,
+    "street": "SPRINGFIELD BOULEVARD"
+   }
+  ]
+ },
  "92-53 Springfield Boulevard, Queens, NY 11428": {
   "features": [
    {
@@ -48122,6 +52723,100 @@
   ]
  },
  "965 LONGWOOD AVENUE, Bronx, NY 10459": {
+  "features": [
+   {
+    "bin": "2005616",
+    "borough": "Bronx",
+    "housenumber": "965",
+    "label": "965 LONGWOOD AVENUE, Bronx, NY, USA",
+    "lat": 40.81776,
+    "lon": -73.897863,
+    "street": "LONGWOOD AVENUE"
+   },
+   {
+    "bin": "2098884",
+    "borough": "Bronx",
+    "housenumber": "922",
+    "label": "922 LONGWOOD AVENUE, Bronx, NY, USA",
+    "lat": 40.818164,
+    "lon": -73.899785,
+    "street": "LONGWOOD AVENUE"
+   },
+   {
+    "bin": "2098858",
+    "borough": "Bronx",
+    "housenumber": "914",
+    "label": "914 LONGWOOD AVENUE, Bronx, NY, USA",
+    "lat": 40.818299,
+    "lon": -73.900011,
+    "street": "LONGWOOD AVENUE"
+   },
+   {
+    "bin": "2098855",
+    "borough": "Bronx",
+    "housenumber": "924",
+    "label": "924 LONGWOOD AVENUE, Bronx, NY, USA",
+    "lat": 40.81813,
+    "lon": -73.899728,
+    "street": "LONGWOOD AVENUE"
+   },
+   {
+    "bin": "2092001",
+    "borough": "Bronx",
+    "housenumber": "915",
+    "label": "915 LONGWOOD AVENUE, Bronx, NY, USA",
+    "lat": 40.819382,
+    "lon": -73.89965,
+    "street": "LONGWOOD AVENUE"
+   },
+   {
+    "bin": "2000000",
+    "borough": "Bronx",
+    "housenumber": "941",
+    "label": "941 LONGWOOD AVENUE, Bronx, NY, USA",
+    "lat": 40.81897,
+    "lon": -73.8978,
+    "street": "LONGWOOD AVENUE"
+   },
+   {
+    "bin": "2000000",
+    "borough": "Bronx",
+    "housenumber": "947",
+    "label": "947 LONGWOOD AVENUE, Bronx, NY, USA",
+    "lat": 40.81897,
+    "lon": -73.8978,
+    "street": "LONGWOOD AVENUE"
+   },
+   {
+    "bin": "2005169",
+    "borough": "Bronx",
+    "housenumber": "850B",
+    "label": "850B LONGWOOD AVENUE, Bronx, NY, USA",
+    "lat": 40.819182,
+    "lon": -73.901479,
+    "street": "LONGWOOD AVENUE"
+   },
+   {
+    "bin": "2005170",
+    "borough": "Bronx",
+    "housenumber": "866",
+    "label": "866 LONGWOOD AVENUE, Bronx, NY, USA",
+    "lat": 40.818927,
+    "lon": -73.901149,
+    "street": "LONGWOOD AVENUE"
+   },
+   {
+    "bin": "2098039",
+    "borough": "Bronx",
+    "housenumber": "884",
+    "label": "884 LONGWOOD AVENUE, Bronx, NY, USA",
+    "lat": 40.818748,
+    "lon": -73.900765,
+    "street": "LONGWOOD AVENUE"
+   }
+  ]
+ },
+ "965 Longwood Avenue, NY 10459": {
   "features": [
    {
     "bin": "2005616",
@@ -48874,6 +53569,100 @@
   ]
  },
  "99 AVENUE P, Brooklyn, NY 11204": {
+  "features": [
+   {
+    "bin": "3174076",
+    "borough": "Brooklyn",
+    "housenumber": "99",
+    "label": "99 AVENUE P, Brooklyn, NY, USA",
+    "lat": 40.608014,
+    "lon": -73.984743,
+    "street": "AVENUE P"
+   },
+   {
+    "bin": "3174076",
+    "borough": "Brooklyn",
+    "housenumber": "99",
+    "label": "99 P AVENUE, Brooklyn, NY, USA",
+    "lat": 40.608014,
+    "lon": -73.984743,
+    "street": "P AVENUE"
+   },
+   {
+    "bin": "3329042",
+    "borough": "Brooklyn",
+    "housenumber": "28",
+    "label": "28 AVENUE P, Brooklyn, NY, USA",
+    "lat": 40.606658,
+    "lon": -73.98748,
+    "street": "AVENUE P"
+   },
+   {
+    "bin": "3329042",
+    "borough": "Brooklyn",
+    "housenumber": "30",
+    "label": "30 P AVENUE, Brooklyn, NY, USA",
+    "lat": 40.606658,
+    "lon": -73.98748,
+    "street": "P AVENUE"
+   },
+   {
+    "bin": "3161688",
+    "borough": "Brooklyn",
+    "housenumber": "6",
+    "label": "6 AVENUE P, Brooklyn, NY, USA",
+    "lat": 40.606831,
+    "lon": -73.988295,
+    "street": "AVENUE P"
+   },
+   {
+    "bin": "3161689",
+    "borough": "Brooklyn",
+    "housenumber": "10",
+    "label": "10 P AVENUE, Brooklyn, NY, USA",
+    "lat": 40.606834,
+    "lon": -73.987905,
+    "street": "P AVENUE"
+   },
+   {
+    "bin": "3426070",
+    "borough": "Brooklyn",
+    "housenumber": "26",
+    "label": "26 P AVENUE, Brooklyn, NY, USA",
+    "lat": 40.606976,
+    "lon": -73.987663,
+    "street": "P AVENUE"
+   },
+   {
+    "bin": "3404438",
+    "borough": "Brooklyn",
+    "housenumber": "57",
+    "label": "57 AVENUE P, Brooklyn, NY, USA",
+    "lat": 40.608262,
+    "lon": -73.986506,
+    "street": "AVENUE P"
+   },
+   {
+    "bin": "3404438",
+    "borough": "Brooklyn",
+    "housenumber": "63",
+    "label": "63 AVENUE P, Brooklyn, NY, USA",
+    "lat": 40.608262,
+    "lon": -73.986506,
+    "street": "AVENUE P"
+   },
+   {
+    "bin": "3404438",
+    "borough": "Brooklyn",
+    "housenumber": "63",
+    "label": "63 P AVENUE, Brooklyn, NY, USA",
+    "lat": 40.608262,
+    "lon": -73.986506,
+    "street": "P AVENUE"
+   }
+  ]
+ },
+ "99 Avenue P, NY 11204": {
   "features": [
    {
     "bin": "3174076",
